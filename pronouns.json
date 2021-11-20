@@ -1,0 +1,40 @@
+[
+    {
+        "singular pronouns":[
+            "I", 
+            "mine", 
+            "my", 
+            "myself", 
+            "your", 
+            "yourself", 
+            "he", 
+            "him", 
+            "his",
+            "himself", 
+            "she", 
+            "her", 
+            "herself", 
+            "it", 
+            "itself"
+        ],
+
+        "plural pronouns":[
+            "you",
+            "we",
+            "us", 
+            "our", 
+            "ours", 
+            "ourselves", 
+            "yours", 
+            "yourselves", 
+            "its", 
+            "they", 
+            "them", 
+            "their", 
+            "theirs", 
+            "themself", 
+            "themselves"
+        ]       
+        
+    }
+]

@@ -1,0 +1,82 @@
+case1: có trong từ điển => dịch từ từ
+case2.1: k có => tên riêng + thuật ngữ (Luôn viết hoa chữ đầu tiên) => Danh từ và giữ nguyên
+Case2.2: K có (viết thường) => Từ chưa có trong từ điển => Thông báo ra là chưa gặp => in ra y nguyên từ đó => cùng 1 vị trí
+Case3: Căn văn đầu vào sai
+case4: Có trong từ điển, nhưng mà loại từ ánh xạ sang không khớp => dịch theo từ đó, sắp xếp theo thứ tự theo luật
+case5: Có trong từ điển, nhưng có nhiều loại từ trùng nhau => Dịch theo cùng vị trí 
+case6: Không xác định được vị trí của loại từ trong câu theo luật => dịch theo cùng vị trí của câu tiếng Việt
+
+Mặc định là chủ động
+Việt: Tách từ (có sẵn), tìm các luật, các tri thức để đưa chúng nó về các loại (12 loại kia + chủ (ngôi) - vị + thì trong câu (hiện tại (đơn), quá khứ (đơn), tiếp diễn, tương lai))
+
+(Tách theo chủ - vị => phân theo loại => phân loại theo ngôi, thì)
+
+anh rất yêu chó màu trắng
+
+Tiếng anh: xem từ => phân loại, ghép từ theo luật, chia động từ theo thì và theo ngôi
+
+Rule: 
+- Thì
+ + Hiện tại đơn: Động từ nguyên mẫu, to-V, tobe (thể hiện sự tồn tại, trạng thái or đặc điểm) => tiếng việt, nếu vị ngữ tồn tại động từ là động từ chỉ trạng thái và động từ quan hệ thì thêm tobe, nếu chủ ngữ là danh từ đơn
+ + Hiện tại tiếp diễn: Luôn dùng tobe
+ + Quá khứ: Giống đơn, nhưng mà có chia động từ
+ + Tương lai: Giống đơn nhưng mà thêm will, riêng 2 trường hợp lẻ như htđ thì thành will be
+ + Câu phủ định htđ: Nếu mà tobe => thêm not, còn nếu k phải tobe, thì phải thêm don't/doesn't phụ thuộc vào ngôi
+ + Câu phủ định ht tiếp diễn: tobe thêm not
+ + Câu phủ định quá khứ: Giống qk nhưng mà thêm not
+ + Câu phủ định tương lai: Giống tương lai nhưng thêm not
+
+- Sắp xếp câu tiếng Anh:
+ + Cấu trúc đơn thuần: Danh từ/Đại từ + động từ + tân ngữ (Danh từ/Đại từ). Do lựa chọn câu khẳng định, cấu trúc kia được giữ.
+ + Tính từ bổ cho danh từ, trạng từ bổ cho động từ (trước động từ chính nhưng sau động từ phụ)
+ + Tính từ thường trước danh từ, xếp theo thứ tự Số lượng, Phẩm chất, ý kiến, Kích thước, Tuổi đời, Hình dạng, Màu sắc, Địa chỉ, Chất liệu, Mục đích
+ + Giới từ phải đứng trước danh từ hoặc đại từ (phụ) và đứng sau động từ
+ + Liên từ kết nối giữa 2 loại từ cùng loại nhau hoặc 2 mệnh đề
+ + Thán từ thường ở đầu câu (câu đơn khẳng định) hoặc cuối câu (câu cảm thán mạnh)
+ + Từ hạn định luôn đứng trước một danh từ để bổ sung ý nghĩa cho nó
+ + Mạo từ đứng trước danh từ, từ chỉ định được xác định như một danh từ trong câu, từ sở hữu đứng trước danh từ thành cụm danh từ, đứng sau động từ để thành danh từ
+ + Trạng từ có thể ở mọi vị trí trong câu, tuy nhiên ta có thể quy ước luôn đưa xuống cuối "vẫn có thể chấp nhận được"
+
+
+- Ánh xạ từ:
+ + Các từ thuộc "thì" sẽ không được dịch, bổ sung ý nghĩa cho thì của câu tiếng anh
+ + Tất cả những cái sau đều sẽ ánh xạ theo thứ tự việt-anh 
+ + Danh từ - Danh từ (Chú ý về danh từ số ít - số nhiều)
+ + Động từ - Động từ
+   * Động từ trạng thái, quan hệ - Động từ thêm tobe
+   * Động từ hành động - Động từ thường
+   * Chia động từ theo thì/ngôi:
+     ' Danh từ số nhiều và danh từ số ít, phân biệt bằng dữ liệu, nếu là danh từ số ít hoặc đại từ số ít thì chia động từ theo vế số ít
+     ' Các quy luật chia theo thì được giữ như ở trên
+ + Tính từ - Tính từ
+ + Số từ - Tính từ/Số lượng
+ + Lượng từ - Từ hạn định/Lượng từ
+ + Phó từ - Trạng từ
+ + Đại từ - Đại từ
+ + Chỉ từ - Từ hạn định/Từ chỉ định
+ + Quan hệ từ - Từ hạn định/Từ sở hữu + Liên từ + Giới từ
+   * Quan hệ từ sở hữu - Từ hạn định/Từ sở hữu
+   * Quan hệ từ liệt kê + tương phản + nguyên nhân-kết quả - Liên từ
+   * Quan hệ từ định vị - Giới từ
+ + Thán từ - Thán từ
+ + Giới từ - Giới từ
+
+
+Dữ liệu:
+- Chung:
+ + Từ điển: Từ điển theo dạng từ - từ, kết nối 1 từ tiếng anh đến 1 từ tiếng việt
+- Riêng:
+ + Anh: Tổng hợp tất cả các từ ở các từ điển con bên việt => Phân thành các loại
+ + Việt: Tổng hợp các từ => Phân thành các loại (1 từ có thể nhiều loại)
+
+https://engbreaking.com/tu-loai-trong-tieng-anh
+https://oxford.edu.vn/goc-tieng-anh/hoc-tieng-anh-cung-oxford/
+https://elight.edu.vn/dong-tu-to-be/
+https://tienganhmoingay.com/ngu-phap-tieng-anh/ngu-phap-tieng-anh-cot-loi-cau-truc-cau/
+https://topicanative.edu.vn/cac-thi-trong-tieng-anh/
+https://vinaenglish.com/ngu-phap-tieng-anh/
+https://tienganhmoingay.com/ngu-phap-tieng-anh/tong-quan-hoa-hop-chu-ngu-dong-tu/
+
+https://www.informatik.uni-leipzig.de/~duc/Dict/install.html
+https://github.com/monolithpl/verb.forms.dictionary/tree/master/json
+https://github.com/thanhphu/tudien
