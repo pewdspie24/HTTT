@@ -9,7 +9,8 @@ def vn_token_vnc(text):
         word = word.replace('_', ' ')
         final.append(word)
     return final
-sentence = "thứ hai tháng sáu"
+
+sentence = "Tôi đang làm một vài kiểm tra"
 
 abc = vn_token_uts(sentence)
 print(abc)

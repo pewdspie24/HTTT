@@ -2,7 +2,7 @@ case1: có trong từ điển => dịch từ từ
 case2.1: k có => tên riêng + thuật ngữ (Luôn viết hoa chữ đầu tiên) => Danh từ và giữ nguyên
 Case2.2: K có (viết thường) => Từ chưa có trong từ điển => Thông báo ra là chưa gặp => in ra y nguyên từ đó => cùng 1 vị trí
 Case3: Căn văn đầu vào sai
-case4: Có trong từ điển, nhưng mà loại từ ánh xạ sang không khớp => dịch theo từ đó, sắp xếp theo thứ tự theo luật
+case4: Có trong từ điển, nhưng mà loại từ ánh xạ sang không khớp theo luật=> dịch theo từ đó, sắp xếp theo thứ tự theo luật của từ bên tiếng anh (không tồn tại thì giữ nguyên vị trí)
 case5: Có trong từ điển, nhưng có nhiều loại từ trùng nhau => Dịch theo cùng vị trí 
 case6: Không xác định được vị trí của loại từ trong câu theo luật => dịch theo cùng vị trí của câu tiếng Việt
 
@@ -18,7 +18,7 @@ Tiếng anh: xem từ => phân loại, ghép từ theo luật, chia động từ
 Rule: 
 - Thì
  + Hiện tại đơn: Động từ nguyên mẫu, to-V, tobe (thể hiện sự tồn tại, trạng thái or đặc điểm) => tiếng việt, nếu vị ngữ tồn tại động từ là động từ chỉ trạng thái và động từ quan hệ thì thêm tobe, nếu chủ ngữ là danh từ đơn
- + Hiện tại tiếp diễn: Luôn dùng tobe
+ + Hiện tại tiếp diễn: Luôn dùng tobe, v-ing
  + Quá khứ: Giống đơn, nhưng mà có chia động từ
  + Tương lai: Giống đơn nhưng mà thêm will, riêng 2 trường hợp lẻ như htđ thì thành will be
  + Câu phủ định htđ: Nếu mà tobe => thêm not, còn nếu k phải tobe, thì phải thêm don't/doesn't phụ thuộc vào ngôi
@@ -34,9 +34,8 @@ Rule:
  + Liên từ kết nối giữa 2 loại từ cùng loại nhau hoặc 2 mệnh đề
  + Thán từ thường ở đầu câu (câu đơn khẳng định) hoặc cuối câu (câu cảm thán mạnh)
  + Từ hạn định luôn đứng trước một danh từ để bổ sung ý nghĩa cho nó
- + Mạo từ đứng trước danh từ, từ chỉ định được xác định như một danh từ trong câu, từ sở hữu đứng trước danh từ thành cụm danh từ, đứng sau động từ để thành danh từ
+ + Mạo từ đứng trước danh từ, từ chỉ định được xác định như một danh từ trong câu, từ sở hữu đứng trước danh từ thành cụm danh từ
  + Trạng từ có thể ở mọi vị trí trong câu, tuy nhiên ta có thể quy ước luôn đưa xuống cuối "vẫn có thể chấp nhận được"
-
 
 - Ánh xạ từ:
  + Các từ thuộc "thì" sẽ không được dịch, bổ sung ý nghĩa cho thì của câu tiếng anh
@@ -59,7 +58,6 @@ Rule:
    * Quan hệ từ liệt kê + tương phản + nguyên nhân-kết quả - Liên từ
    * Quan hệ từ định vị - Giới từ
  + Thán từ - Thán từ
- + Giới từ - Giới từ
 
 
 Dữ liệu:

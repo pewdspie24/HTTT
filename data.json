@@ -1079,7 +1079,7 @@
     {
         "word": "ang áng",
         "type": [
-            "adverb"
+            "adv"
         ],
         "trans1": [
             "bout",
@@ -1113,8 +1113,8 @@
             "noun"
         ],
         "trans1": [
-            "Elder brother",
-            "First cousin",
+            "he",
+            "brother",
             "cousin german"
         ]
     },
@@ -2498,7 +2498,7 @@
     {
         "word": "ăn tham",
         "type": [
-            "adjective"
+            "adj"
         ],
         "trans1": [
             "reedy",
@@ -2920,7 +2920,7 @@
     {
         "word": "âm mưu",
         "type": [
-            "danh từ & động từ"
+            "noun"
         ],
         "trans1": [
             "Plot",
@@ -2942,15 +2942,7 @@
             "noun"
         ],
         "trans1": [
-            "Music",
-            "he Kinh and all ethnic minorities in Vietnam have a time-honoured tradition of music and dance. This is evidenced by the figures seen dancing to music which were engraved on the bronze drums unearthed at Dong Son  and lithophones discovered in Tay Nguyen Highlands and other relics. Besides royal court music",
-            "there was also a rich vein of music which was closely attached to the daily lives of the working masses. Thousands of diverse musical tunes have been collected from this source. From Quan Ho folk songs in the North to Hue songs",
-            "\"guessing game\" songs",
-            "satirical songs",
-            "joking songs and numerous songs in southern provinces",
-            "all are characterised by a profound sensibility and poetic",
-            "lyrical sense. After 1945",
-            "royal court music was underdeveloped. But folk music flourished more than ever before along with the increasingly popular modern music"
+            "Music"
         ]
     },
     {
@@ -4520,7 +4512,7 @@
     {
         "word": "bá láp",
         "type": [
-            "adjective"
+            "adj"
         ],
         "trans1": [
             "isorderly"
@@ -4741,7 +4733,7 @@
     {
         "word": "bạc hạnh",
         "type": [
-            "adjective"
+            "adj"
         ],
         "trans1": [
             "ad luck",
@@ -4769,7 +4761,7 @@
     {
         "word": "bạc nghĩa",
         "type": [
-            "adjective"
+            "adj"
         ],
         "trans1": [
             "ngrateful",
@@ -4803,7 +4795,7 @@
     {
         "word": "bạc phận",
         "type": [
-            "adjective"
+            "adj"
         ],
         "trans1": [
             "nhappy fate",
@@ -5901,7 +5893,7 @@
     {
         "word": "bại sản",
         "type": [
-            "adjective"
+            "adj"
         ],
         "trans1": [
             "uined"
@@ -5910,7 +5902,7 @@
     {
         "word": "bại tẩu",
         "type": [
-            "adjective"
+            "adj"
         ],
         "trans1": [
             "nrout",
@@ -8500,7 +8492,7 @@
     {
         "word": "bảo hòa",
         "type": [
-            "adjective"
+            "adj"
         ],
         "trans1": [
             "aturated",
@@ -8629,7 +8621,7 @@
     {
         "word": "bảo thủ",
         "type": [
-            "adj, verb"
+            "adj"
         ],
         "trans1": [
             "Conservative"
@@ -9213,7 +9205,7 @@
             "ontine share"
         ],
         "trans2": [
-            "ight"
+            "eight"
         ]
     },
     {
@@ -9695,7 +9687,7 @@
             "number"
         ],
         "trans1": [
-            "even",
+            "seven",
             "seventh"
         ]
     },
@@ -10123,7 +10115,7 @@
     {
         "word": "bằng an",
         "type": [
-            "adjective"
+            "adj"
         ],
         "trans1": [
             "ell",
@@ -11188,8 +11180,14 @@
     },
     {
         "word": "bận bịu",
-        "trans0": [
-            "adj & vẻb",
+        "type": [
+            "adj",
+            "verb"
+        ],
+        "trans1": [
+            "busy"
+        ],
+        "trans2": [
             "busy"
         ]
     },
@@ -11640,7 +11638,7 @@
     {
         "word": "bất hợp lý",
         "type": [
-            "adjective"
+            "adj"
         ],
         "trans1": [
             "rrational",
@@ -12265,7 +12263,7 @@
     {
         "word": "bầy hầy",
         "type": [
-            "adjective"
+            "adj"
         ],
         "trans1": [
             "irty"
@@ -13071,12 +13069,11 @@
             "adj"
         ],
         "trans1": [
-            "At the bottom of the scale",
+            "worst",
             "least",
             "last",
             "lowest",
-            "worst",
-            "dùng phụ sau động từ hoặc tính từ) Utterly wrong.."
+            "worst"
         ]
     },
     {
@@ -13589,9 +13586,9 @@
     {
         "word": "bên trên",
         "trans0": [
-            "over",
             "above",
-            "pper",
+            "over",
+            "upper",
             "uppermost"
         ]
     },
@@ -14293,7 +14290,7 @@
     {
         "word": "bỉ vận",
         "type": [
-            "adjective"
+            "adj"
         ],
         "trans1": [
             "ad luck",
@@ -15587,7 +15584,7 @@
     {
         "word": "biệt ly",
         "type": [
-            "adjective"
+            "adj"
         ],
         "trans1": [
             "eparated"
@@ -17449,15 +17446,15 @@
         "word": "bõ",
         "type": [
             "noun",
-            "verb, adj"
+            "adj"
         ],
         "trans1": [
             "Old man-servant",
-            "eadle",
+            "deadle",
             "verger"
         ],
         "trans2": [
-            "worth the trouble",
+            "worth",
             "compensate",
             "meet one's wish"
         ]
@@ -18074,7 +18071,7 @@
     {
         "word": "bóng bảy",
         "type": [
-            "adjective"
+            "adj"
         ],
         "trans1": [
             "lashy",
@@ -18117,7 +18114,7 @@
     {
         "word": "bóng loáng",
         "type": [
-            "adjective"
+            "adj"
         ],
         "trans1": [
             "ustrous"
@@ -18526,7 +18523,7 @@
     {
         "word": "bồ nhìn",
         "type": [
-            "adjective"
+            "adj"
         ],
         "trans1": [
             "uppet"
@@ -19655,9 +19652,14 @@
     {
         "word": "bối rối",
         "type": [
-            "adj & verb"
+            "adj",
+            "verb"
         ],
         "trans1": [
+            "embarrassed",
+            "puzzled"
+        ],
+        "trans2": [
             "embarrassed",
             "puzzled"
         ]
@@ -19890,11 +19892,14 @@
     {
         "word": "bồn chồn",
         "type": [
-            "adj & verb"
+            "adj",
+            "verb"
         ],
         "trans1": [
-            "on the tenterhooks",
-            "in a state of anxious suspense"
+            "anxious"
+        ],
+        "trans2": [
+            "anxious"
         ]
     },
     {
@@ -19922,7 +19927,7 @@
             "number"
         ],
         "trans1": [
-            "our",
+            "four",
             "fourth"
         ]
     },
@@ -20491,7 +20496,7 @@
     {
         "word": "bở",
         "type": [
-            "adjective"
+            "adj"
         ],
         "trans1": [
             "riable",
@@ -23820,10 +23825,10 @@
     {
         "word": "cá thể",
         "type": [
-            "noun & adj"
+            "noun"
         ],
         "trans1": [
-            "ndividual"
+            "individual"
         ]
     },
     {
@@ -23938,7 +23943,7 @@
     {
         "word": "các",
         "type": [
-            "adv (dùng phụ trước danh từ)",
+            "adv",
             "verb"
         ],
         "trans1": [
@@ -24325,9 +24330,11 @@
     },
     {
         "word": "cải cách",
-        "trans0": [
-            "danh từ & động từ",
-            "eform"
+        "type": [
+            "verb"
+        ],
+        "trans1": [
+            "reform"
         ]
     },
     {
@@ -24633,11 +24640,7 @@
             "verb"
         ],
         "trans1": [
-            "Orange",
-            "hildren's disease due to malnutrition",
-            "quả cam",
-            "am",
-            "Xem máu cam"
+            "Orange"
         ],
         "trans2": [
             "content oneself with",
@@ -25361,9 +25364,15 @@
     {
         "word": "cạn",
         "type": [
-            "adj & verb"
+            "adj",
+            "verb"
         ],
         "trans1": [
+            "dry",
+            "sed up",
+            "nearly exhausted"
+        ],
+        "trans2": [
             "dry",
             "sed up",
             "nearly exhausted"
@@ -25653,7 +25662,7 @@
     {
         "word": "cành nanh",
         "type": [
-            "adjective"
+            "adj"
         ],
         "trans1": [
             "ealous"
@@ -26399,7 +26408,7 @@
     {
         "word": "cao ngạo",
         "type": [
-            "adjective"
+            "adj"
         ],
         "trans1": [
             "roud",
@@ -28293,6 +28302,12 @@
         ]
     },
     {
+        "word": "cái",
+        "trans1": [
+            "the"
+        ]
+    },
+    {
         "word": "cầm",
         "type": [
             "noun",
@@ -29156,7 +29171,7 @@
     {
         "word": "cẩn thẩn",
         "type": [
-            "adjective"
+            "adj"
         ],
         "trans1": [
             "areful",
@@ -29470,7 +29485,7 @@
     {
         "word": "cấp tiến",
         "type": [
-            "adjective"
+            "adj"
         ],
         "trans1": [
             "adical"
@@ -31132,9 +31147,14 @@
     {
         "word": "chán chường",
         "type": [
-            "adj & verb"
+            "adj",
+            "verb"
         ],
         "trans1": [
+            "embittered",
+            "weary"
+        ],
+        "trans2": [
             "embittered",
             "weary"
         ]
@@ -32074,14 +32094,12 @@
     {
         "word": "chăm",
         "type": [
-            "noun & verb",
+            "noun",
             "verb"
         ],
         "trans1": [
             "assiduous",
-            "diligent",
-            "be) assiduous in one's studies",
-            "in one's work"
+            "diligent"
         ],
         "trans2": [
             "diligently look after"
@@ -34687,7 +34705,7 @@
     {
         "word": "chếch choáng",
         "type": [
-            "adjective"
+            "adj"
         ],
         "trans1": [
             "ipsy",
@@ -34800,10 +34818,13 @@
     {
         "word": "chết",
         "type": [
-            "adj & verb"
+            "adj",
+            "verb"
         ],
         "trans1": [
-            "ead",
+            "dead"
+        ],
+        "trans2":[
             "die"
         ]
     },
@@ -35262,7 +35283,7 @@
         "word": "chí",
         "type": [
             "noun",
-            "từ nối",
+            "conj",
             "adv"
         ],
         "trans1": [
@@ -35631,7 +35652,7 @@
     {
         "word": "chiếc bóng",
         "type": [
-            "adjective"
+            "adj"
         ],
         "trans1": [
             "onely shadow"
@@ -36483,7 +36504,7 @@
             "number"
         ],
         "trans1": [
-            "ine",
+            "nine",
             "ninth"
         ]
     },
@@ -36902,7 +36923,8 @@
         "word": "chịt",
         "type": [
             "verb",
-            "adj, adv"
+            "adj",
+            "adv"
         ],
         "trans1": [
             "choke",
@@ -36910,6 +36932,9 @@
             "block"
         ],
         "trans2": [
+            "Tight"
+        ],
+        "trans3": [
             "Tight"
         ]
     },
@@ -37467,7 +37492,7 @@
         "word": "chói mắt",
         "type": [
             "verb",
-            "adjective"
+            "adj"
         ],
         "trans1": [
             "o dazzle the eyes"
@@ -37634,7 +37659,7 @@
     {
         "word": "chòng chành",
         "type": [
-            "adjective"
+            "adj"
         ],
         "trans1": [
             "ranky",
@@ -37771,9 +37796,8 @@
             "adj"
         ],
         "trans1": [
-            "Extremity",
-            "end",
-            "last"
+            "last",
+            "end"
         ],
         "trans2": [
             "Glaring",
@@ -37831,7 +37855,7 @@
     {
         "word": "chốc nữa",
         "type": [
-            "adverb"
+            "adv"
         ],
         "trans1": [
             "resently",
@@ -38051,7 +38075,7 @@
     {
         "word": "chồng ngồng",
         "type": [
-            "adjective"
+            "adj"
         ],
         "trans1": [
             "all"
@@ -39367,10 +39391,10 @@
     {
         "word": "chuẩn mực",
         "type": [
-            "noun & adj"
+            "noun"
         ],
         "trans1": [
-            "tandard"
+            "standard"
         ]
     },
     {
@@ -39476,7 +39500,7 @@
             "number"
         ],
         "trans1": [
-            "en"
+            "ten"
         ]
     },
     {
@@ -40937,7 +40961,6 @@
     {
         "word": "chứ",
         "trans0": [
-            "từ nối",
             "ertainly",
             "would rather...than"
         ],
@@ -40976,7 +40999,7 @@
     {
         "word": "chưa bao giờ",
         "type": [
-            "adverb"
+            "adv"
         ],
         "trans1": [
             "ever"
@@ -41275,22 +41298,6 @@
             "o swear at",
             "bounce out",
             "slip out"
-        ]
-    },
-    {
-        "word": "chưng",
-        "type": [
-            "verb",
-            "từ nối"
-        ],
-        "trans1": [
-            "show off",
-            "sport",
-            "o distil"
-        ],
-        "trans2": [
-            "Như ở",
-            "tại"
         ]
     },
     {
@@ -41764,7 +41771,7 @@
     {
         "word": "co rút",
         "type": [
-            "adjective"
+            "adj"
         ],
         "trans1": [
             "ontractive"
@@ -42212,7 +42219,7 @@
     {
         "word": "cọc cằn",
         "type": [
-            "adjective"
+            "adj"
         ],
         "trans1": [
             "ude",
@@ -42718,8 +42725,8 @@
     {
         "word": "con trai",
         "trans0": [
-            "Son",
             "boy",
+            "son",
             "dolescent"
         ]
     },
@@ -42949,13 +42956,22 @@
             "verb"
         ],
         "trans1": [
-            "Aunt",
+            "she",
             "auntie",
             "Miss",
             "young lady"
         ],
         "trans2": [
             "boil down"
+        ]
+    },
+    {
+        "word": "cô ấy",
+        "type": [
+            "noun"
+        ],
+        "trans1": [
+            "she"
         ]
     },
     {
@@ -44373,7 +44389,6 @@
             "given kind of food"
         ],
         "trans2": [
-            "f",
             "belong to",
             "from"
         ]
@@ -44466,7 +44481,7 @@
     {
         "word": "cục mịch",
         "type": [
-            "adjective"
+            "adj"
         ],
         "trans1": [
             "himsy",
@@ -44563,7 +44578,7 @@
     {
         "word": "cúm núm",
         "type": [
-            "adjective"
+            "adj"
         ],
         "trans1": [
             "imorous",
@@ -45614,7 +45629,7 @@
             "number"
         ],
         "trans1": [
-            "ine"
+            "nine"
         ]
     },
     {
@@ -45737,7 +45752,7 @@
     {
         "word": "cựu truyền",
         "type": [
-            "noun & verb"
+            "noun"
         ],
         "trans1": [
             "stick to"
@@ -45894,7 +45909,7 @@
     {
         "word": "dã dượi",
         "type": [
-            "adjective"
+            "adj"
         ],
         "trans1": [
             "ired",
@@ -46455,7 +46470,7 @@
     {
         "word": "dành riêng",
         "type": [
-            "adjective"
+            "adj"
         ],
         "trans1": [
             "eserved"
@@ -46652,7 +46667,7 @@
     {
         "word": "dạo ấy",
         "type": [
-            "adverb"
+            "adv"
         ],
         "trans1": [
             "t that period",
@@ -46869,12 +46884,6 @@
         ]
     },
     {
-        "word": "dăm",
-        "type": [
-            "number five; few; about five"
-        ]
-    },
-    {
         "word": "dằm",
         "type": [
             "noun"
@@ -47048,7 +47057,7 @@
     {
         "word": "dằng dặc",
         "type": [
-            "adjective"
+            "adj"
         ],
         "trans1": [
             "ndless",
@@ -47941,7 +47950,7 @@
     {
         "word": "dật dục",
         "type": [
-            "adjective"
+            "adj"
         ],
         "trans1": [
             "enmal"
@@ -49000,7 +49009,7 @@
     {
         "word": "dẻo sức",
         "type": [
-            "adjective"
+            "adj"
         ],
         "trans1": [
             "ntiring",
@@ -50751,7 +50760,11 @@
     {
         "word": "do",
         "type": [
-            "trạng ngữ by; because of"
+            "adv" 
+        ],
+        "trans1":[
+            "by",
+            "because of"
         ]
     },
     {
@@ -51806,10 +51819,10 @@
     {
         "word": "dợn",
         "type": [
-            "verb, noun"
+            "noun"
         ],
         "trans1": [
-            "ipple"
+            "nipple"
         ]
     },
     {
@@ -53716,7 +53729,7 @@
     {
         "word": "đa âm",
         "type": [
-            "adjective"
+            "adj"
         ],
         "trans1": [
             "olysyllabic",
@@ -53797,7 +53810,7 @@
     {
         "word": "đa dục",
         "type": [
-            "adjective"
+            "adj"
         ],
         "trans1": [
             "enmal"
@@ -53852,7 +53865,7 @@
     {
         "word": "đa hôn",
         "type": [
-            "adjective"
+            "adj"
         ],
         "trans1": [
             "olygamous"
@@ -54214,7 +54227,7 @@
     {
         "word": "đã lâu",
         "type": [
-            "adverb"
+            "adv"
         ],
         "trans1": [
             "ong ago",
@@ -56014,10 +56027,7 @@
     {
         "word": "đánh đu",
         "trans0": [
-            "swing",
-            "Đánh đu diễn ra trong các hội xuân hoặc hội thu ở các làng thuộc Hà Bắc",
-            "Vĩnh Phú. Cây đu làm bằng tre",
-            "thường trồng gần nơi đình làng để trai gái tới vui chơi. Đây là dịp giúp cho trai gái được gần gũi nhau và bộc lộ tình yêu+Đánh đu  is a popular game in spring or autumn festivals in Ha Bac or Vinh Phu provinces. A swing pillar made of bamboo is planted near to the village communal house where boys and girls gather for entertainments. It is on this occasion that they get closer to one another and confide to one another more easily"
+            "swing"
         ]
     },
     {
@@ -56572,7 +56582,7 @@
     {
         "word": "đáo lý",
         "type": [
-            "adjective"
+            "adj"
         ],
         "trans1": [
             "easonable",
@@ -58732,10 +58742,19 @@
     {
         "word": "đây",
         "type": [
-            "adv"
+            "adv",
+            "pronoun",
+            "noun"
         ],
         "trans1": [
             "here"
+        ],
+        "trans2": [
+            "this"
+        ],
+        "trans3": [
+            "here",
+            "this"
         ]
     },
     {
@@ -62060,7 +62079,7 @@
     {
         "word": "đỏ tươi",
         "type": [
-            "adjective"
+            "adj"
         ],
         "trans1": [
             "carlet"
@@ -63546,7 +63565,7 @@
         "word": "đốc",
         "type": [
             "noun",
-            "erb"
+            "verb"
         ],
         "trans1": [
             "Headmaster",
@@ -67228,17 +67247,14 @@
         "word": "em",
         "type": [
             "noun",
-            "adj"
+            "pronoun"
         ],
         "trans1": [
-            "younger brother",
-            "younger sister",
-            "",
-            "me"
+            "you"
         ],
         "trans2": [
-            "small",
-            "smaller"
+            "I",
+            "me"
         ]
     },
     {
@@ -67316,6 +67332,15 @@
         "trans0": [
             "Brother-in-law",
             "sister-in-law"
+        ]
+    },
+    {
+        "word": "em trai",
+        "type": [
+            "noun"
+        ],
+        "trans1": [
+            "younger brother"
         ]
     },
     {
@@ -68021,7 +68046,7 @@
     {
         "word": "gà mờ",
         "type": [
-            "adjective"
+            "adj"
         ],
         "trans1": [
             "im",
@@ -68741,7 +68766,7 @@
     {
         "word": "gay cấn",
         "type": [
-            "adjective"
+            "adj"
         ],
         "trans1": [
             "horny",
@@ -68751,7 +68776,7 @@
     {
         "word": "gay gắt",
         "type": [
-            "adjective"
+            "adj"
         ],
         "trans1": [
             "lazing hot",
@@ -68766,7 +68791,7 @@
     {
         "word": "gay go",
         "type": [
-            "adjective"
+            "adj"
         ],
         "trans1": [
             "een",
@@ -69073,7 +69098,7 @@
     {
         "word": "gặp nạn",
         "type": [
-            "adjective"
+            "adj"
         ],
         "trans1": [
             "o be in danger"
@@ -70300,7 +70325,7 @@
         ],
         "trans1": [
             "what",
-            "hatever"
+            "whatever"
         ]
     },
     {
@@ -70315,6 +70340,15 @@
         ],
         "trans2": [
             "rust"
+        ]
+    },
+    {
+        "word": "gì đó",
+        "type": [
+            "noun"
+        ],
+        "trans1": [
+            "something"
         ]
     },
     {
@@ -70718,7 +70752,7 @@
     {
         "word": "già dặn",
         "type": [
-            "adjective"
+            "adj"
         ],
         "trans1": [
             "killed",
@@ -71120,7 +71154,7 @@
     {
         "word": "giá buốt",
         "type": [
-            "adjective"
+            "adj"
         ],
         "trans1": [
             "iting cold"
@@ -72208,7 +72242,7 @@
     {
         "word": "giản dị",
         "type": [
-            "adjective"
+            "adj"
         ],
         "trans1": [
             "asy",
@@ -73804,12 +73838,6 @@
             "Be aroused",
             "tục ngữ) With Stomamach full and back Wrm",
             "evveryonne feels arounsed"
-        ]
-    },
-    {
-        "word": "giần",
-        "type": [
-            "verb, noun sieve"
         ]
     },
     {
@@ -76093,7 +76121,7 @@
     {
         "word": "góa",
         "type": [
-            "adjective"
+            "adj"
         ],
         "trans1": [
             "idowed"
@@ -76111,7 +76139,7 @@
     {
         "word": "góa bụa",
         "type": [
-            "adjective"
+            "adj"
         ],
         "trans1": [
             "idow"
@@ -76975,7 +77003,7 @@
     {
         "word": "gù lưng",
         "type": [
-            "adjective"
+            "adj"
         ],
         "trans1": [
             "unch-backed",
@@ -78991,7 +79019,7 @@
     {
         "word": "hàng tháng",
         "type": [
-            "adverb"
+            "adv"
         ],
         "trans1": [
             "onthly"
@@ -79012,7 +79040,7 @@
     {
         "word": "hàng tuần",
         "type": [
-            "adverb"
+            "adv"
         ],
         "trans1": [
             "eekly"
@@ -79900,9 +79928,13 @@
     {
         "word": "hay",
         "type": [
-            "trạng ngữ or; whether",
+            "adv",
             "adj",
             "verb"
+        ],
+        "trans1": [
+            "or",
+            "whether"
         ],
         "trans2": [
             "well",
@@ -79977,7 +80009,7 @@
     {
         "word": "hay lây",
         "type": [
-            "adjective"
+            "adj"
         ],
         "trans1": [
             "ontagious"
@@ -80475,15 +80507,6 @@
         "word": "hầm lò",
         "trans0": [
             "Pit"
-        ]
-    },
-    {
-        "word": "hầm mỏ",
-        "type": [
-            "noun"
-        ],
-        "trans1": [
-            "mine"
         ]
     },
     {
@@ -81550,7 +81573,7 @@
     {
         "word": "hẹp lượng",
         "type": [
-            "adjective"
+            "adj"
         ],
         "trans1": [
             "ngenerous",
@@ -81962,7 +81985,7 @@
     {
         "word": "hỉ nọ",
         "type": [
-            "adjective"
+            "adj"
         ],
         "trans1": [
             "oy and anger"
@@ -82985,7 +83008,7 @@
     {
         "word": "hiếu kỳ",
         "type": [
-            "adjective"
+            "adj"
         ],
         "trans1": [
             "urious",
@@ -83254,7 +83277,7 @@
     {
         "word": "hình dung từ",
         "trans0": [
-            "Adjective"
+            "adj"
         ]
     },
     {
@@ -83858,7 +83881,7 @@
     {
         "word": "hoa mỹ",
         "type": [
-            "adjective"
+            "adj"
         ],
         "trans1": [
             "ine",
@@ -84000,7 +84023,7 @@
     {
         "word": "hòa",
         "type": [
-            "verb, adj",
+            "verb",
             "noun"
         ],
         "trans1": [
@@ -84065,7 +84088,7 @@
     {
         "word": "hòa hợp",
         "type": [
-            "adjective"
+            "adj"
         ],
         "trans1": [
             "o agree",
@@ -84087,7 +84110,7 @@
     {
         "word": "hòa nhã",
         "type": [
-            "adjective"
+            "adj"
         ],
         "trans1": [
             "ffable"
@@ -84810,7 +84833,7 @@
     {
         "word": "hoàn mỹ",
         "type": [
-            "adjective"
+            "adj"
         ],
         "trans1": [
             "erfectly beautiful"
@@ -84863,13 +84886,17 @@
     {
         "word": "hoàn toàn",
         "type": [
-            "adj"
+            "adj",
+            "adv"
         ],
         "trans1": [
-            "complet",
+            "complete",
             "perfect",
             "entirely",
             "faultless"
+        ],
+        "trans2": [
+            "completely"
         ]
     },
     {
@@ -85007,7 +85034,7 @@
     {
         "word": "hoang",
         "type": [
-            "adjective"
+            "adj"
         ],
         "trans1": [
             "ncultivated",
@@ -85430,7 +85457,7 @@
     {
         "word": "hoảng sợ",
         "type": [
-            "adjective"
+            "adj"
         ],
         "trans1": [
             "illed with terror",
@@ -85636,7 +85663,11 @@
     {
         "word": "hoặc",
         "type": [
-            "trạng ngữ or; either"
+            "adv" 
+        ],
+        "trans1":[
+            "or",
+            "either"
         ]
     },
     {
@@ -86762,7 +86793,10 @@
     {
         "word": "hộ",
         "type": [
-            "trạng ngữ for"
+            "adv"
+        ],
+        "trans1":[
+            "for"
         ]
     },
     {
@@ -91075,7 +91109,7 @@
     {
         "word": "ích kỷ",
         "type": [
-            "adjective"
+            "adj"
         ],
         "trans1": [
             "elfish",
@@ -91365,7 +91399,7 @@
     {
         "word": "ít nhứt",
         "type": [
-            "adverb"
+            "adv"
         ],
         "trans1": [
             "t least"
@@ -92925,7 +92959,7 @@
     {
         "word": "khả thi",
         "type": [
-            "adjective"
+            "adj"
         ],
         "trans1": [
             "easable",
@@ -92968,7 +93002,7 @@
     {
         "word": "khá tốt",
         "type": [
-            "adjective"
+            "adj"
         ],
         "trans1": [
             "assable good"
@@ -94327,15 +94361,6 @@
         ]
     },
     {
-        "word": "khăng",
-        "type": [
-            "noun"
-        ],
-        "trans1": [
-            "cat"
-        ]
-    },
-    {
         "word": "khăng khăng",
         "trans0": [
             "Persist in"
@@ -94964,7 +94989,7 @@
         ],
         "trans1": [
             "clever",
-            "skilful",
+            "skillful",
             "dexterous"
         ]
     },
@@ -94977,7 +95002,7 @@
     {
         "word": "khéo léo",
         "trans0": [
-            "như khéo"
+            "skillful"
         ]
     },
     {
@@ -96378,7 +96403,7 @@
     {
         "word": "khỏa thân",
         "type": [
-            "adjective"
+            "adj"
         ],
         "trans1": [
             "ude",
@@ -97083,7 +97108,7 @@
     {
         "word": "khỏe mạnh",
         "type": [
-            "adjective"
+            "adj"
         ],
         "trans1": [
             "trong bodied",
@@ -98139,6 +98164,13 @@
             "beginning"
         ]
     },
+    
+    {
+        "word": "khởi nghiệp",
+        "trans0": [
+            "start up"
+        ]
+    },
     {
         "word": "khởi phát",
         "trans0": [
@@ -98431,7 +98463,7 @@
     {
         "word": "khúc chiết",
         "type": [
-            "adjective"
+            "adj"
         ],
         "trans1": [
             "lear"
@@ -98446,7 +98478,7 @@
     {
         "word": "khúc khuỷu",
         "type": [
-            "adjective"
+            "adj"
         ],
         "trans1": [
             "inuous",
@@ -99223,10 +99255,18 @@
     {
         "word": "kia",
         "type": [
-            "adv"
+            "adv",
+            "noun",
+            "pronoun"
         ],
         "trans1": [
             "over",
+            "that"
+        ],
+        "trans2": [
+            "that"
+        ],
+        "trans3": [
             "that"
         ]
     },
@@ -99625,8 +99665,15 @@
     },
     {
         "word": "kiểm tra",
-        "trans0": [
+        "type":[
+            "verb",
+            "noun"
+        ],
+        "trans1": [
             "Inspect"
+        ],
+        "trans2": [
+            "test"
         ]
     },
     {
@@ -100607,7 +100654,7 @@
     {
         "word": "kín hơi",
         "type": [
-            "adjective"
+            "adj"
         ],
         "trans1": [
             "ir-tight"
@@ -101184,7 +101231,7 @@
     {
         "word": "kỳ ảo",
         "type": [
-            "adjective"
+            "adj"
         ],
         "trans1": [
             "iraculous"
@@ -101193,7 +101240,7 @@
     {
         "word": "kỳ công",
         "type": [
-            "adjective"
+            "adj"
         ],
         "trans1": [
             "xploit",
@@ -101203,7 +101250,7 @@
     {
         "word": "kỳ cục",
         "type": [
-            "adjective"
+            "adj"
         ],
         "trans1": [
             "dd",
@@ -101213,7 +101260,7 @@
     {
         "word": "kỳ cựu",
         "type": [
-            "adjective"
+            "adj"
         ],
         "trans1": [
             "eteran"
@@ -101232,7 +101279,7 @@
     {
         "word": "kỳ diệu",
         "type": [
-            "adjective"
+            "adj"
         ],
         "trans1": [
             "arvellous",
@@ -101579,7 +101626,7 @@
     {
         "word": "la đà",
         "type": [
-            "adv. unsteadily, quiveringly"
+            "adv"
         ]
     },
     {
@@ -101677,7 +101724,7 @@
     {
         "word": "la tinh",
         "type": [
-            "adjective"
+            "adj"
         ],
         "trans1": [
             "atin"
@@ -101935,7 +101982,7 @@
     {
         "word": "lạ kỳ",
         "type": [
-            "adjective"
+            "adj"
         ],
         "trans1": [
             "ueer",
@@ -102493,7 +102540,7 @@
     {
         "word": "lại",
         "type": [
-            "adv. again",
+            "adv",
             "verb"
         ],
         "trans1": [
@@ -102521,7 +102568,7 @@
     {
         "word": "lại cái",
         "type": [
-            "adjective"
+            "adj"
         ],
         "trans1": [
             "isexual",
@@ -103681,7 +103728,7 @@
     {
         "word": "lao xao",
         "type": [
-            "adv. hubbub"
+            "adv"
         ]
     },
     {
@@ -103798,7 +103845,7 @@
     {
         "word": "lát nữa",
         "type": [
-            "adverb"
+            "adv"
         ],
         "trans1": [
             "y and by",
@@ -103983,7 +104030,7 @@
     {
         "word": "lắm",
         "type": [
-            "adv. much; many; very; a lot"
+            "adv"
         ]
     },
     {
@@ -104334,7 +104381,7 @@
     {
         "word": "lầm lỳ",
         "type": [
-            "adjective"
+            "adj"
         ],
         "trans1": [
             "aciturn",
@@ -105143,7 +105190,10 @@
     {
         "word": "lén lút",
         "type": [
-            "adv, tính từ stealthy ; stealthily ; sneaky ; sneakity"
+            "adj"
+        ],
+        "trans0": [
+            "sneaky"
         ]
     },
     {
@@ -105277,23 +105327,6 @@
         ],
         "trans2": [
             "pear"
-        ]
-    },
-    {
-        "word": "Lê Đại Hành",
-        "trans0": [
-            "As an excellent strategist",
-            "Lê Đại Hành  was the king founding Nhà Tiền Lê  . His native land was in Thọ Xuân . Born in a poor family",
-            "Lê Hoàn  was an orphan from his early childhood but very studious. He was appointed as Commander-in-chief by Đinh Tiên Hoàng. In 979",
-            "after Đinh Tiên Hoàng had been assassinated",
-            "Lê Hoàn became the regent because Đinh Tiên Hoàng 's successor remained too young. In 980",
-            "the Tống Chinese dynasty prepared to annex our country. In 981",
-            "the queen mother Dương Vân Nga and the armed forces unanimously enthroned Lê Hoàng as Lê Đại Hành. In 981",
-            "Lê Đại Hành trounced the Tống invaders on Bạch Đằng River and at Chi Lăng Pass. After Lê Đại Ha`nh's death in 1005",
-            "his son Lê Long Đĩnh killed his elder brother to usurp the throne. Indulging in debauchery",
-            "this cruel king Lê Long Đĩnh always stretched out at the royal conferences",
-            "therefore he was also called Lê Ngoa. Triều . After his death",
-            "Lý Công Uẩn replaced him in 1009 and founded Nhà Hậu Lý"
         ]
     },
     {
@@ -105640,7 +105673,7 @@
     {
         "word": "lí lắc",
         "type": [
-            "adjective"
+            "adj"
         ],
         "trans1": [
             "live"
@@ -105947,7 +105980,7 @@
     {
         "word": "liểng xiểng",
         "type": [
-            "adjective"
+            "adj"
         ],
         "trans1": [
             "rushing"
@@ -106384,7 +106417,7 @@
     {
         "word": "lòa",
         "type": [
-            "adjective"
+            "adj"
         ],
         "trans1": [
             "im"
@@ -106402,7 +106435,7 @@
     {
         "word": "lõa lồ",
         "type": [
-            "adjective"
+            "adj"
         ],
         "trans1": [
             "aked"
@@ -106420,7 +106453,7 @@
     {
         "word": "lõa xõa",
         "type": [
-            "adjective"
+            "adj"
         ],
         "trans1": [
             "of hair) to be flowing"
@@ -106720,7 +106753,7 @@
     {
         "word": "lòe loẹt",
         "type": [
-            "adjective"
+            "adj"
         ],
         "trans1": [
             "lashy",
@@ -107631,7 +107664,7 @@
     {
         "word": "lú",
         "type": [
-            "adjective"
+            "adj"
         ],
         "trans1": [
             "ull - brained",
@@ -108452,7 +108485,7 @@
     {
         "word": "lúng túng",
         "type": [
-            "adjective"
+            "adj"
         ],
         "trans1": [
             "erplexed",
@@ -109243,15 +109276,19 @@
         "word": "lửng",
         "type": [
             "noun",
-            "adj & adv"
+            "adj",
+            "adv"
         ],
         "trans1": [
             "Badger"
         ],
         "trans2": [
-            "alf-way",
-            "half-done",
-            "lưng lửng ) Nearly one's fill"
+            "half-way",
+            "half-done"
+        ],
+        "trans3": [
+            "half-way",
+            "half-done"
         ]
     },
     {
@@ -110312,7 +110349,7 @@
     {
         "word": "ly tán",
         "type": [
-            "adjective"
+            "adj"
         ],
         "trans1": [
             "cattered"
@@ -110521,10 +110558,10 @@
     {
         "word": "mà",
         "type": [
-            "trạng ngữ. but"
+            "adv"
         ],
         "trans1": [
-            "here"
+            "but"
         ]
     },
     {
@@ -110664,7 +110701,7 @@
     {
         "word": "mạ bạc",
         "type": [
-            "adjective"
+            "adj"
         ],
         "trans1": [
             "ilverplated"
@@ -111559,8 +111596,8 @@
             "noun"
         ],
         "trans1": [
-            "calculator",
-            "arithmoneter"
+            "computer",
+            "calculator"
         ]
     },
     {
@@ -112369,7 +112406,7 @@
     {
         "word": "mê ly",
         "type": [
-            "adjective"
+            "adj"
         ],
         "trans1": [
             "ndistinct",
@@ -112651,12 +112688,7 @@
             "noun"
         ],
         "trans1": [
-            "Vermicelli made of cassava",
-            "Made from a kind of tuber plant familiar to cassava",
-            "Mien threads are very long and tough. When being served",
-            "these long tiny flour threads are cut into smaller pieces.This kind of cassava vermicelli is used to make several different dishes. The most popular is Mien Ga",
-            "Mien Bo  and Mien Luon . Cassava vermicelli is also used for different dishes stirred in fat such as Mien Xao Thit",
-            "Mien Xao Long Ga  and Mien Xao Cua"
+            "Vermicelli"
         ]
     },
     {
@@ -112782,16 +112814,20 @@
     {
         "word": "mình",
         "type": [
-            "noun"
+            "noun",
+            "pronoun"
         ],
         "trans1": [
-            "body. oneself"
+            "me"
+        ],
+        "trans2": [
+            "I"
         ]
     },
     {
         "word": "mistake",
         "type": [
-            "adjective"
+            "adj"
         ],
         "trans1": [
             "oting",
@@ -113141,10 +113177,9 @@
             "noun"
         ],
         "trans1": [
-            "tem",
+            "item",
             "article",
-            "dish",
-            "ood course"
+            "dish"
         ]
     },
     {
@@ -114092,7 +114127,6 @@
     {
         "word": "mốt",
         "type": [
-            "number. one",
             "noun"
         ],
         "trans2": [
@@ -114103,7 +114137,8 @@
     {
         "word": "một",
         "trans0": [
-            "one"
+            "a",
+            "an"
         ]
     },
     {
@@ -115296,7 +115331,6 @@
             "black-head",
             "ustule",
             "eruption",
-            "it",
             "piece",
             "hild"
         ]
@@ -115967,7 +116001,7 @@
     {
         "word": "mỹ lệ",
         "type": [
-            "adjective"
+            "adj"
         ],
         "trans1": [
             "eautiful",
@@ -116887,7 +116921,7 @@
     {
         "word": "nát nhàu",
         "type": [
-            "adjective"
+            "adj"
         ],
         "trans1": [
             "rumpled"
@@ -116989,8 +117023,7 @@
     {
         "word": "này",
         "trans0": [
-            "here",
-            "his"
+            "this"
         ]
     },
     {
@@ -119406,7 +119439,7 @@
     {
         "word": "ngạt hơi",
         "type": [
-            "adjective"
+            "adj"
         ],
         "trans1": [
             "uffocating",
@@ -119643,7 +119676,7 @@
     {
         "word": "ngày nay",
         "type": [
-            "adv. nowadays,today"
+            "adv"
         ]
     },
     {
@@ -121998,7 +122031,7 @@
     {
         "word": "nghinh ngang",
         "type": [
-            "adjective"
+            "adj"
         ],
         "trans1": [
             "anghty",
@@ -124121,7 +124154,7 @@
     {
         "word": "nguy hiểm",
         "type": [
-            "adjective"
+            "adj"
         ],
         "trans1": [
             "angerous",
@@ -125715,8 +125748,6 @@
     {
         "word": "nhà tôi",
         "trans0": [
-            "my old man",
-            "my old woman",
             "my huaband",
             "my wife"
         ]
@@ -126241,7 +126272,7 @@
     {
         "word": "nhàn nhã",
         "type": [
-            "adjective"
+            "adj"
         ],
         "trans1": [
             "asy",
@@ -128260,7 +128291,11 @@
     {
         "word": "nhất",
         "type": [
-            "number. one; first"
+            "number"
+        ],
+        "trans1":[
+            "one",
+            "first"
         ]
     },
     {
@@ -128927,7 +128962,10 @@
     {
         "word": "nhì",
         "type": [
-            "number. second"
+            "number"
+        ],
+        "trans1": [
+            "second"
         ]
     },
     {
@@ -129032,7 +129070,10 @@
     {
         "word": "nhị",
         "type": [
-            "number. two"
+            "number"
+        ],
+        "trans0": [
+            "two"
         ]
     },
     {
@@ -129509,7 +129550,7 @@
     {
         "word": "nhiều tiền",
         "type": [
-            "adjective"
+            "adj"
         ],
         "trans1": [
             "ich",
@@ -129527,8 +129568,7 @@
         "trans0": [
             "Crepe",
             "ester",
-            "trouble",
-            "am"
+            "trouble"
         ]
     },
     {
@@ -130244,7 +130284,7 @@
     {
         "word": "nhón gót",
         "type": [
-            "adv. on tiptoe"
+            "adv"
         ]
     },
     {
@@ -132430,12 +132470,18 @@
     {
         "word": "nó",
         "type": [
+            "pronoun",
             "noun"
         ],
         "trans1": [
+            "it",
             "he",
-            "Him",
-            "t"
+            "him"
+        ],
+        "trans2": [
+            "it",
+            "he",
+            "him"
         ]
     },
     {
@@ -134126,7 +134172,7 @@
     {
         "word": "nội tiết",
         "type": [
-            "adjective"
+            "adj"
         ],
         "trans1": [
             "ndocrical"
@@ -134899,24 +134945,6 @@
         "word": "nung núng",
         "trans0": [
             "xem núng"
-        ]
-    },
-    {
-        "word": "Nùng",
-        "trans0": [
-            "dân tộc Nùng",
-            "With about 650",
-            "000 inhabitants",
-            "Nùng ethnic group occupies 1.05% of the Vietnamese population. Divided into many branches",
-            "they live in Cao Bằng",
-            "Lạng Sơn",
-            "Tuyên Quang",
-            "Lào Cai",
-            "Yên Bái",
-            "Hà Giang. This ethnic group migrated late to Vietnam and had relations close to the Tày people. Their popular literature and arts is abundant in poems and tales..... They are courageous",
-            "battle-tested",
-            "good at farming and able to trade. After 1954",
-            "many of them migrated to Eastern Cochinchina and Central Highlands"
         ]
     },
     {
@@ -136342,7 +136370,7 @@
     {
         "word": "oái ăm",
         "type": [
-            "adjective"
+            "adj"
         ],
         "trans1": [
             "wkward",
@@ -136782,7 +136810,7 @@
     {
         "word": "oi nồng",
         "type": [
-            "adjective"
+            "adj"
         ],
         "trans1": [
             "ultry"
@@ -138237,13 +138265,16 @@
     {
         "word": "ở",
         "type": [
-            "verb"
+            "verb",
+            "prep"
         ],
         "trans1": [
-            "live",
-            "bẹ",
             "stay",
+            "live",
             "remain"
+        ],
+        "trans2": [
+            "in"
         ]
     },
     {
@@ -140176,13 +140207,7 @@
         "word": "phát kiến",
         "trans0": [
             "Discover",
-            "iscovery"
-        ]
-    },
-    {
-        "word": "phát lưu",
-        "trans0": [
-            "như phát vãng"
+            "Discovery"
         ]
     },
     {
@@ -142551,10 +142576,10 @@
     {
         "word": "phía trước",
         "type": [
-            "noun, prep"
+            "prep"
         ],
         "trans1": [
-            "ront",
+            "front",
             "in front"
         ]
     },
@@ -142637,7 +142662,7 @@
     {
         "word": "phiếm thần",
         "type": [
-            "adjective"
+            "adj"
         ],
         "trans1": [
             "antheistic"
@@ -143116,7 +143141,7 @@
     {
         "word": "phó ngữ",
         "trans0": [
-            "Adverbial locution"
+            "advial locution"
         ]
     },
     {
@@ -143161,7 +143186,7 @@
             "noun"
         ],
         "trans1": [
-            "adverb"
+            "adv"
         ]
     },
     {
@@ -145773,10 +145798,7 @@
     {
         "word": "phức",
         "trans0": [
-            "Very",
-            "very",
-            "very",
-            "Phưng phức"
+            "very"
         ]
     },
     {
@@ -146225,7 +146247,7 @@
     {
         "word": "qua quít",
         "type": [
-            "adv."
+            "adv"
         ],
         "trans1": [
             "perfunetorily"
@@ -147647,7 +147669,7 @@
     {
         "word": "quay quắt",
         "type": [
-            "adjective"
+            "adj"
         ],
         "trans1": [
             "eceitful",
@@ -148442,7 +148464,7 @@
         "word": "quần",
         "type": [
             "noun",
-            "erb"
+            "verb"
         ],
         "trans1": [
             "small ball",
@@ -149439,7 +149461,7 @@
         "word": "qui mô",
         "type": [
             "noun",
-            "adjective"
+            "adj"
         ],
         "trans1": [
             "ize",
@@ -149492,7 +149514,7 @@
     {
         "word": "quỉ quyệt",
         "type": [
-            "adjective"
+            "adj"
         ],
         "trans1": [
             "rafty",
@@ -149566,7 +149588,7 @@
     {
         "word": "quí phái",
         "type": [
-            "adjective"
+            "adj"
         ],
         "trans1": [
             "igh-borm",
@@ -152330,17 +152352,13 @@
     },
     {
         "word": "rất",
-        "trans0": [
-            "very",
-            "very much",
-            "most"
-        ],
         "type": [
             "adv"
         ],
-        "trans1": [
-            "extremely",
-            "excessively"
+        "trans0": [
+            "very",
+            "very much",
+            "extremely"
         ]
     },
     {
@@ -154194,7 +154212,7 @@
     {
         "word": "rộng thênh thang",
         "type": [
-            "adjective"
+            "adj"
         ],
         "trans1": [
             "ast",
@@ -155859,24 +155877,6 @@
         ]
     },
     {
-        "word": "rượu cần",
-        "trans0": [
-            "Rượu cần  is very popular among the highlanders",
-            "especially in Tây Nguyên. But its flavour differs from one area to another. In Sơn La",
-            "for example",
-            "where the Thái ethnic groups are to be found",
-            "people drink rượu cần in their own special way. It is drunk on several occasions: Tết festival",
-            "wedding parties",
-            "ground-breaking ceremonies or other festive days. The jar containing the wine is put at a fixed place",
-            "so that as many people as possible can drink it. Pipes are put into the jar prior to drinking and a basinful of pure water is placed beside it. A buffalo horn to be used to pour water into the jar is put on a tray nearby. Not everyone is allowed to drink rượu cần. And the order of precedence is strictly observed. But there is no racial discrimination: the Kinh  may drink with the Thái and Mường. The ingredients of rượu cần include wild leaves",
-            "cassava roots and rice which are washed and put above an oven for 20 days or sọ Then all the mixed ingredients are wrapped with large banana leaves and left in a corner of the house for a couple of days. As soon as the process of fermentation is completed",
-            "the whole brew is put into a jar. When all the guests are seated",
-            "the host pours water from the basin into the jar. At first",
-            "he invites the guests to taste the wine from a jar whose wine is more bitter than others. This is meant to remind everyone of the bitterness of life. Then a second jar is brought in which the wine tastes more pungent. In the third jar",
-            "the wine is sweetest symbolizing that \" your heart can be happy after so much grief\". Drinking rượu cần is accompanied by Múa Xoè  and drum beating. All this is to help the host and guests forget all their daily worries and enjoy to the utmost the pleasure of tasting rượu cần."
-        ]
-    },
-    {
         "word": "rượu chát",
         "type": [
             "noun"
@@ -156381,7 +156381,7 @@
     {
         "word": "sạch trụi",
         "type": [
-            "adjective"
+            "adj"
         ],
         "trans1": [
             "lean finished"
@@ -157250,7 +157250,7 @@
     {
         "word": "sáng rực",
         "type": [
-            "adjective"
+            "adj"
         ],
         "trans1": [
             "right",
@@ -157553,7 +157553,10 @@
     {
         "word": "sao cho",
         "type": [
-            "trạng ngữ so that, in such a way as to"
+            "adv" 
+        ],
+        "trans1":[
+            "so that"
         ]
     },
     {
@@ -157836,10 +157839,10 @@
     {
         "word": "sát",
         "type": [
-            "verb, adj"
+            "adj"
         ],
         "trans1": [
-            "e very close to",
+            "very close to",
             "adjoining"
         ]
     },
@@ -157931,7 +157934,7 @@
     {
         "word": "sát sạt",
         "type": [
-            "adjective"
+            "adj"
         ],
         "trans1": [
             "ery close"
@@ -157995,17 +157998,11 @@
     },
     {
         "word": "sau",
-        "type": [
-            "conj"
-        ],
         "trans1": [
             "behind",
-            "at the back of",
             "rear",
-            "ereinafter",
             "below",
-            "following",
-            "as follows"
+            "following"
         ]
     },
     {
@@ -158017,9 +158014,8 @@
     {
         "word": "sau cùng",
         "trans0": [
-            "After everyone",
-            "after everything",
-            "last"
+            "last",
+            "after everything"
         ]
     },
     {
@@ -158058,9 +158054,15 @@
     {
         "word": "sau này",
         "type": [
-            "adj, adv"
+            "adj", 
+            "adv"
         ],
         "trans1": [
+            "afterwards",
+            "later",
+            "in the future"
+        ],
+        "trans2": [
             "afterwards",
             "later",
             "in the future"
@@ -158070,15 +158072,6 @@
         "word": "sau nữa",
         "trans0": [
             "Moreover"
-        ]
-    },
-    {
-        "word": "sau rốt",
-        "type": [
-            "adj, adv"
-        ],
-        "trans1": [
-            "last"
         ]
     },
     {
@@ -158109,7 +158102,7 @@
             "number"
         ],
         "trans1": [
-            "ixty"
+            "sixty"
         ]
     },
     {
@@ -158395,9 +158388,14 @@
     {
         "word": "sặc sụa",
         "type": [
-            "adj, adv"
+            "adj",
+            "adv"
         ],
         "trans1": [
+            "reeking of",
+            "reekingly"
+        ],
+        "trans2": [
             "reeking of",
             "reekingly"
         ]
@@ -159700,27 +159698,12 @@
         ]
     },
     {
-        "word": "sém",
-        "type": [
-            "verb, adj",
-            "noun"
-        ],
-        "trans1": [
-            "inged",
-            "burned",
-            "burnt"
-        ],
-        "trans2": [
-            "layer of burned rice"
-        ]
-    },
-    {
         "word": "sen",
         "type": [
             "noun"
         ],
         "trans1": [
-            "lotus hoa sen"
+            "lotus"
         ]
     },
     {
@@ -159761,7 +159744,7 @@
         "word": "sét",
         "type": [
             "noun",
-            "erb & noun",
+            "verb & noun",
             "adj"
         ],
         "trans1": [
@@ -159788,18 +159771,6 @@
         ],
         "trans2": [
             "bamboo lattice basket"
-        ]
-    },
-    {
-        "word": "sề sệ",
-        "trans0": [
-            "xem sệ"
-        ]
-    },
-    {
-        "word": "sể",
-        "trans0": [
-            "xem chổi sể"
         ]
     },
     {
@@ -159838,7 +159809,7 @@
     {
         "word": "sền sệt",
         "trans0": [
-            "xem sệt"
+            "very thick"
         ]
     },
     {
@@ -159972,7 +159943,7 @@
     {
         "word": "sì sì",
         "trans0": [
-            "xem sì"
+            "very"
         ]
     },
     {
@@ -160330,7 +160301,7 @@
     {
         "word": "siêu sinh",
         "trans0": [
-            "Siêu sinh tịnh độ to depart from this life and reach serene and pure land"
+            "to depart from life"
         ]
     },
     {
@@ -160398,10 +160369,10 @@
         "word": "sinh",
         "type": [
             "verb",
-            "noun, adj"
+            "noun"
         ],
         "trans1": [
-            "give birth to to produce",
+            "give birth",
             "yield to turn"
         ],
         "trans2": [
@@ -161279,7 +161250,7 @@
         "word": "sói",
         "type": [
             "noun",
-            "adjective"
+            "adj"
         ],
         "trans1": [
             "olf"
@@ -161297,7 +161268,7 @@
     {
         "word": "sóm sém",
         "type": [
-            "adjective"
+            "adj"
         ],
         "trans1": [
             "ld and toothless"
@@ -161476,12 +161447,6 @@
         "word": "song kiếm",
         "trans0": [
             "Couple of swords"
-        ]
-    },
-    {
-        "word": "song le",
-        "type": [
-            "trạng ngữ however, but, still"
         ]
     },
     {
@@ -161675,7 +161640,7 @@
     {
         "word": "sóng sượt",
         "type": [
-            "adverb"
+            "adv"
         ],
         "trans1": [
             "t full length"
@@ -162854,12 +162819,6 @@
         ]
     },
     {
-        "word": "sơ qua",
-        "type": [
-            "adj, adv rough, roughly"
-        ]
-    },
-    {
         "word": "sơ sài",
         "trans0": [
             "Cursory",
@@ -163225,7 +163184,10 @@
     {
         "word": "sớm",
         "type": [
-            "adv, tính từ early"
+            "adj" 
+        ],
+        "trans1":[
+            "early"
         ]
     },
     {
@@ -163269,8 +163231,8 @@
     },
     {
         "word": "sớm tối",
-        "type": [
-            "trạng ngữ all day long"
+        "trans0": [
+            "all day long"
         ]
     },
     {
@@ -163579,7 +163541,7 @@
     {
         "word": "stick",
         "type": [
-            "adjective"
+            "adj"
         ],
         "trans1": [
             "lear",
@@ -163698,7 +163660,7 @@
     {
         "word": "súc tích",
         "type": [
-            "adjective"
+            "adj"
         ],
         "trans1": [
             "oncise",
@@ -163852,7 +163814,7 @@
     {
         "word": "sún",
         "type": [
-            "adjective"
+            "adj"
         ],
         "trans1": [
             "răng) decayed"
@@ -164624,7 +164586,7 @@
     {
         "word": "suýt nữa",
         "type": [
-            "adverb"
+            "adv"
         ],
         "trans1": [
             "lmost",
@@ -164634,7 +164596,7 @@
     {
         "word": "suýt soát",
         "type": [
-            "adjective"
+            "adj"
         ],
         "trans1": [
             "lmost",
@@ -165210,7 +165172,14 @@
     {
         "word": "sừng sững",
         "type": [
-            "adj, adv statly, high and majestic"
+            "adj",
+            "adv"
+        ],
+        "trans1":[
+            "majestic"
+        ],
+        "trans2":[
+            "majestic"
         ]
     },
     {
@@ -166382,8 +166351,15 @@
     },
     {
         "word": "tại",
-        "type": [
-            "trạng ngữ. at, in. due to, owing to, because"
+        "type":[
+            "adv"
+        ],
+        "trans1": [
+            "at", 
+            "in", 
+            "due to", 
+            "owing to", 
+            "because"
         ]
     },
     {
@@ -166415,9 +166391,13 @@
     {
         "word": "tại gia",
         "type": [
-            "adj, adv"
+            "adj", 
+            "adv"
         ],
         "trans1": [
+            "at home"
+        ],
+        "trans2": [
             "at home"
         ]
     },
@@ -166433,7 +166413,7 @@
     {
         "word": "tại sao",
         "type": [
-            "adv, noun"
+            "adv"
         ],
         "trans1": [
             "why",
@@ -166573,7 +166553,11 @@
     {
         "word": "tám",
         "type": [
-            "number eight, eightth"
+            "number"
+        ],
+        "trans1": [
+            "eight", 
+            "eightth"
         ]
     },
     {
@@ -166582,7 +166566,7 @@
             "number"
         ],
         "trans1": [
-            "ighty"
+            "eighty"
         ]
     },
     {
@@ -166692,18 +166676,6 @@
         "trans1": [
             "disintegrate",
             "separate"
-        ]
-    },
-    {
-        "word": "tan tác",
-        "type": [
-            "adv. in utter disarray"
-        ]
-    },
-    {
-        "word": "tan tành",
-        "type": [
-            "adv. into pieces"
         ]
     },
     {
@@ -167245,15 +167217,14 @@
     {
         "word": "tao",
         "type": [
-            "verb",
+            "pronoun",
             "noun"
         ],
         "trans1": [
-            "I",
-            "mẹ"
+            "I"
         ],
         "trans2": [
-            "time. rope strand"
+            "me"
         ]
     },
     {
@@ -167360,12 +167331,6 @@
         "trans1": [
             "overbold",
             "daring"
-        ]
-    },
-    {
-        "word": "táo tác",
-        "type": [
-            "adv. stampedingly"
         ]
     },
     {
@@ -168457,7 +168422,7 @@
     {
         "word": "tân kỳ",
         "type": [
-            "adjective"
+            "adj"
         ],
         "trans1": [
             "ew fangled"
@@ -169041,10 +169006,10 @@
     {
         "word": "tây bắc",
         "type": [
-            "noun, adj"
+            "noun"
         ],
         "trans1": [
-            "orth-west"
+            "north-west"
         ]
     },
     {
@@ -170476,7 +170441,7 @@
     {
         "word": "thanh kiếm",
         "type": [
-            "adjective"
+            "adj"
         ],
         "trans1": [
             "orally pure"
@@ -172195,7 +172160,7 @@
     {
         "word": "thần kỳ",
         "type": [
-            "adjective"
+            "adj"
         ],
         "trans1": [
             "arvellous",
@@ -173345,7 +173310,7 @@
     {
         "word": "thể theo",
         "type": [
-            "trạng ngữ compliance with"
+            "compliance with"
         ]
     },
     {
@@ -175199,7 +175164,7 @@
     {
         "word": "thỏa đáng",
         "type": [
-            "adjective"
+            "adj"
         ],
         "trans1": [
             "atisfactory"
@@ -175235,7 +175200,7 @@
     {
         "word": "thỏa lòng",
         "type": [
-            "adjective"
+            "adj"
         ],
         "trans1": [
             "atisfied"
@@ -175273,7 +175238,7 @@
     {
         "word": "thỏa thích",
         "type": [
-            "adverb"
+            "adv"
         ],
         "trans1": [
             "atisfactorily"
@@ -176733,7 +176698,7 @@
     {
         "word": "thuần lý",
         "type": [
-            "adjective"
+            "adj"
         ],
         "trans1": [
             "urely rational"
@@ -176752,7 +176717,7 @@
     {
         "word": "thuần phát",
         "type": [
-            "adjective"
+            "adj"
         ],
         "trans1": [
             "imple-minded"
@@ -177199,7 +177164,7 @@
         "word": "thuở",
         "type": [
             "noun",
-            "adv phó từ"
+            "adv"
         ],
         "trans1": [
             "time",
@@ -177253,7 +177218,7 @@
     {
         "word": "thủy chung",
         "type": [
-            "adjective"
+            "adj"
         ],
         "trans1": [
             "onstant",
@@ -178510,7 +178475,7 @@
         "word": "tía",
         "type": [
             "noun",
-            "noun, adj"
+            "adj"
         ],
         "trans1": [
             "dad",
@@ -178704,7 +178669,7 @@
         "word": "tiên",
         "type": [
             "noun",
-            "adj, adv"
+            "adj"
         ],
         "trans1": [
             "fairy"
@@ -179996,7 +179961,16 @@
     {
         "word": "tình cờ",
         "type": [
-            "adj, adv by chance, accidental"
+            "adj",
+            "adv"
+        ],
+        "trans1": [
+            "by chance",
+            "accidental"
+        ],
+        "trans2": [
+            "by chance",
+            "accidental"
         ]
     },
     {
@@ -180234,7 +180208,7 @@
             "noun"
         ],
         "trans1": [
-            "adjective"
+            "adj"
         ]
     },
     {
@@ -180297,7 +180271,7 @@
     {
         "word": "to patch",
         "type": [
-            "adjective"
+            "adj"
         ],
         "trans1": [
             "aving patches",
@@ -180971,15 +180945,14 @@
         "word": "tôi",
         "type": [
             "noun",
-            "verb"
+            "pronoun"
         ],
         "trans1": [
-            "subject servant self"
+            "myself"
         ],
         "trans2": [
             "I",
-            "me to temper",
-            "slake"
+            "me"
         ]
     },
     {
@@ -181176,24 +181149,6 @@
         "trans1": [
             "guideline",
             "principle"
-        ]
-    },
-    {
-        "word": "tôn giáo",
-        "type": [
-            "noun"
-        ],
-        "trans1": [
-            "Religion",
-            "esides the traditional religious practices in Vietnam",
-            "there are other major religions such as Buddhism",
-            "Catholicism",
-            "Protestantism",
-            "Islam",
-            "the Cao Dai sect and the Hoa Hao sect... At present",
-            "over 70 percent of the population of Vietnam are either Buddhist or strongly influenced by Buddhist practices. About 10 percent of the population are considered to be catholic. The number of Protestants is estimated at a mere 400",
-            "000 Most of the Islamic followers in Vietnam are those of the Cham ethnic minority group living in the central part of the central coast. The number of Islamic followers in Vietnam totals about 50",
-            "000. The Cao Dai Church in Tay Ninh is the central point nearby which are located settlements of Cao Dai followers in South Vietnam. The number of followers of this sect is estimated at 2 million. More than 1 million Vietnamese are followers of the Hoa Hao sect. Most of them live in the western part of South Vietnam"
         ]
     },
     {
@@ -181611,11 +181566,15 @@
     {
         "word": "tớ",
         "type": [
-            "noun"
+            "noun",
+            "pronoun"
         ],
         "trans1": [
             "servant",
-            "",
+            "me"
+        ],
+        "trans2": [
+            "I",
             "me"
         ]
     },
@@ -181760,7 +181719,16 @@
     {
         "word": "trác táng",
         "type": [
-            "adj, adv licentious, loose"
+            "adj", 
+            "adv"
+        ],
+        "trans1": [
+            "pre-licentious",
+            "loose"
+        ],
+        "trans2": [
+            "pre-licentious",
+            "loose"
         ]
     },
     {
@@ -181820,10 +181788,9 @@
         "word": "trai",
         "type": [
             "noun",
-            "noun, adj"
+            "adj"
         ],
         "trans1": [
-            "oyster young man",
             "boy"
         ],
         "trans2": [
@@ -182359,7 +182326,10 @@
     {
         "word": "trăm",
         "type": [
-            "number hundred"
+            "number"
+        ],
+        "trans1":[
+            "hundred"
         ]
     },
     {
@@ -182875,7 +182845,7 @@
     {
         "word": "tréo ngoe",
         "type": [
-            "adjective"
+            "adj"
         ],
         "trans1": [
             "pposite",
@@ -182896,7 +182866,7 @@
     {
         "word": "trẹo hàm",
         "type": [
-            "adjective"
+            "adj"
         ],
         "trans1": [
             "aw Ọ breaking"
@@ -182958,8 +182928,8 @@
             "above"
         ],
         "trans2": [
-            "upper",
             "on",
+            "upper",
             "over"
         ],
         "trans3": [
@@ -183025,7 +182995,7 @@
     {
         "word": "tri kỷ",
         "type": [
-            "adjective"
+            "adj"
         ],
         "trans1": [
             "eart-to-heart",
@@ -183044,7 +183014,7 @@
     {
         "word": "trì dộn",
         "type": [
-            "adjective"
+            "adj"
         ],
         "trans1": [
             "ull-witted",
@@ -183327,7 +183297,10 @@
     {
         "word": "triệu",
         "type": [
-            "number million to recall"
+            "number"
+        ],
+        "trans1":[
+            "million"
         ]
     },
     {
@@ -183447,7 +183420,7 @@
     {
         "word": "trìu mến",
         "type": [
-            "adv, adj"
+            "adj"
         ],
         "trans1": [
             "tender",
@@ -183628,7 +183601,8 @@
         "type": [
             "adj",
             "conj",
-            "adj"
+            "adj",
+            "adv"
         ],
         "trans1": [
             "clear",
@@ -183641,6 +183615,9 @@
         "trans3": [
             "internal",
             "interior"
+        ],
+        "trans4": [
+            "in"
         ]
     },
     {
@@ -184011,7 +183988,7 @@
     {
         "word": "trống không",
         "type": [
-            "adjective"
+            "adj"
         ],
         "trans1": [
             "mpty",
@@ -184943,7 +184920,10 @@
     {
         "word": "trừ phi",
         "type": [
-            "trạng ngữ unless"
+            "adv"
+        ],
+        "trans1":[
+            "unless"
         ]
     },
     {
@@ -185205,7 +185185,11 @@
     {
         "word": "trước tiên",
         "type": [
-            "adv, tính từ first, firstly"
+            "adj"
+        ],
+        "trans1":[
+            "first",
+            "firstly"
         ]
     },
     {
@@ -185678,7 +185662,7 @@
     {
         "word": "tuấn tú",
         "type": [
-            "adjective"
+            "adj"
         ],
         "trans1": [
             "andsome and intelligent"
@@ -187096,12 +187080,6 @@
         ]
     },
     {
-        "word": "tựa hồ",
-        "type": [
-            "trạng ngữ as if, as though"
-        ]
-    },
-    {
         "word": "tức cười",
         "type": [
             "adj"
@@ -187935,7 +187913,7 @@
     {
         "word": "uốn quanh",
         "type": [
-            "adjective"
+            "adj"
         ],
         "trans1": [
             "eandering",
@@ -189075,13 +189053,12 @@
             "enter"
         ],
         "trans2": [
-            "n",
-            "into",
-            "on"
+            "on",
+            "into"
         ],
         "trans3": [
             "in",
-            "a touchdown"
+            "touchdown"
         ]
     },
     {
@@ -189697,12 +189674,6 @@
         ]
     },
     {
-        "word": "vầy",
-        "type": [
-            "adj, adv so, this way, like this"
-        ]
-    },
-    {
         "word": "vẫy",
         "type": [
             "verb"
@@ -190110,7 +190081,13 @@
     {
         "word": "vì",
         "type": [
-            "trạng ngữ because, for, as; for the sake of"
+            "adv"
+        ],
+        "trans1":[
+            "because", 
+            "for", 
+            "as", 
+            "for the sake of"
         ]
     },
     {
@@ -190198,12 +190175,6 @@
         ]
     },
     {
-        "word": "ví thử",
-        "type": [
-            "trạng ngữ if, supposing"
-        ]
-    },
-    {
         "word": "vị",
         "type": [
             "noun"
@@ -190231,7 +190202,7 @@
     {
         "word": "vị kỷ",
         "type": [
-            "adjective"
+            "adj"
         ],
         "trans1": [
             "goist",
@@ -190998,7 +190969,8 @@
     {
         "word": "vô lý",
         "type": [
-            "adjective"
+            "adj",
+            ""
         ],
         "trans1": [
             "bsurd",
@@ -193261,7 +193233,7 @@
     {
         "word": "xiềng",
         "type": [
-            "noun & verb"
+            "noun"
         ],
         "trans1": [
             "chain"
@@ -194222,7 +194194,7 @@
     {
         "word": "xuôi vần",
         "type": [
-            "adjective"
+            "adj"
         ],
         "trans1": [
             "hymed"
@@ -194306,7 +194278,7 @@
     {
         "word": "xúyt",
         "type": [
-            "adjective"
+            "adj"
         ],
         "trans1": [
             "early"
@@ -194325,7 +194297,7 @@
     {
         "word": "xúyt xoát",
         "type": [
-            "adjective"
+            "adj"
         ],
         "trans1": [
             "early",
@@ -194587,9 +194559,9 @@
         ]
     },
     {
-        "word": "y",
+        "word": "anh",
         "type": [
-            "noun"
+            "pronoun"
         ],
         "trans1": [
             "he",
@@ -194938,12 +194910,6 @@
         ],
         "trans1": [
             "visit"
-        ]
-    },
-    {
-        "word": "yết thị",
-        "type": [
-            "verb, noun post, playcard"
         ]
     },
     {
