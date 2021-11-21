@@ -1,12 +1,6 @@
 [
     {
-        "singular pronouns":[
-            "I", 
-            "mine", 
-            "my", 
-            "myself", 
-            "your", 
-            "yourself", 
+        "singular pronouns":[ 
             "he", 
             "him", 
             "his",
@@ -19,6 +13,12 @@
         ],
 
         "plural pronouns":[
+            "I", 
+            "mine", 
+            "my", 
+            "myself", 
+            "your", 
+            "yourself",
             "you",
             "we",
             "us", 
