@@ -853,6 +853,7 @@ chủ lực
 chủ mưu
 chủ nghĩa
 chủ nhiệm
+chủ nhật
 chủ quan
 chủ quyền
 chủ tịch
@@ -932,6 +933,7 @@ còi
 cõi
 cõi đời
 cói
+con
 con bạc
 con cờ
 con điếm
@@ -8831,7 +8833,6 @@ tộc
 tộc biểu
 tộc đoàn
 tộc trưởng
-tôi
 tôi con
 tôi đòi
 tôi mọi

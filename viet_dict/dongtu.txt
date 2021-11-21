@@ -26,7 +26,6 @@ an dưỡng
 an nghỉ
 an phận
 an táng
-an toàn
 an ủi
 an vị
 án
@@ -883,8 +882,7 @@ cốt
 cột
 cơi
 cởi
-cởi mở
-cơm
+cởi đã
 cợt
 cù
 củ
@@ -1101,7 +1099,6 @@ dứt tình
 đả đảo
 đả kích
 đả thương
-đã
 đá
 đá bóng
 đạc
@@ -1128,7 +1125,6 @@ dứt tình
 đan
 đàn
 đàn áp
-đang
 đáng
 đành lòng
 đánh
@@ -1216,6 +1212,7 @@ dứt tình
 đền tội
 đến
 đi
+đi ăn
 đi bộ
 đi chơi
 đi dạo
