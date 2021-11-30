@@ -10,6 +10,6 @@ def vn_token_vnc(text):
         final.append(word)
     return final
 
-sentence = "ngày sau"
+sentence = "cô ấy rất đẹp"
 abc = vn_token_uts(sentence) 
 print(abc)

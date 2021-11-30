@@ -1,0 +1,16 @@
+không - mươi - linh - chục - 0
+nhất - một - mốt - 1
+nhì - hai - hăm - 2
+tam - ba - 3
+tứ - bốn - tư - 4
+ngũ - năm - nhăm - 5
+lục - sáu - 6
+thất - bảy - 7 
+bát - tám - 8
+cửu - chín - 9
+mười - 10
+trăm - 00 - 100
+ngàn -nghìn - 000
+vạn - 00000
+triệu - 000000
+tỷ - 000000000
