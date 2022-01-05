@@ -3875,6 +3875,10 @@
         ]
     },
     {
+        "word": "ba",
+        "type": [
+            "noun"
+        ],
         "trans0": [
             "Papa",
             "daddy",
@@ -4498,7 +4502,6 @@
             "dominator"
         ]
     },
-    {},
     {
         "word": "bá hộ",
         "type": [
@@ -6013,7 +6016,7 @@
             "Initial"
         ]
     },
-    {},
+    
     {
         "word": "ban đêm",
         "trans0": [
@@ -6135,7 +6138,7 @@
             "grant"
         ]
     },
-    {},
+    
     {
         "word": "ban thứ",
         "trans0": [
@@ -6188,8 +6191,8 @@
             "exchange views on"
         ]
     },
-    {},
-    {},
+    
+    
     {
         "word": "bàn cãi",
         "type": [
@@ -6313,7 +6316,7 @@
             "hand over"
         ]
     },
-    {},
+    
     {
         "word": "bàn giấy",
         "type": [
@@ -6557,8 +6560,8 @@
             "indigenous"
         ]
     },
-    {},
-    {},
+    
+    
     {
         "word": "bản đồ",
         "type": [
@@ -6902,7 +6905,7 @@
             "native country"
         ]
     },
-    {},
+    
     {
         "word": "bán",
         "type": [
@@ -7042,7 +7045,7 @@
             "Radius"
         ]
     },
-    {},
+    
     {
         "word": "bán lẻ",
         "trans0": [
@@ -7616,7 +7619,7 @@
             "spread"
         ]
     },
-    {},
+    
     {
         "word": "bành voi",
         "type": [
@@ -8001,7 +8004,7 @@
             "fine allusion"
         ]
     },
-    {},
+    
     {
         "word": "bánh xe",
         "trans0": [
@@ -8095,7 +8098,7 @@
             "shield"
         ]
     },
-    {},
+    
     {
         "word": "bao chiếm",
         "type": [
@@ -8115,7 +8118,7 @@
             "magnanimous"
         ]
     },
-    {},
+    
     {
         "word": "bao giấy",
         "type": [
@@ -8152,7 +8155,7 @@
             "imply"
         ]
     },
-    {},
+    
     {
         "word": "bao la",
         "type": [
@@ -8202,7 +8205,7 @@
             "envelop"
         ]
     },
-    {},
+    
     {
         "word": "bao quanh",
         "type": [
@@ -8222,13 +8225,7 @@
             "embrace"
         ]
     },
-    {
-        "trans0": [
-            "o see the whole of",
-            "grasp the whole"
-        ]
-    },
-    {},
+    
     {
         "word": "bao tải",
         "type": [
@@ -8294,7 +8291,7 @@
             "lay a siege to"
         ]
     },
-    {},
+    
     {
         "word": "bào",
         "type": [
@@ -8930,7 +8927,7 @@
             "Signal"
         ]
     },
-    {},
+    
     {
         "word": "báo hỷ",
         "type": [
@@ -9165,7 +9162,7 @@
             "Wickedly cruel"
         ]
     },
-    {},
+    
     {
         "word": "bạo phát",
         "trans0": [
@@ -9742,7 +9739,7 @@
             "fill the gap"
         ]
     },
-    {},
+    
     {
         "word": "bắc cực",
         "type": [
@@ -10177,7 +10174,7 @@
             "base oneself on"
         ]
     },
-    {},
+    
     {
         "word": "bằng địa",
         "trans0": [
@@ -10817,7 +10814,7 @@
             "inborn"
         ]
     },
-    {},
+    
     {
         "word": "",
         "trans0": [
@@ -11087,7 +11084,7 @@
             "worried"
         ]
     },
-    {},
+    
     {
         "word": "bần tiện",
         "type": [
@@ -11155,7 +11152,7 @@
             "pothering"
         ]
     },
-    {},
+    
     {
         "word": "bận",
         "type": [
@@ -11384,7 +11381,7 @@
             "Immutable"
         ]
     },
-    {},
+    
     {
         "word": "bất bình",
         "type": [
@@ -11682,12 +11679,7 @@
         "word": "bất kể",
         "trans0": [
             "Irrespective of",
-            "regardless of"
-        ]
-    },
-    {
-        "trans0": [
-            "egardless of everything"
+            "regardless of everything"
         ]
     },
     {
@@ -11871,7 +11863,7 @@
             "At most"
         ]
     },
-    {},
+    
     {
         "word": "bất tài",
         "trans0": [
@@ -12388,7 +12380,7 @@
             "that much"
         ]
     },
-    {},
+    
     {
         "word": "bậy",
         "type": [
@@ -13249,7 +13241,7 @@
             "outward"
         ]
     },
-    {},
+    
     {
         "word": "bề sâu",
         "trans0": [
@@ -13336,7 +13328,7 @@
             "whirligig"
         ]
     },
-    {},
+    
     {
         "word": "bể hoạn",
         "trans0": [
@@ -13765,7 +13757,7 @@
             "emerge"
         ]
     },
-    {},
+    
     {
         "word": "bềnh bệch",
         "trans0": [
@@ -14142,24 +14134,15 @@
     {
         "word": "bì",
         "type": [
-            "noun"
-        ],
-        "trans1": [
-            "Skin"
-        ]
-    },
-    {
-        "trans0": [
-            "acking",
-            "bag",
-            "are"
-        ],
-        "type": [
+            "noun",
             "verb"
         ],
+        "trans0": [
+            "Skin",
+            "bag"
+        ],
         "trans1": [
-            "+Matchable",
-            "comparable"
+            "compare"
         ]
     },
     {
@@ -15792,7 +15775,7 @@
             "Manifestation"
         ]
     },
-    {},
+    
     {
         "word": "biểu kiến",
         "type": [
@@ -16937,17 +16920,12 @@
     {
         "word": "bò",
         "type": [
-            "noun"
+            "noun",
+            "verb"
         ],
-        "trans1": [
-            "Ox",
+        "trans0": [
             "cow",
             "beef"
-        ]
-    },
-    {
-        "type": [
-            "verb"
         ],
         "trans1": [
             "creep",
@@ -16959,7 +16937,7 @@
         "type": [
             "noun"
         ],
-        "trans1": [
+        "trans0": [
             "Scorpion"
         ]
     },
@@ -17018,7 +16996,7 @@
             "place"
         ]
     },
-    {},
+    
     {
         "word": "bỏ bà",
         "trans0": [
@@ -18280,7 +18258,7 @@
             "như bóp miệng"
         ]
     },
-    {},
+    
     {
         "word": "bóp mũi",
         "type": [
@@ -18724,8 +18702,8 @@
             "supplement"
         ]
     },
-    {},
-    {},
+    
+    
     {
         "word": "bổ túc",
         "type": [
@@ -19409,7 +19387,7 @@
             "Ingenuous"
         ]
     },
-    {},
+    
     {
         "word": "bộc tuệch bộc toạc",
         "trans0": [
@@ -19488,17 +19466,13 @@
     {
         "word": "bồi",
         "type": [
-            "noun"
+            "noun",
+            "verb"
         ],
-        "trans1": [
-            "Waiter",
+        "trans0": [
+            "waiter",
             "man-servant",
             "houseboy"
-        ]
-    },
-    {
-        "type": [
-            "verb"
         ],
         "trans1": [
             "strengthen",
@@ -19574,8 +19548,8 @@
             "be fretty"
         ]
     },
-    {},
-    {},
+    
+    
     {
         "word": "bồi tế",
         "trans0": [
@@ -20920,13 +20894,6 @@
         ]
     },
     {
-        "trans0": [
-            "o assist in settling down",
-            "help settle down",
-            "o reciprocate"
-        ]
-    },
-    {
         "word": "bù đầu",
         "type": [
             "khẩu ngữ"
@@ -21565,7 +21532,7 @@
             "moment"
         ]
     },
-    {},
+    
     {
         "word": "buổi chiều",
         "trans0": [
@@ -21684,12 +21651,6 @@
             "Sad",
             "melancholy",
             "grieved"
-        ]
-    },
-    {
-        "trans0": [
-            "eeling an itch",
-            "icklish"
         ]
     },
     {
@@ -22483,13 +22444,6 @@
         ]
     },
     {
-        "trans0": [
-            "he first step is difficult to take",
-            "ituation",
-            "juncture"
-        ]
-    },
-    {
         "word": "bước đầu",
         "trans0": [
             "Initial"
@@ -23061,7 +23015,7 @@
             "Tomato"
         ]
     },
-    {},
+    
     {
         "word": "cà chua",
         "type": [
@@ -23971,21 +23925,17 @@
     {
         "word": "cách",
         "type": [
-            "noun"
+            "noun",
+            "verb"
         ],
-        "trans1": [
+        "trans0": [
             "Way",
             "manner",
             "fashion",
             "ase"
-        ]
-    },
-    {
-        "type": [
-            "verb"
         ],
         "trans1": [
-            "be separated"
+            "separate"
         ]
     },
     {
@@ -23999,7 +23949,7 @@
             "o be very different from"
         ]
     },
-    {},
+    
     {
         "word": "cách bức",
         "type": [
@@ -24054,7 +24004,7 @@
             "Stylize"
         ]
     },
-    {},
+    
     {
         "word": "cách điệu hoá",
         "type": [
@@ -24064,7 +24014,7 @@
             "stylize"
         ]
     },
-    {},
+    
     {
         "word": "cách ly",
         "type": [
@@ -24252,7 +24202,7 @@
             "rule"
         ]
     },
-    {},
+    
     {
         "word": "cai tuần",
         "trans0": [
@@ -24911,7 +24861,7 @@
             "express one's gratitude"
         ]
     },
-    {},
+    
     {
         "word": "cảm thán",
         "trans0": [
@@ -24971,7 +24921,7 @@
             "Feeling"
         ]
     },
-    {},
+    
     {
         "word": "cảm tử",
         "type": [
@@ -25134,7 +25084,7 @@
             "Courage"
         ]
     },
-    {},
+    
     {
         "word": "can gián",
         "type": [
@@ -25303,7 +25253,7 @@
             "Obstacle"
         ]
     },
-    {},
+    
     {
         "word": "cán",
         "type": [
@@ -25814,7 +25764,7 @@
             "open the eyes of"
         ]
     },
-    {},
+    
     {
         "word": "cảnh trí",
         "type": [
@@ -26152,24 +26102,6 @@
         "trans1": [
             "o fly",
             "run away"
-        ]
-    },
-    {
-        "word": "Cao Bằng",
-        "trans0": [
-            "Cao Bằng is a mountainous province in North-Vietnam. Its provincial capital is under the same name. It shares a border of 314km with China to the north and the east",
-            "and is inhabited by many ethnic groups. Some 60km from the provincial capital is Pắc Bó",
-            "a small hamlet in Truong Ha commune",
-            "Hà Quảng district",
-            "close to the Vietnamese-Chinese border. In the local dialect",
-            "Pắc Bó means watershed",
-            "where springs of clear water run. From Thái Nguyên City",
-            "provincial capital of Bắc Thái province",
-            "you drive along Highway 3 to the towns of Bắc Cạn and Phu Thong. After another 16km",
-            "you will arrive at Ba Bể Lake which is about 225km from Hà Nội. The lake actually consists of three lakes called Pe Lam",
-            "Pe Lu and Pe Leng",
-            "so it is called Ba Bể . Ba Bể Lake is surrounded by limestone mountains and thick forests",
-            "home to many species of rare birds and animals"
         ]
     },
     {
@@ -27025,7 +26957,7 @@
             "rule as a feud"
         ]
     },
-    {},
+    
     {
         "word": "cát đằng",
         "trans0": [
@@ -27274,7 +27206,7 @@
             "Bitter"
         ]
     },
-    {},
+    
     {
         "word": "cay độc",
         "trans0": [
@@ -27450,7 +27382,7 @@
             "resent and abhor"
         ]
     },
-    {},
+    
     {
         "word": "căm giận",
         "trans0": [
@@ -27766,7 +27698,7 @@
             "dwarfed"
         ]
     },
-    {},
+    
     {
         "word": "cằn nhằn",
         "type": [
@@ -28261,7 +28193,7 @@
             "truncate"
         ]
     },
-    {},
+    
     {
         "word": "cấc",
         "trans0": [
@@ -30620,7 +30552,7 @@
             "painstakingly entreat  for a favour."
         ]
     },
-    {},
+    
     {
         "word": "cậy thế",
         "type": [
@@ -30642,7 +30574,7 @@
             "curse"
         ]
     },
-    {},
+    
     {
         "word": "cha anh",
         "trans0": [
@@ -32673,12 +32605,6 @@
         ]
     },
     {
-        "trans0": [
-            "o join",
-            "clasp"
-        ]
-    },
-    {
         "word": "chắp nhặt",
         "type": [
             "verb"
@@ -32726,7 +32652,7 @@
             "stint oneself in"
         ]
     },
-    {},
+    
     {
         "word": "chắt chiu",
         "type": [
@@ -33167,7 +33093,7 @@
             "Centipede-foot-shaped"
         ]
     },
-    {},
+    
     {
         "word": "chân tài",
         "type": [
@@ -33777,7 +33703,7 @@
             "Material"
         ]
     },
-    {},
+    
     {
         "word": "chất lỏng",
         "trans0": [
@@ -33880,11 +33806,6 @@
         ]
     },
     {
-        "trans0": [
-            "etty"
-        ]
-    },
-    {
         "word": "chật vật",
         "type": [
             "adj"
@@ -33896,12 +33817,7 @@
             "requiring a lot of exertion"
         ]
     },
-    {
-        "trans0": [
-            "nói về đời sống) Hard"
-        ]
-    },
-    {},
+    
     {
         "word": "châu",
         "type": [
@@ -33971,7 +33887,7 @@
             "o cool one's heels"
         ]
     },
-    {},
+    
     {
         "word": "chầu rìa",
         "trans0": [
@@ -34107,7 +34023,7 @@
             "smother up"
         ]
     },
-    {},
+    
     {
         "word": "che giấu",
         "trans0": [
@@ -34552,11 +34468,6 @@
         ]
     },
     {
-        "trans0": [
-            "xem vụng"
-        ]
-    },
-    {
         "word": "chê bai",
         "type": [
             "verb"
@@ -34566,7 +34477,7 @@
             "disparage"
         ]
     },
-    {},
+    
     {
         "word": "chê chán",
         "trans0": [
@@ -34654,7 +34565,7 @@
             "ridicule"
         ]
     },
-    {},
+    
     {
         "word": "chế ngự",
         "type": [
@@ -34783,7 +34694,7 @@
             "of different levels"
         ]
     },
-    {},
+    
     {
         "word": "chênh vênh",
         "type": [
@@ -34838,7 +34749,7 @@
             "die"
         ]
     },
-    {},
+    
     {
         "word": "chết cha",
         "trans0": [
@@ -34896,7 +34807,7 @@
             "be captivated"
         ]
     },
-    {},
+    
     {
         "word": "chết tươi",
         "type": [
@@ -34930,7 +34841,7 @@
             "disburse"
         ]
     },
-    {},
+    
     {
         "word": "chi bằng",
         "trans0": [
@@ -35035,7 +34946,7 @@
             "govern"
         ]
     },
-    {},
+    
     {
         "word": "chi tiết",
         "type": [
@@ -35280,7 +35191,7 @@
             "point"
         ]
     },
-    {},
+    
     {
         "word": "chỉ vẽ",
         "trans0": [
@@ -35347,7 +35258,7 @@
             "Very just"
         ]
     },
-    {},
+    
     {
         "word": "chí hiếu",
         "trans0": [
@@ -35451,7 +35362,7 @@
             "death"
         ]
     },
-    {},
+    
     {
         "word": "chí yếu",
         "trans0": [
@@ -35719,7 +35630,7 @@
             "be experienced in observing"
         ]
     },
-    {},
+    
     {
         "word": "chiêm ngưỡng",
         "type": [
@@ -35730,7 +35641,7 @@
             "o pay homage to the memory of"
         ]
     },
-    {},
+    
     {
         "word": "chiêm tinh học",
         "type": [
@@ -35909,7 +35820,7 @@
             "movement"
         ]
     },
-    {},
+    
     {
         "word": "chiến đấu",
         "type": [
@@ -36015,7 +35926,7 @@
             "ighter"
         ]
     },
-    {},
+    
     {
         "word": "chiến sự",
         "type": [
@@ -36150,9 +36061,7 @@
             "o extract",
             "o deduct",
             "stop",
-            "nói về đan",
-            "khâu) To nip in",
-            "o layer"
+            " To nip in"
         ]
     },
     {
@@ -36518,7 +36427,7 @@
             "ninth"
         ]
     },
-    {},
+    
     {
         "word": "chín cây",
         "trans0": [
@@ -37296,7 +37205,7 @@
             "Swanky and shining"
         ]
     },
-    {},
+    
     {
         "word": "choáng óc",
         "trans0": [
@@ -38179,7 +38088,7 @@
             "o resist"
         ]
     },
-    {},
+    
     {
         "word": "chống trả",
         "type": [
@@ -39453,7 +39362,7 @@
             "grant"
         ]
     },
-    {},
+    
     {
         "word": "chúc",
         "type": [
@@ -39779,7 +39688,7 @@
             "on the whole"
         ]
     },
-    {},
+    
     {
         "word": "chung thẩm",
         "trans0": [
@@ -40716,7 +40625,7 @@
             "transliterate"
         ]
     },
-    {},
+    
     {
         "word": "chuyển vần",
         "trans0": [
@@ -42014,7 +41923,7 @@
             "only that"
         ]
     },
-    {},
+    
     {
         "word": "có hậu",
         "trans0": [
@@ -57125,7 +57034,7 @@
             "be fully satisfied"
         ]
     },
-    {},
+    
     {
         "word": "đặc",
         "type": [
@@ -57242,7 +57151,7 @@
             "Special issue"
         ]
     },
-    {},
+    
     {
         "word": "đặc sản",
         "trans0": [
@@ -58654,7 +58563,7 @@
             "put in  a tender"
         ]
     },
-    {},
+    
     {
         "word": "đấu thủ",
         "trans0": [
@@ -58662,7 +58571,7 @@
             "player"
         ]
     },
-    {},
+    
     {
         "word": "đấu tố",
         "trans0": [
@@ -62398,7 +62307,7 @@
             "Make a positive affirmation o uncertainn grounds"
         ]
     },
-    {},
+    
     {
         "word": "đoán mò",
         "trans0": [
@@ -63397,7 +63306,7 @@
             "concentrate upon"
         ]
     },
-    {},
+    
     {
         "word": "đổ đồng",
         "trans0": [
@@ -65228,7 +65137,7 @@
             "Be speechless from shortage of argument"
         ]
     },
-    {},
+    
     {
         "word": "đớ họng",
         "trans0": [
@@ -65476,7 +65385,7 @@
             "Pure"
         ]
     },
-    {},
+    
     {
         "word": "đơn thuốc",
         "trans0": [
@@ -66626,7 +66535,7 @@
             "Lounge at treet corners"
         ]
     },
-    {},
+    
     {
         "word": "đứng giá",
         "trans0": [
@@ -67022,7 +66931,7 @@
             "having a stately brearing"
         ]
     },
-    {},
+    
     {
         "word": "đường huyền",
         "trans0": [
@@ -69047,7 +68956,7 @@
             "Make an unusual effort"
         ]
     },
-    {},
+    
     {
         "word": "gắng sức",
         "type": [
@@ -70085,7 +69994,7 @@
             "Shudder with horror"
         ]
     },
-    {},
+    
     {
         "word": "ghê tởm",
         "type": [
@@ -77428,7 +77337,7 @@
             "severe"
         ]
     },
-    {},
+    
     {
         "word": "hà khẩu",
         "trans0": [
@@ -79815,7 +79724,7 @@
             "emply"
         ]
     },
-    {},
+    
     {
         "word": "hão huyền",
         "trans0": [
@@ -82436,7 +82345,7 @@
     {
         "word": "hiền nhân",
         "trans0": [
-            "Saage",
+            "Sage",
             "wise person"
         ]
     },
@@ -82465,9 +82374,7 @@
         "word": "hiền thê",
         "trans0": [
             "Virtuous wife.",
-            "từ cũ",
-            "nghĩa cũ",
-            "văn chương) my good wife!"
+            "my good wife!"
         ]
     },
     {
@@ -85904,7 +85811,7 @@
             "learn"
         ]
     },
-    {},
+    
     {
         "word": "học khóa",
         "trans0": [
@@ -88568,7 +88475,7 @@
             "Moreover"
         ]
     },
-    {},
+    
     {
         "word": "hơn thế nữa",
         "trans0": [
@@ -93081,7 +92988,7 @@
             "Different"
         ]
     },
-    {},
+    
     {
         "word": "khác chi",
         "trans0": [
@@ -95673,7 +95580,7 @@
             "Angle"
         ]
     },
-    {},
+    
     {
         "word": "khích",
         "trans0": [
@@ -97115,11 +97022,6 @@
         ]
     },
     {
-        "trans0": [
-            "he outsider smiled a disc reet satisfied smile while the insider criesd her heart out"
-        ]
-    },
-    {
         "word": "khoe",
         "type": [
             "verb"
@@ -97359,13 +97261,6 @@
         "word": "khổ chủ",
         "trans0": [
             "Victim"
-        ]
-    },
-    {
-        "trans0": [
-            "thông tục) Host",
-            "person who throws a party",
-            "person who stands treat"
         ]
     },
     {
@@ -99732,13 +99627,6 @@
         ],
         "trans2": [
             "test"
-        ]
-    },
-    {
-        "trans0": [
-            "o go on an inspection tour about the implementation of the new agricultural policy",
-            "ontrol",
-            "check"
         ]
     },
     {
@@ -113949,7 +113837,7 @@
             "ift of the gad"
         ]
     },
-    {},
+    
     {
         "word": "mồm miệng",
         "trans0": [
@@ -117133,7 +117021,7 @@
             "Begin to sprout"
         ]
     },
-    {},
+    
     {
         "word": "nảy nở",
         "trans0": [
@@ -121473,7 +121361,7 @@
             "worry about"
         ]
     },
-    {},
+    
     {
         "word": "nghĩ ra",
         "trans0": [
@@ -121904,26 +121792,17 @@
             "Imperturbable"
         ]
     },
-    {
-        "trans0": [
-            "ithout any trouble",
-            "without any fuss",
-            "without much ado"
-        ]
-    },
-    {},
+    
     {
         "word": "nghiệm",
         "trans0": [
-            "Consider",
-            "e efficacious",
-            "toán học) Root"
+            "Consider"
         ]
     },
     {
         "word": "nghiệm số",
         "trans0": [
-            "như nghiệm"
+            "Consider"
         ]
     },
     {
@@ -122211,11 +122090,6 @@
         "word": "ngó ngoáy",
         "trans0": [
             "Scrape round"
-        ]
-    },
-    {
-        "trans0": [
-            "on't scrape round in that hole in the wall and enlarge it"
         ]
     },
     {
@@ -123274,7 +123148,7 @@
             "n case"
         ]
     },
-    {},
+    
     {
         "word": "ngộ biến",
         "trans0": [
@@ -137081,7 +136955,7 @@
     {
         "word": "ong vẽ",
         "trans0": [
-            "cũng như ong vò vẽ"
+            "wasp"
         ]
     },
     {
@@ -139142,11 +139016,6 @@
         "word": "phai mờ",
         "trans0": [
             "Fade"
-        ]
-    },
-    {
-        "trans0": [
-            "ll memory of his childhood faded from his mind"
         ]
     },
     {
@@ -141313,7 +141182,7 @@
             "a certain degree"
         ]
     },
-    {},
+    
     {
         "word": "phần nhiều",
         "trans0": [
@@ -156649,7 +156518,7 @@
             "Boatman"
         ]
     },
-    {},
+    
     {
         "word": "sái",
         "type": [
@@ -169778,14 +169647,6 @@
         "trans1": [
             "waterfall",
             "falls"
-        ]
-    },
-    {
-        "type": [
-            "verb"
-        ],
-        "trans1": [
-            "die to pretext"
         ]
     },
     {
