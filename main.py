@@ -10,7 +10,7 @@ def vn_token_vnc(text):
         final.append(word)
     return final
 
-sentence = "Tôi đang làm một vài kiểm tra"
+sentence = "mọi người đều thích điều này"
 
 abc = vn_token_uts(sentence)
 print(abc)

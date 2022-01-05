@@ -9,7 +9,12 @@
             "her", 
             "herself", 
             "it", 
-            "itself"
+            "itself",
+            "something",
+            "someone",
+            "nobody",
+            "nothing",
+            "anybody"
         ],
 
         "plural pronouns":[
@@ -33,7 +38,10 @@
             "their", 
             "theirs", 
             "themself", 
-            "themselves"
+            "themselves",
+            "all",
+            "everyone",
+            "everything"
         ]       
         
     }

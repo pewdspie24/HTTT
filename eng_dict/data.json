@@ -31247,12 +31247,22 @@
     {
         "word": "chàng",
         "type": [
-            "noun"
+            "noun",
+            "pronoun-obj",
+            "pronoun"
         ],
         "trans1": [
-            "Large-bladed chisel",
+            "he",
             "oung gentleman",
-            "rue love"
+            "true love"
+        ],
+        "trans2": [
+            "him"
+        ],
+        "trans3": [
+            "he",
+            "his",
+            "him"
         ]
     },
     {
@@ -42044,7 +42054,7 @@
     {
         "word": "có lẽ",
         "trans0": [
-            "Perhaps",
+            "probably",
             "maybe"
         ]
     },
@@ -42953,7 +42963,9 @@
         "word": "cô",
         "type": [
             "noun",
-            "verb"
+            "verb",
+            "pronoun",
+            "pronoun-obj"
         ],
         "trans1": [
             "she",
@@ -42963,15 +42975,40 @@
         ],
         "trans2": [
             "boil down"
+        ],
+        "trans3":[
+            "her",
+            "she"
+        ],
+        "trans4":[
+            "her"
         ]
     },
     {
         "word": "cô ấy",
         "type": [
-            "noun"
+            "noun",
+            "pronoun",
+            "pronoun-obj"
         ],
         "trans1": [
             "she"
+        ],
+        "trans2":[
+            "her",
+            "she"
+        ],
+        "trans3":[
+            "her"
+        ]
+    },
+    {
+        "word": "cô gái",
+        "type": [
+            "noun"
+        ],
+        "trans1": [
+            "girl"
         ]
     },
     {
@@ -80229,18 +80266,39 @@
     {
         "word": "hắn",
         "type": [
-            "pronoun"
+            "pronoun",
+            "noun",
+            "pronoun-obj"
         ],
         "trans1": [
             "he",
+            "his",
+            "him"
+        ],
+        "trans2":[
+            "he"
+        ],
+        "trans3":[
             "him"
         ]
     },
     {
         "word": "hắn ta",
-        "trans0": [
-            "that bloke",
-            "that fellow"
+        "type": [
+            "pronoun",
+            "noun",
+            "pronoun-obj"
+        ],
+        "trans1": [
+            "he",
+            "his",
+            "him"
+        ],
+        "trans2":[
+            "he"
+        ],
+        "trans3":[
+            "him"
         ]
     },
     {
@@ -104031,6 +104089,9 @@
         "word": "lắm",
         "type": [
             "adv"
+        ],
+        "trans1":[
+            
         ]
     },
     {
@@ -116561,10 +116622,19 @@
     {
         "word": "nàng",
         "type": [
-            "noun"
+            "noun",
+            "pronoun",
+            "pronoun-obj"
         ],
         "trans1": [
             "she",
+            "her"
+        ],
+        "trans2": [
+            "she",
+            "her"
+        ],
+        "trans3":[
             "her"
         ]
     },
@@ -124926,9 +124996,8 @@
         ]
     },
     {
-        "word": "người người",
+        "word": "mọi người",
         "trans0": [
-            "All and sundry",
             "everyone",
             "one and all"
         ]
@@ -132471,16 +132540,26 @@
         "word": "nó",
         "type": [
             "pronoun",
-            "noun"
+            "noun",
+            "pronoun-obj"
         ],
         "trans1": [
             "it",
             "he",
+            "she",
+            "her",
             "him"
         ],
         "trans2": [
             "it",
             "he",
+            "she",
+            "her",
+            "him"
+        ],
+        "trans3": [
+            "it",
+            "her",
             "him"
         ]
     },
@@ -188876,7 +188955,7 @@
         ]
     },
     {
-        "word": "vạn sự",
+        "word": "mọi thứ",
         "type": [
             "noun"
         ],
@@ -194561,10 +194640,28 @@
     {
         "word": "anh",
         "type": [
-            "pronoun"
+            "pronoun",
+            "pronoun-obj"
         ],
         "trans1": [
             "he",
+            "him"
+        ],
+        "trans2": [
+            "him"
+        ]
+    },
+    {
+        "word": "anh ấy",
+        "type": [
+            "pronoun",
+            "pronoun-obj"
+        ],
+        "trans1": [
+            "he",
+            "him"
+        ],
+        "trans2": [
             "him"
         ]
     },
