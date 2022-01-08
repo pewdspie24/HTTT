@@ -1,5 +1,7 @@
 import re
 import json
+from googletrans import Translator
+translator = Translator()
 
 with open("dict.txt", encoding="utf8", mode="r") as f:
     a = f.readlines()
@@ -59,3 +61,39 @@ for i in a:
 with open('data.json', 'w', encoding='utf-8') as f:
     json.dump(dictList, f, ensure_ascii=False, indent=4)            
 
+with open("eng_dict\data.json", 'r', encoding="utf8") as j:
+        vi_eng_dict = json.loads(j.read())
+with open("eng_dict\pronouns.json", 'r', encoding="utf8") as j:
+    pronoun = json.loads(j.read())
+with open("eng_dict\singular_noun.json", 'r', encoding="utf8") as j:
+    singular_noun = json.loads(j.read())
+with open("eng_dict\\verb.json", 'r', encoding="utf8") as j:
+    verbs = json.loads(j.read())
+with open("eng_dict\words_dictionary.json", 'r', encoding="utf8") as j:
+    eng_dict = json.loads(j.read())
+
+# Vietnamese loading
+for idx, i in enumerate(vi_eng_dict):
+    # try:
+    for postfix in range (0,7):
+        if "trans"+str(postfix) in i:
+            if i["trans"+str(postfix)][0][0:3] == "như" or i["trans"+str(postfix)][0][0:3] == "Như":
+                # print(i["trans"+str(postfix)][0][4:])
+                print(i["trans"+str(postfix)][0][4:])
+                i["trans"+str(postfix)][0] = translator.translate(i["trans"+str(postfix)][0][4:], src="vi", dest="en").text
+                print(i["trans"+str(postfix)][0])
+            # TODO: trans1 without trans0 and "Như"
+    # except Exception as e:
+    #     print(vi_eng_dict[idx])
+    #     print(idx)
+with open("testing.json", "w", encoding='utf-8') as outfile:
+    json.dump(vi_eng_dict, outfile, ensure_ascii=False, indent=4)   
+
+aux_list = []
+for i in vi_eng_dict:
+    if 'type' in i:
+        for a in i['type']:
+            if a not in aux_list:
+                aux_list.append(a)
+for i in aux_list:
+    print(i)

@@ -182,7 +182,7 @@
     {
         "word": "ạ",
         "type": [
-            "excl"
+            "từ đệm"
         ]
     },
     {
@@ -459,7 +459,7 @@
     {
         "word": "ai đời",
         "type": [
-            "speak"
+            "khẩu ngữ"
         ],
         "trans1": [
             "Fancy"
@@ -468,7 +468,7 @@
     {
         "word": "ai nấy",
         "type": [
-            "speak"
+            "khẩu ngữ"
         ],
         "trans1": [
             "each and all",
@@ -1878,7 +1878,7 @@
     {
         "word": "áy náy",
         "type": [
-            "adj"
+            "verb & adj"
         ],
         "trans1": [
             "uneasy"
@@ -3866,12 +3866,12 @@
     },
     {
         "word": "ấy",
-        "type": [
-            "excl"
-        ],
         "trans0": [
             "That",
             "Like"
+        ],
+        "type": [
+            "từ đệm"
         ]
     },
     {
@@ -5286,7 +5286,7 @@
     {
         "word": "bài bây",
         "type": [
-            "speaking"
+            "khẩu ngữ"
         ],
         "trans1": [
             "Brazen"
@@ -8362,7 +8362,7 @@
         "word": "bảo",
         "type": [
             "verb",
-            "speak"
+            "khẩu ngữ"
         ],
         "trans1": [
             "tell",
@@ -11736,7 +11736,7 @@
     {
         "word": "bất mãn",
         "type": [
-            "verb"
+            "verb & adj"
         ],
         "trans1": [
             "dissatisfied with",
@@ -12556,7 +12556,7 @@
     {
         "word": "bẻ lái",
         "type": [
-            "speak"
+            "khẩu ngữ"
         ],
         "trans1": [
             "steer"
@@ -12782,7 +12782,7 @@
         "word": "beng",
         "type": [
             "verb",
-            "speak"
+            "khẩu ngữ"
         ],
         "trans1": [
             "cut",
@@ -12904,7 +12904,7 @@
         "word": "béo",
         "type": [
             "adj",
-            "speak"
+            "khẩu ngữ"
         ],
         "trans1": [
             "Fat",
@@ -12923,7 +12923,7 @@
     {
         "word": "béo bở",
         "type": [
-            "speak"
+            "khẩu ngữ"
         ],
         "trans1": [
             "Profitable",
@@ -13050,7 +13050,7 @@
     {
         "word": "bét nhè",
         "type": [
-            "speak"
+            "khẩu ngữ"
         ],
         "trans1": [
             "Having a drawl from overdrinking"
@@ -13493,7 +13493,8 @@
             "next to",
             "nearby",
             "adjacent",
-            "side by side"
+            "ide by side",
+            "o"
         ]
     },
     {
@@ -15419,7 +15420,7 @@
     {
         "word": "biết tay",
         "type": [
-            "speak"
+            "khẩu ngữ"
         ],
         "trans1": [
             "know what stuff one is made of"
@@ -17231,7 +17232,7 @@
     {
         "word": "bỏ rẻ",
         "type": [
-            "speak"
+            "khẩu ngữ"
         ],
         "trans1": [
             "At the lowest"
@@ -17316,7 +17317,7 @@
     {
         "word": "bỏ túi",
         "type": [
-            "speak"
+            "khẩu ngữ"
         ],
         "trans1": [
             "Pocket",
@@ -17348,7 +17349,7 @@
     {
         "word": "bỏ xác",
         "type": [
-            "speak"
+            "khẩu ngữ"
         ],
         "trans1": [
             "pop off"
@@ -17357,7 +17358,7 @@
     {
         "word": "bỏ xó",
         "type": [
-            "speak"
+            "khẩu ngữ"
         ],
         "trans1": [
             "lay up",
@@ -18221,7 +18222,7 @@
     {
         "word": "bóp mũi",
         "type": [
-            "speak"
+            "khẩu ngữ"
         ],
         "trans1": [
             "bully easily"
@@ -18621,7 +18622,7 @@
     {
         "word": "bổ nháo",
         "type": [
-            "speak"
+            "khẩu ngữ"
         ],
         "trans1": [
             "run helter-skelter in various directions"
@@ -18704,7 +18705,8 @@
             "papa",
             "dad",
             "ute",
-            "anvas"
+            "anvas",
+            "khẩu ngữ) Love"
         ]
     },
     {
@@ -18858,7 +18860,7 @@
     {
         "word": "bố vờ",
         "type": [
-            "speak"
+            "khẩu ngữ"
         ],
         "trans1": [
             "pretend",
@@ -18939,7 +18941,8 @@
     {
         "word": "bộ điệu",
         "trans0": [
-            "Bearing carriage"
+            "Bearing carriage",
+            "khẩu ngữ) To put on airs"
         ]
     },
     {
@@ -19213,10 +19216,10 @@
             "get hot in the head"
         ],
         "type": [
-            "speak"
+            "khẩu ngữ"
         ],
         "trans1": [
-            "to flash out"
+            "o flash out"
         ]
     },
     {
@@ -19495,10 +19498,11 @@
     {
         "word": "bồi hồi",
         "type": [
-            "adj"
+            "verb & adj"
         ],
         "trans1": [
-            "fretty"
+            "ret",
+            "be fretty"
         ]
     },
     {
@@ -19974,10 +19978,10 @@
     {
         "word": "bông phèng",
         "type": [
-            "speak"
+            "khẩu ngữ"
         ],
         "trans1": [
-            "just casually and nonsensically"
+            "jest casually and nonsensically"
         ]
     },
     {
@@ -20761,11 +20765,12 @@
     {
         "word": "bớt miệng",
         "type": [
-            "speak"
+            "khẩu ngữ"
         ],
         "trans1": [
+            "stint oneself in food",
             "cut down food expenditure",
-            "to cut down the cackle"
+            "o cut down the cackle"
         ]
     },
     {
@@ -20788,11 +20793,11 @@
     {
         "word": "bớt xớ",
         "type": [
-            "speak"
+            "khẩu ngữ"
         ],
         "trans1": [
             "take a rake-off",
-            "to bargain",
+            "o bargain",
             "haggle"
         ]
     },
@@ -20846,7 +20851,7 @@
     {
         "word": "bù đầu",
         "type": [
-            "speak"
+            "khẩu ngữ"
         ],
         "trans1": [
             "Over head and ears"
@@ -21403,11 +21408,11 @@
     {
         "word": "bụng dạ",
         "type": [
-            "speak"
+            "khẩu ngữ"
         ],
         "trans1": [
             "Digestive system",
-            "heart",
+            "eart",
             "one's heart of hearts"
         ]
     },
@@ -21985,10 +21990,10 @@
     {
         "word": "bứ bự",
         "type": [
-            "speak"
+            "khẩu ngữ"
         ],
         "trans1": [
-            "to be completely cloyed with food"
+            "ăn no bứ bự To be completely cloyed with food"
         ]
     },
     {
@@ -22072,7 +22077,7 @@
     {
         "word": "bừa phứa",
         "type": [
-            "speak"
+            "khẩu ngữ"
         ],
         "trans1": [
             "Rash",
@@ -22097,10 +22102,15 @@
     {
         "word": "bữa",
         "type": [
-            "noun"
+            "noun",
+            "khẩu ngữ"
         ],
         "trans1": [
             "Meal"
+        ],
+        "trans2": [
+            "",
+            "ay"
         ]
     },
     {
@@ -22128,7 +22138,8 @@
             "adj"
         ],
         "trans1": [
-            "Wild mangosteen"
+            "Wild mangosteen",
+            "khẩu ngữ) pigheaded"
         ],
         "trans2": [
             "Pigheaded"
@@ -22163,6 +22174,7 @@
         "trans0": [
             "force",
             "coerce",
+            "khẩu ngữ) Pressing",
             "urgent"
         ]
     },
@@ -22270,11 +22282,13 @@
     {
         "word": "bực",
         "type": [
-            "adj",
+            "verb & adj",
             "noun"
         ],
         "trans1": [
-            "angry"
+            "o fret",
+            "fretty",
+            "fretful"
         ],
         "trans2": [
             "temper"
@@ -22283,16 +22297,17 @@
     {
         "word": "bực bội",
         "type": [
-            "adj"
+            "verb & adj"
         ],
         "trans1": [
-            "angry"
+            "o fret",
+            "fretty"
         ]
     },
     {
         "word": "bực dọc",
         "type": [
-            "adj"
+            "verb & adj"
         ],
         "trans1": [
             "testy"
@@ -22508,7 +22523,7 @@
         "word": "bương",
         "type": [
             "noun",
-            "adj"
+            "verb & adj"
         ],
         "trans1": [
             "Big-size bamboo",
@@ -23278,7 +23293,7 @@
     {
         "word": "cả thảy",
         "type": [
-            "speak"
+            "khẩu ngữ"
         ],
         "trans1": [
             "In all",
@@ -24486,9 +24501,12 @@
         ],
         "trans1": [
             "Mother",
+            "khẩu ngữ)",
+            "other",
             "mother of vinegar"
         ],
         "trans2": [
+            "",
             "First",
             "the first thing"
         ]
@@ -25126,7 +25144,7 @@
     {
         "word": "càn quấy",
         "type": [
-            "speak"
+            "khẩu ngữ"
         ],
         "trans1": [
             "Unruly",
@@ -27057,7 +27075,7 @@
     {
         "word": "cáu kỉnh",
         "type": [
-            "adj"
+            "verb & adj"
         ],
         "trans1": [
             "surly",
@@ -27073,7 +27091,7 @@
     {
         "word": "cáu tiết",
         "type": [
-            "speak"
+            "khẩu ngữ"
         ],
         "trans1": [
             "have one's blood up"
@@ -27363,7 +27381,7 @@
     {
         "word": "cắm cổ",
         "type": [
-            "speak"
+            "khẩu ngữ"
         ],
         "trans1": [
             "Completely wrapped up in what one is doing",
@@ -27373,7 +27391,7 @@
     {
         "word": "cắm cúi",
         "type": [
-            "adj"
+            "verb & adj"
         ],
         "trans1": [
             "fully stretched",
@@ -27431,7 +27449,7 @@
     {
         "word": "cặm cụi",
         "type": [
-            "adj"
+            "verb & adj"
         ],
         "trans1": [
             "completely wrapped up in"
@@ -27884,7 +27902,7 @@
     {
         "word": "cặp díp",
         "type": [
-            "speak"
+            "khẩu ngữ"
         ],
         "trans1": [
             "Joined together",
@@ -28203,7 +28221,7 @@
         "word": "cầm càng",
         "trans0": [
             "Pull a cart",
-            "Conduct"
+            "khẩu ngữ) Conduct"
         ]
     },
     {
@@ -30413,7 +30431,8 @@
         ],
         "trans1": [
             "Civet",
-            "viverrine"
+            "viverrine",
+            "khẩu ngữ) Chow"
         ]
     },
     {
@@ -32242,13 +32261,21 @@
         "word": "chăng",
         "type": [
             "verb",
-            "adv"
+            "adv",
+            "từ đệm"
         ],
         "trans1": [
             "Hồi giáo"
         ],
         "trans2": [
             "Not any"
+        ],
+        "trans3": [
+            "Surely",
+            "isn't it",
+            "is it",
+            "doesn't it",
+            "does it."
         ]
     },
     {
@@ -38116,13 +38143,13 @@
         "word": "chớ",
         "type": [
             "adv",
-            "excl"
+            "từ đệm"
         ],
         "trans1": [
             "Do not"
         ],
         "trans2": [
-            "certainly"
+            "ertainly"
         ]
     },
     {
@@ -38400,7 +38427,7 @@
     {
         "word": "chớt nhả",
         "type": [
-            "adj"
+            "verb & adj"
         ],
         "trans1": [
             "be) half-serious and half-joking"
@@ -38629,10 +38656,11 @@
     {
         "word": "chủ động",
         "type": [
-            "adj"
+            "verb & adj"
         ],
         "trans1": [
-            "proactive"
+            "o take the initiative",
+            "have the sense of initiative"
         ]
     },
     {
@@ -39009,7 +39037,8 @@
             "noun"
         ],
         "trans1": [
-            "Note"
+            "Note",
+            "khẩu ngữ)Thief"
         ]
     },
     {
@@ -46465,7 +46494,8 @@
         "trans0": [
             "Overflow",
             "overbrim",
-            "boil over"
+            "boil over",
+            "khẩu ngữ) như dà"
         ]
     },
     {
@@ -102623,7 +102653,8 @@
         "word": "làm gì",
         "trans0": [
             "What to dọ",
-            "what for",
+            "hat for",
+            "o",
             "nothing"
         ]
     },
@@ -122730,7 +122761,8 @@
     {
         "word": "ngọng",
         "trans0": [
-            "Lisp",
+            "Lisp.",
+            "khẩu ngữ) Be stupid",
             "be dull"
         ]
     },
@@ -124298,7 +124330,7 @@
     {
         "word": " ngứa tiết",
         "trans0": [
-            "Have one's blood up",
+            "khẩu ngữ) Have one's blood up",
             "be fiare by one's anger to action",
             "flare up"
         ]
@@ -130020,8 +130052,10 @@
     {
         "word": "nhót",
         "trans0": [
-            "Oleaster",
+            "Oleaster .",
+            "thông tục) Pinch",
             "steal",
+            "khẩu ngữ) Steal away",
             "give the slip",
             "slink out"
         ]
@@ -135823,7 +135857,8 @@
             "noun"
         ],
         "trans1": [
-            "flirt"
+            "flirt",
+            ""
         ],
         "trans2": [
             "aunt",
@@ -141324,7 +141359,8 @@
     {
         "word": "phe phẩy",
         "trans0": [
-            "Flap gently"
+            "Flap gently",
+            "khẩu ngữ) như phe"
         ]
     },
     {
@@ -153391,7 +153427,7 @@
     {
         "word": "rô",
         "type": [
-            "noun"
+            "oun"
         ],
         "trans1": [
             "diamond"
@@ -156593,6 +156629,7 @@
             "cross"
         ],
         "trans2": [
+            "n",
             "into",
             "on to",
             "aside"
@@ -159404,19 +159441,20 @@
         "word": "sét",
         "type": [
             "noun",
-            "verb",
-            "verb"
+            "verb & noun",
+            "adj"
         ],
         "trans1": [
-            "lightning",
             "thunderbolt",
+            "bolt agril",
             "clay"
         ],
         "trans2": [
             "rust"
         ],
         "trans3": [
-            "rusty"
+            "strike measured",
+            "struck"
         ]
     },
     {
@@ -172960,7 +172998,7 @@
     },
     {
         "word": "thể theo",
-        "trans0": [
+        "type": [
             "compliance with"
         ]
     },
@@ -173735,7 +173773,7 @@
         "word": "thiên",
         "type": [
             "noun",
-            "number",
+            "số từ",
             "verb",
             "adj"
         ],
