@@ -3867,11 +3867,15 @@
     {
         "word": "ấy",
         "type": [
-            "excl"
+            "excl",
+            "det"
         ],
         "trans0": [
-            "That",
-            "Like"
+            "like",
+            "that"
+        ],
+        "trans1":[
+            "that"
         ]
     },
     {
@@ -44523,7 +44527,7 @@
             "ame"
         ],
         "trans3": [
-            "nd",
+            "and",
             "together with"
         ]
     },
@@ -58549,7 +58553,8 @@
         "type": [
             "adv",
             "pronoun",
-            "noun"
+            "noun",
+            "det"
         ],
         "trans1": [
             "here"
@@ -58559,6 +58564,9 @@
         ],
         "trans3": [
             "here",
+            "this"
+        ],
+        "trans4":[
             "this"
         ]
     },
@@ -58784,10 +58792,14 @@
     {
         "word": "đấy",
         "type": [
-            "adj"
+            "adj",
+            "det"
         ],
         "trans1": [
             "there"
+        ],
+        "trans2":[
+            "this"
         ]
     },
     {
@@ -61895,6 +61907,9 @@
     },
     {
         "word": "đó",
+        "type": [
+            "det"
+        ],
         "trans0": [
             "that",
             "there",
@@ -79703,13 +79718,12 @@
     {
         "word": "hay",
         "type": [
-            "adv",
+            "conj",
             "adj",
             "verb"
         ],
         "trans1": [
-            "or",
-            "whether"
+            "or"
         ],
         "trans2": [
             "well",
@@ -85409,7 +85423,7 @@
     {
         "word": "hoặc",
         "type": [
-            "adv"
+            "conj"
         ],
         "trans1": [
             "or",
@@ -98971,7 +98985,8 @@
         "type": [
             "adv",
             "noun",
-            "pronoun"
+            "pronoun",
+            "det"
         ],
         "trans1": [
             "over",
@@ -98982,12 +98997,15 @@
         ],
         "trans3": [
             "that"
+        ],
+        "trans4":[
+            "that"
         ]
     },
     {
         "word": "kia kìa",
         "trans0": [
-            "over"
+            "over there"
         ]
     },
     {
@@ -101446,20 +101464,16 @@
         "type": [
             "noun",
             "verb",
-            "conj",
-            "verb"
+            "conj"
         ],
         "trans1": [
             "fine silk"
         ],
         "trans2": [
-            "bẹ"
+            "be"
         ],
         "trans3": [
             "then"
-        ],
-        "trans4": [
-            "press iron"
         ]
     },
     {
@@ -116733,6 +116747,9 @@
     },
     {
         "word": "này",
+        "type":[
+            "det"
+        ],
         "trans0": [
             "this"
         ]
@@ -132158,10 +132175,13 @@
     },
     {
         "word": "nọ",
+        "type": [
+            "det"
+        ],
         "trans0": [
             "That",
             "the other",
-            "here",
+            "there",
             "over there"
         ]
     },
@@ -134152,10 +134172,7 @@
         "word": "nồng",
         "trans0": [
             "Hot",
-            "trong",
-            "arm",
-            "ardent",
-            "fervid."
+            "strong"
         ]
     },
     {
@@ -136579,7 +136596,7 @@
         "type": [
             "adv"
         ],
-        "trans": [
+        "trans0": [
             "splashingly"
         ]
     },
@@ -183260,8 +183277,8 @@
             "pure"
         ],
         "trans2": [
-            "ithin",
-            "in for"
+            "within",
+            "in"
         ],
         "trans3": [
             "internal",
@@ -191032,7 +191049,7 @@
             "reach"
         ],
         "trans2": [
-            "ith",
+            "with",
             "to",
             "towards from"
         ]
