@@ -1661,7 +1661,6 @@ cầm trịch
 cầm tù
 cầm đầu
 cầm đồ
-cần
 cầu
 cầu an
 cầu chúc
@@ -5134,7 +5133,6 @@ nhịn
 nhịn nhục
 nhịn đói
 nhọc
-nhỏ
 nhỏ giọt
 nhỏ to
 nhỏm
@@ -7894,7 +7892,6 @@ tô
 tô hồng
 tô vẽ
 tô điểm
-tôi
 tôi luyện
 tôm
 tôn
