@@ -23,7 +23,7 @@ def get_token(text):
 def get_word_type_vi(tokens):
     word = []
     type_word = []
-    thi = "HTD"
+    thi = "present"
     main_verb = 0 
     for token in tokens:
         try:
@@ -51,18 +51,18 @@ def get_word_type_vi(tokens):
                 # print("từ vô định")
                 # print(word)
     num = len(word)
-    print(word)
+    print("Word o day:"+str(num))
     print(type_word)
     for idx in range(num) :
         word_type = type_word[idx].split(" ")
         print(idx, ". ",word[idx], ": ", type_word[idx])
         # decide thi 
         if word[idx] in ["đã", "mới", "vừa", "từng"]:
-            thi = "QK"
+            thi = "past"
         elif word[idx] == "đang":
-            thi = "HTTD"
+            thi = "continous"
         elif word[idx] in ["sẽ", "sắp", "sắp sửa"]:
-            thi = "TLD"  
+            thi = "future"  
         # convert danhtuchiloai to noun
         if type_word[idx] == "danhtuchiloai": 
             if idx+1 == num or (idx+1 < num and type_word[idx+1] not in ["danhtuchung", "danhtuchiloai"]):
@@ -80,7 +80,7 @@ def get_word_type_vi(tokens):
                 # decide noun
                 elif type_word[idx-1] == "danhtuchiloai":
                     type_word[idx] = "danhtuchung"
-                # decide verd
+                # decide verb
                 elif type_word[idx-1] == "photuthoigian":
                     type_word[idx] = "dongtu"
                 
@@ -102,12 +102,13 @@ def get_word_type_vi(tokens):
                     type_word[idx] = "danhtuchung"
                 elif type_word[idx+1] == "chitu":
                     type_word[idx] = "danhtuchung"
-                # decide verd
+                # decide verb
                 elif type_word[idx+1] == "photuchimucdo":
                     if "dongtu" in type_word[idx]:
                         type_word[idx] = "dongtu"
                     elif "tinhtu" in type_word[idx]:
                         type_word[idx] = "tinhtu"
+        # print(word_type)
                         
     for idx, type_word1 in enumerate(type_word) :
         if type_word1 in ["danhtuchiloai", "photuthoigian"]:
@@ -164,7 +165,7 @@ if __name__ == "__main__":
     
     while True:
         # 1. Input text
-        sequence = input()
+        sequence = "tôi và Ngọc đang chạy"
         # 2. Tokenize text
         tokens = vn_token_uts(sequence)
         # 3.1 Get VI type
@@ -182,6 +183,7 @@ if __name__ == "__main__":
         print(type_word)
         print(thi)
         print(main_verb)
+        break
 
 # sentence = "tôi, Ngọc và bạn cùng ăn, chơi với nhau"
 # abc = vn_token_uts(sentence)

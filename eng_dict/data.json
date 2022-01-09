@@ -1108,17 +1108,6 @@
         ]
     },
     {
-        "word": "anh",
-        "type": [
-            "noun"
-        ],
-        "trans1": [
-            "he",
-            "brother",
-            "cousin german"
-        ]
-    },
-    {
         "word": "anh ách",
         "trans0": [
             "ái nữ"
@@ -17995,10 +17984,10 @@
             "noun"
         ],
         "trans1": [
-            "hadow",
+            "shadow",
             "shade",
             "reflection",
-            "all",
+            "fall",
             "football",
             "ried fish bladder",
             "himney",
@@ -18008,6 +17997,15 @@
             "himy",
             "polished",
             "glossy"
+        ]
+    },
+    {
+        "word": "bóng đá",
+        "type": [
+            "noun"
+        ],
+        "trans1": [
+            "football"
         ]
     },
     {
@@ -22236,7 +22234,7 @@
             "noun"
         ],
         "trans1": [
-            "icture",
+            "picture",
             "painting"
         ]
     },
@@ -48562,9 +48560,11 @@
     },
     {
         "word": "dẫy dụa",
+        "type": [
+            "vern"
+        ],
         "trans0": [
-            "anh ta hết sức dẫy dụa",
-            "e fought like a wild cat"
+            "bestir"
         ]
     },
     {
@@ -67055,9 +67055,11 @@
             "pronoun"
         ],
         "trans1": [
-            "you"
+            "younger brother",
+            "younger sister"
         ],
         "trans2": [
+            "you",
             "I",
             "me"
         ]
@@ -151790,7 +151792,7 @@
             "adj"
         ],
         "trans1": [
-            "shady bóng râm shade"
+            "shady"
         ]
     },
     {
@@ -194210,14 +194212,15 @@
         "word": "anh",
         "type": [
             "pronoun",
-            "pronoun-obj"
+            "noun"
         ],
         "trans1": [
-            "he",
-            "him"
+            "I",
+            "you",
+            "he"
         ],
         "trans2": [
-            "him"
+            "older brother"
         ]
     },
     {
