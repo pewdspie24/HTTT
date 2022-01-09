@@ -6,7 +6,6 @@ AK
 ATM
 Ag
 Al
-Anh
 As
 Au
 B
@@ -17,7 +16,6 @@ BHYT
 BIOS
 BXL
 Br
-Bà
 Bà La Môn
 Bà La Môn giáo
 Bắc Cực
@@ -483,8 +481,7 @@ buồng trứng
 buồng tối
 buổi
 buổi mai
-byte
-bà
+bytes
 bà ba
 bà chúa
 bà con
@@ -560,7 +557,6 @@ bá hộ
 bá quyền
 bá tước
 bá vương
-bác
 bác học
 bác sĩ
 bách
@@ -1945,7 +1941,6 @@ chùa chiền
 chùm
 chùm gửi
 chùm ruột
-chú
 chú rể
 chúa
 chúa cứu thế
@@ -2773,7 +2768,6 @@ cóc tía
 cói
 cóng
 cót
-cô
 cô bác
 cô dâu
 cô giáo
@@ -3212,7 +3206,6 @@ cận trên
 cận vệ
 cận đại
 cật
-cậu
 cậu ấm
 cậy
 cắc kè
@@ -3801,7 +3794,6 @@ dép
 dép lê
 dép quai hậu
 dê
-dì
 dì ghẻ
 dích dắc
 dím
@@ -4053,7 +4045,6 @@ e
 ebonite
 electron
 ellipse
-em
 em gái
 em trai
 em út
@@ -7567,7 +7558,6 @@ mỡ màng
 mỡ máy
 mỡ phần
 mỡ sa
-mợ
 mụ
 mụ vườn
 mục
@@ -7599,9 +7589,9 @@ mỹ nhân
 mỹ nhân kế
 mỹ nữ
 mỹ phẩm
-mỹ quan
+mỹ quan 
 mỹ thuật
-mỹ thuật công nghiệp
+mỹ thuật công nghiệp  
 mỹ tục
 mỹ viện
 n
@@ -13669,7 +13659,6 @@ zero
 zeta
 zigzag
 zn
-Ông
 á hậu
 á kim
 á sừng
@@ -13843,7 +13832,6 @@ zn
 ôn dịch
 ôn vật
 ôn đới
-ông
 ông ba mươi
 ông bà
 ông bà ông vải
