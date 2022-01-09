@@ -176,7 +176,7 @@ if __name__ == "__main__":
         PRONOUN = 0
         NEG = 0
         # 1. Input text
-        sequence = "anh yêu em"
+        sequence = "tôi là một học sinh"
         # 2. Tokenize text
         tokens = vn_token_uts(sequence)
         # 3.1 Get VI type, primary Verb, Tense
@@ -220,7 +220,7 @@ if __name__ == "__main__":
                         print(WTYPE_MATCH.get(vi_type))
                         # Exist in dictionary with type
                         # print(i['type'])
-                        if WTYPE_MATCH.get(vi_type) in i['type']: 
+                        if 'type' in i and WTYPE_MATCH.get(vi_type) in i['type']: 
                             # print("cc")
                             trans_idx = 0
                             res = {}
