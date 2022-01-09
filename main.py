@@ -176,7 +176,7 @@ if __name__ == "__main__":
         PRONOUN = 0
         NEG = 0
         # 1. Input text
-        sequence = "cô ấy đẹp"
+        sequence = "anh yêu em"
         # 2. Tokenize text
         tokens = vn_token_uts(sequence)
         # 3.1 Get VI type, primary Verb, Tense
