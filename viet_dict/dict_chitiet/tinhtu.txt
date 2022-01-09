@@ -795,7 +795,6 @@ chứa chan
 chừ bự
 chững
 chững chạc
-con
 con con
 con cón
 con heo
@@ -852,7 +851,6 @@ cách nhật
 cách quãng
 cách rách
 cách thuỷ
-cái
 cám hấp
 cánh gián
 cánh sẻ
@@ -878,7 +876,6 @@ còm nhom
 còng
 còng queo
 còng quèo
-có
 có của
 có giá
 có hiếu
@@ -933,7 +930,6 @@ cùi cụi
 cùm cụp
 cùn
 cùn đời
-cùng
 cùng cực
 cùng khổ
 cùng quẫn
@@ -966,7 +962,6 @@ cơ mật
 cơ nhỡ
 cơ yếu
 cơ động
-cơm
 cưng cứng
 cương
 cương nghị
@@ -998,7 +993,6 @@ cấp tính
 cấp tập
 cấp tốc
 cầm cập
-cần
 cần cù
 cần kiệm
 cần kíp
@@ -3265,7 +3259,6 @@ mộ điệu
 mộc
 mộc mạc
 mộng
-một
 mới
 mới coong
 mới cứng
@@ -4836,7 +4829,6 @@ sững
 sững sờ
 sự vụ
 sự vụ chủ nghĩa
-ta
 tai hại
 tai ngược
 tai quái
@@ -5106,14 +5098,8 @@ thưa vắng
 thương tâm
 thướt tha
 thườn thượt
-thường
-thường kì
 thường kỳ
 thường ngày
-thường nhật
-thường niên
-thường tình
-thường xuyên
 thưỡn
 thưỡn thà thưỡn thẹo
 thượng
@@ -5297,7 +5283,6 @@ tiêu điều
 tiếc hùi hụi
 tiềm tàng
 tiềm ẩn
-tiền
 tiền chiến
 tiền hôn nhân
 tiền khả thi
@@ -6719,7 +6704,6 @@ yểu điệu
 ý tứ
 ý vị
 ăm ắp
-ăn
 ăn chơi
 ăn khớp
 ăn liền
@@ -6857,7 +6841,6 @@ yểu điệu
 đáng kể
 đáng đời
 đáo để
-đã
 đã đời
 đãi bôi
 đèm đẹp

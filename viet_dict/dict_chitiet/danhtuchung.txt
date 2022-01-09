@@ -614,6 +614,8 @@ bánh giầy
 bánh gối
 bánh hỏi
 bánh in
+bánh kem
+bánh kẹo
 bánh khoai
 bánh khoái
 bánh khúc
@@ -1935,6 +1937,7 @@ chông
 chông ba lá
 chông chà
 chông gai
+chồng
 chõ
 chõng
 chùa
@@ -2765,7 +2768,6 @@ cò quay
 còi
 còn
 còng
-có
 cóc
 cóc tía
 cói
@@ -2939,8 +2941,6 @@ cùi chỏ
 cùi kén
 cùi tay
 cùm
-cùng
-cùng cực
 cú
 cú mèo
 cú pháp
@@ -6988,7 +6988,6 @@ morphine
 morse
 moóc
 mu
-mua
 mui
 mun
 muôn năm
@@ -12779,7 +12778,6 @@ từ điển điện tử
 từ đường
 từ đồng nghĩa
 từ đồng âm
-từng
 từng lớp
 tử cung
 tử huyệt
@@ -13392,8 +13390,6 @@ xa lông
 xa lộ
 xa tanh
 xa xỉ phẩm
-xang
-xanh
 xanh tuya
 xe
 xe buýt
