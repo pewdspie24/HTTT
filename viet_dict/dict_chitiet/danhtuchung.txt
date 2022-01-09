@@ -240,7 +240,6 @@ an ninh
 an toàn
 an toàn khu
 ang
-anh
 anh chàng
 anh chị
 anh chị em
@@ -2089,7 +2088,6 @@ chỉ điểm
 chỉ định
 chỉnh hình
 chỉnh thể
-chị
 chị chàng
 chị em
 chị gái
