@@ -3870,7 +3870,8 @@
     {
         "word": "ba",
         "type": [
-            "noun"
+            "noun",
+            "number"
         ],
         "trans0": [
             "Papa",
@@ -3881,6 +3882,9 @@
             "a few",
             "a handful of",
             "a number of"
+        ],
+        "trans1": [
+            "three"
         ]
     },
     {
@@ -77678,7 +77682,7 @@
     {
         "word": "hai",
         "type": [
-            "noun",
+            "number",
             "adj"
         ],
         "trans1": [
@@ -85673,6 +85677,7 @@
     {
         "word": "học sinh",
         "trans0": [
+            "student",
             "Schoolboy",
             "schoolgirl",
             "pupil"
@@ -116873,7 +116878,7 @@
         "word": "năm",
         "type": [
             "noun",
-            "noun"
+            "number"
         ],
         "trans1": [
             "year"
@@ -186017,6 +186022,7 @@
             "fourth"
         ],
         "type": [
+            "number",
             "adj"
         ],
         "trans1": [
