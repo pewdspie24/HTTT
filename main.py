@@ -199,10 +199,10 @@ if __name__ == "__main__":
         for word in vi_sentence:
             k, v = word[0], word[1]
             # print("ATT",v[0])
-            if v[0] == 'lietke':
+            if v[0] == 'kitu':
                 c = []
                 c.append(k)
-                eng_sentence.append((c,('lietke', idx)))
+                eng_sentence.append((c,('kitu', idx)))
                 continue
             if v[0] == 'daituxungho' and k[0].isupper():
                 c = []
