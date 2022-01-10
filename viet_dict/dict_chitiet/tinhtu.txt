@@ -20,16 +20,10 @@ anh ánh
 ba lăng nhăng
 ba phải
 ba que
-ba rọi
-ba vạ
-ba xu
-bai bải
-banh
 bao dung
 bao la
 bao xa
 bay bướm
-be
 be bé
 be bét
 beo
@@ -45,7 +39,6 @@ bi tráng
 bi đát
 biêng biếc
 biếc
-biến hình
 biến tướng
 biếng
 biếng nhác
@@ -54,15 +47,11 @@ biền biệt
 biền ngẫu
 biểu kiến
 biện chứng
-biệt
-biệt mù
-biệt phái
 biệt tích
 biệt tăm
 biệt xứ
 biệt động
 bo bo
-bon
 bon bon
 boong
 boong boong
@@ -151,14 +140,11 @@ bét tĩ
 bê bết
 bê bối
 bê tha
-bêu
-bì
 bì bà bì bõm
 bì bì
 bì bõm
 bì bạch
 bì sị
-bình
 bình bịch
 bình dân
 bình dị
@@ -179,7 +165,6 @@ bí rì
 bí truyền
 bí ẩn
 bít bùng
-bón
 bóng
 bóng bẩy
 bóng dợn
@@ -192,8 +177,6 @@ bô bô
 bô lô ba la
 bôm bốp
 bôn sê vích
-bông
-bù
 bù xù
 bù đầu
 bùi
@@ -202,9 +185,6 @@ bùi tai
 bùng bùng
 bùng bục
 bùng nhùng
-búi
-băn khoăn
-băng
 băng giá
 băng hoại
 bơ phờ
@@ -228,10 +208,7 @@ bạc ác
 bạc đầu
 bạch
 bạch bạch
-bại
 bại liệt
-bạnh
-bạo
 bạo dạn
 bạo gan
 bạo miệng
@@ -255,7 +232,6 @@ bảnh bao
 bảnh choẹ
 bảnh trai
 bảo hoàng
-bảo đảm
 bấn
 bấn bít
 bấn bíu
@@ -290,7 +266,6 @@ bất lương
 bất lợi
 bất lực
 bất minh
-bất mãn
 bất nghĩa
 bất ngờ
 bất nhân
@@ -318,7 +293,6 @@ bần cùng
 bần hàn
 bần thần
 bần tiện
-bầu
 bầu bĩnh
 bầy hầy
 bầy nhầy
@@ -328,7 +302,6 @@ bẩn mình
 bẩn thẩn bần thần
 bẩn thỉu
 bẫm
-bậm
 bậm bạch
 bậm bạp
 bậm trợn
@@ -392,7 +365,6 @@ bỉ tiện
 bỉ ổi
 bị sị
 bị động
-bịch
 bịp bợm
 bịt bùng
 bỏm bẻm
@@ -400,7 +372,6 @@ bỏng
 bố láo
 bố láo bố lếu
 bố lếu bố láo
-bốc
 bốc lửa
 bốc đồng
 bối rối
@@ -408,14 +379,12 @@ bốp
 bồi hồi
 bồm bộp
 bồn chồn
-bồng
 bồng bột
 bổ
 bổ ích
 bổi hổi
 bổng
 bỗ bã
-bộ
 bộc trực
 bộc tuệch
 bội
@@ -447,7 +416,6 @@ bủng beo
 bứ
 bứ bừ
 bứ bự
-bức
 bức bối
 bức thiết
 bức xúc
@@ -528,7 +496,6 @@ chin chít
 chiu chíu
 chiêm
 chiêm chiếp
-chiếc
 chiến lược
 chiếp
 chiết trung chủ nghĩa
@@ -1068,7 +1035,6 @@ cởi mở
 cỡ
 cợp
 cụ thể
-cục
 cục bộ
 cục cằn
 cục mịch
@@ -1477,7 +1443,6 @@ gấp khúc
 gấp rút
 gấu
 gấy sốt
-gần
 gần gũi
 gần gặn
 gần gụi
@@ -2091,7 +2056,6 @@ khôn lỏi
 khôn lớn
 khôn ngoan
 khôn thiêng
-không
 không tưởng
 không đâu
 khù khờ
@@ -2392,7 +2356,6 @@ liến
 liến láu
 liến thoắng
 liếp nhiếp
-liền
 liền liền
 liều lĩnh
 liểng xiểng
@@ -2781,7 +2744,6 @@ lật đật
 lậu
 lắc cắc
 lắc rắc
-lắm
 lắm chuyện
 lắm mồm
 lắm điều
@@ -3166,8 +3128,6 @@ mạt hạng
 mạt kiếp
 mạt vận
 mạt đời
-mả
-mảnh
 mảnh dẻ
 mảnh khảnh
 mảnh mai
@@ -4661,7 +4621,6 @@ sáo cũ
 sáo mép
 sáo mòn
 sáo rỗng
-sát
 sát hợp
 sát nách
 sát nút
@@ -4779,7 +4738,6 @@ sẵn sàng
 sặc mùi
 sặc sỡ
 sẻn so
-sẽ
 sẽ sàng
 sề
 sền sệt
@@ -4860,7 +4818,6 @@ teo tóp
 tha thiết
 tha thẩn
 tham lam
-thanh
 thanh bình
 thanh bạch
 thanh cao
@@ -5677,7 +5634,6 @@ tái ngắt
 tái nhợt
 tái tê
 tái xanh
-táo
 táo bón
 táo bạo
 táo tác
@@ -6630,8 +6586,6 @@ yểu điệu
 èo uột
 éo le
 ép
-ê
-ê a
 ê chề
 ê chệ
 ê hề
@@ -7110,7 +7064,7 @@ yểu điệu
 đồi truỵ
 đồm độp
 đồng
-đồng bóng
+đồng bóng 
 đồng bệnh
 đồng bộ
 đồng chất
@@ -7166,7 +7120,6 @@ yểu điệu
 độc ẩm
 độn
 động trời
-độp
 đột ngột
 đột xuất
 đớ
@@ -7177,7 +7130,6 @@ yểu điệu
 đờ
 đờ đẫn
 đời thường
-đục
 đục ngầu
 đụt
 đủ
@@ -7185,7 +7137,6 @@ yểu điệu
 đủng đà đủng đỉnh
 đủng đỉnh
 đứ đừ
-đứng
 đứng bóng
 đứng cái
 đứng số
@@ -7322,8 +7273,6 @@ yểu điệu
 ời ời
 ời ợi
 ỡm ờ
-ụ
-ục
 ục ịch
 ủ rũ
 ủ ê

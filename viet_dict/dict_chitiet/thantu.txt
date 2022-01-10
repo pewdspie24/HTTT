@@ -6,7 +6,6 @@ bớ
 chao ôi
 chu cha
 chui cha
-chà
 chậc
 chết chưa
 chết chửa
@@ -16,7 +15,6 @@ cơ khổ
 dào ôi
 dạ
 eo ôi
-gớm
 hỡi ôi
 hỡi ơi
 hứ
@@ -24,12 +22,9 @@ hừ
 hừm
 mô Phật
 mô phật
-suỵt
 than ôi
 thương ôi
-trời đất
 trời đất ơi
-trời ơi
 vâng
 à
 á
@@ -42,7 +37,6 @@ vâng
 ô hay
 ô kê
 ô kìa
-ôi
 ôi chao
 ôi dào
 ôi thôi
@@ -56,7 +50,6 @@ vâng
 ơi
 ạ ơi
 ầu ơ
-ối
 ối dào
 ồ
 ớ

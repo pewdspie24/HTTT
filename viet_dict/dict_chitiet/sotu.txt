@@ -8,6 +8,12 @@ bảy
 tám
 chín
 mười
+thứ hai
+thứ ba
+thứ tư
+thứ năm
+thứ sáu
+thứ bảy
 không - mươi - linh - chục - 0
 nhất - một - mốt - 1
 nhì - hai - hăm - 2

@@ -8,7 +8,7 @@ translator = Translator()
 WTYPE_MATCH = {'danhtuchung':'noun', 'dongtu':'verb', 'tinhtu':'adj', 'sotu':'number', 'luongtu':'adj', 'photu':'advA', 'photuchimucdo':'advB', 'photuthoigian':'advB', 'daitu':'pronoun', 'thantu':'excl', 'quanhetulietke':'conj', 'quanhetudinhvi':'prep', 'chitu':'det', 'daituxungho':'pronoun'}
 TENSE = ['present', 'past', 'future', 'continous']
 FLAG = 0
-PATH_VI = ["chitu.txt", "daituchi_hd.txt", "daituxungho.txt", "danhtuchiloai.txt", "danhtuchung.txt", "danhtudonvi.txt", 
+PATH_VI = ["chitu.txt", "daituxungho.txt", "danhtuchiloai.txt", "danhtuchung.txt", "danhtudonvi.txt", 
         "dongtu.txt", "luongtu.txt", "photuchimucdo.txt", "photuphudinh.txt", "photuthoigian.txt", 
         "quanhetudinhvi.txt", "quanhetulietke.txt", "sotu.txt", "thantu.txt", "tinhtu.txt"]
 VI_DICT_PATH = "viet_dict/dict_chitiet/"
@@ -56,7 +56,7 @@ def get_word_type_vi(tokens):
     # print(type_word)
     for idx in range(num) :
         word_type = type_word[idx].split(" ")
-        # print(idx, ". ",word[idx], ": ", type_word[idx])
+        print(idx, ". ",word[idx], ": ", type_word[idx])
         # decide thi 
         if word[idx] in ["đã", "mới", "vừa", "từng"]:
             thi = "past"
@@ -176,7 +176,7 @@ if __name__ == "__main__":
         PRONOUN = 0
         NEG = 0
         # 1. Input text
-        sequence = "cô ấy đẹp"
+        sequence = "tao nói: cút 123"
         # 2. Tokenize text
         tokens = vn_token_uts(sequence)
         # 3.1 Get VI type, primary Verb, Tense

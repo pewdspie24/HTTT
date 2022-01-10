@@ -23,8 +23,6 @@ ban phát
 ban tặng
 ban ơn
 bang giao
-banh
-bao
 bao biện
 bao bọc
 bao che
@@ -46,9 +44,6 @@ bay bổng
 bay hơi
 bay lượn
 bay nhảy
-be
-be be
-beo
 bi ba bi bô
 bi bô
 bi phẫn
@@ -119,7 +114,6 @@ biệt phái
 biệt đãi
 bo
 boa
-bon
 bon chen
 bong
 bong gân
@@ -167,7 +161,6 @@ bàn thảo
 bàn tán
 bàn tính
 bàn định
-bàng bạc
 bàng quan
 bành trướng
 bào
@@ -246,29 +239,19 @@ bãi miễn
 bãi nhiệm
 bãi nại
 bãi thực
-bén
-bén mảng
-béo
 bép xép
 bê
-bê tha
 bê trễ
 bênh
 bênh vực
-bêu
-bêu nắng
 bêu riếu
 bêu xấu
-bì
-bình
-bình bản
 bình bầu
 bình chọn
 bình công
 bình giá
 bình giải
 bình luận
-bình phương
 bình phẩm
 bình phục
 bình sai
@@ -341,7 +324,6 @@ bùng nổ
 bùng phát
 bú
 bú mớm
-búi
 búng
 bút chiến
 bút đàm
@@ -349,7 +331,6 @@ băm
 băm băm
 băm bổ
 băm vằm
-băng
 băng bó
 băng hà
 băng xăng
@@ -376,13 +357,9 @@ bươu
 bước
 bạ
 bạc đãi
-bại
 bại lộ
 bại trận
 bại vong
-bạn
-bạn bè
-bạnh
 bạo loạn
 bạo phát
 bạo động
@@ -434,12 +411,9 @@ bầu bán
 bầu bạn
 bầu chọn
 bầu cử
-bầy
 bẩm báo
 bẩy
 bẫy
-bậm
-bận
 bập
 bập bà bập bềnh
 bập bẹ
@@ -448,8 +422,6 @@ bập bồng
 bật
 bật mí
 bật tường
-bậu
-bắc
 bắc cầu
 bắn
 bắn bổng
@@ -512,7 +484,6 @@ bế bồng
 bế giảng
 bế kinh
 bế mạc
-bết
 bềnh
 bềnh bồng
 bể
@@ -595,9 +566,6 @@ bồng
 bồng bế
 bồng bềnh
 bồng súng
-bổ
-bổ bán
-bổ chửng
 bổ dưỡng
 bổ dụng
 bổ khuyết
@@ -636,7 +604,6 @@ bục
 bụm
 bủa
 bủa vây
-bức
 bức bách
 bức cung
 bức hiếp
@@ -791,7 +758,6 @@ choán
 choáng ngợp
 choãi
 choảng
-chu
 chu chuyển
 chu cấp
 chua hoá
@@ -951,7 +917,6 @@ chõ mồm
 chùi
 chùn
 chùng chình
-chú
 chú dẫn
 chú mục
 chú thích
@@ -1315,7 +1280,6 @@ cuốn xéo
 cuồng sát
 cuồng tín
 cuỗm
-cuộc
 cuộn
 cà
 cà khịa
@@ -1355,8 +1319,6 @@ cá cược
 cá ngựa
 cá tính hoá
 cá độ
-các
-cách
 cách biệt
 cách chức
 cách li
@@ -1470,7 +1432,6 @@ căm phẫn
 căm thù
 căm tức
 căm uất
-căn
 căn chỉnh
 căn cứ
 căn dặn
@@ -1728,7 +1689,6 @@ cặp mạch
 cặp nhiệt
 cọ
 cọ xát
-cọng
 cố
 cố chí
 cố chấp
@@ -1936,10 +1896,7 @@ dò xét
 dòm
 dòm dỏ
 dòm ngó
-dòng
-dóm
 dóng
-dôi
 dõi
 dùa
 dùi
@@ -1962,12 +1919,8 @@ dưỡng sinh
 dưỡng sức
 dưỡng thai
 dưỡng thương
-dạ
-dạm
 dạm hỏi
 dạm ngõ
-dạn
-dạo
 dạo mát
 dạo đầu
 dạt
@@ -2399,7 +2352,6 @@ giết thịt
 giễu
 giễu cợt
 giọi
-giọt
 giỏ
 giỏng
 giối già
@@ -2522,7 +2474,6 @@ gầm gào
 gầm gừ
 gầm rít
 gầm rú
-gần
 gần gũi
 gầy
 gập
@@ -2607,8 +2558,6 @@ hao mòn
 hao phí
 hao tài
 hao tổn
-hay
-hay biết
 hi sinh
 hi vọng
 hiến
@@ -3560,7 +3509,6 @@ kết tội
 kết tụ
 kết tủa
 kết án
-kề
 kề cà
 kềnh
 kều
@@ -5959,7 +5907,6 @@ quàng quạc
 quành
 quào
 quày
-quá
 quá bộ
 quá chén
 quá cảnh
@@ -6408,8 +6355,6 @@ suy vong
 suy xét
 suy đoán
 suy đồi
-suốt
-suỵt
 sà
 sàng
 sàng lọc
@@ -6428,7 +6373,6 @@ sánh bước
 sánh duyên
 sánh vai
 sáp nhập
-sát
 sát cánh
 sát hạch
 sát hại
@@ -7166,7 +7110,6 @@ thử
 thử lửa
 thử nghiệm
 thử thách
-thửa
 thực chi
 thực hiện
 thực hành
@@ -7176,8 +7119,6 @@ thực thu
 thực tập
 ti
 ti toe
-tia
-tin
 tin cẩn
 tin cậy
 tin dùng
@@ -8142,7 +8083,6 @@ tống tiền
 tống tiễn
 tống tình
 tống đạt
-tốp
 tốt nghiệp
 tồn
 tồn dư
@@ -8208,7 +8148,6 @@ tức giận
 tức khí
 tức mình
 tức tối
-từ
 từ biệt
 từ bỏ
 từ chối
@@ -8541,7 +8480,6 @@ vọc
 vọng
 vọng ngoại
 vọt
-vốc
 vồ
 vồ ếch
 vồng
@@ -8555,7 +8493,6 @@ vớ
 vớ bẫm
 vớ bở
 vớ vẩn
-với
 vớt
 vớt vát
 vờ
@@ -9013,7 +8950,6 @@ yểm trợ
 ùn
 ùn tắc
 úa
-úi
 úm
 úng
 úng ngập
@@ -9471,7 +9407,6 @@ yểm trợ
 đơm đặt
 đơn ca
 đơn cử
-đơn giản
 đơn giản hoá
 đưa
 đưa dâu
@@ -9824,7 +9759,6 @@ yểm trợ
 ưu đãi
 ươm
 ươm ướm
-ương
 ước
 ước ao
 ước chừng
@@ -9888,14 +9822,10 @@ yểm trợ
 ọ ẹ
 ọc
 ỏn thót
-ốm
 ốm đau
 ốp
 ốp lát
-ồ
 ộc
-ớ
-ới
 ớn
 ở
 ở cữ
@@ -9912,7 +9842,6 @@ yểm trợ
 ở đậu
 ở đợ
 ợ
-ục
 ụp
 ụt ịt
 ủ
@@ -9921,7 +9850,6 @@ yểm trợ
 ủ ấp
 ủi
 ủng hộ
-ứ
 ứ đọng
 ứa
 ức
@@ -9943,10 +9871,4 @@ yểm trợ
 ứng tấu
 ứng xử
 ứng đối
-ừ
-ừ hữ
-ừ ào
-ửng
-ựa
-ỷ
 ỷ lại
