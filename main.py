@@ -177,7 +177,7 @@ if __name__ == "__main__":
         PRONOUN = 0
         NEG = 0
         # 1. Input text
-        sequence = "tôi là một học sinh"
+        sequence = "hôm qua tôi đã học"
         # 2. Tokenize text
         tokens = vn_token_uts(sequence)
         # 3.1 Get VI type, primary Verb, Tense
@@ -290,7 +290,7 @@ if __name__ == "__main__":
                     for smt in j:
                         if word_en == smt:
                             PRONOUN = 1
-                            print("CC")
+                            # print("CC")
                             break
                     if PRONOUN:
                         break # TODO
@@ -310,10 +310,11 @@ if __name__ == "__main__":
         # print("ditmemay", primary_idx)
         # print(verb)
         # print(v_type)
+        print(PRONOUN)
         # Verb is verb
         if v_type == 'verb' and verb != "be":
             if tense == 'present':
-                if PRONOUN == 0 or I_flag:
+                if PRONOUN == 0:
                     if NEG == 0:
                         for v in verbs:
                             if v[0] == verb:
@@ -388,108 +389,80 @@ if __name__ == "__main__":
                     if PRONOUN == 0:
                         if NEG == 0:
                             eng_sentence[primary_idx][0][0] = "is "+verb
-                            break
                         else:
                             eng_sentence[primary_idx][0][0] = "is not "+verb
-                            break
                     elif I_flag == False:
                         if NEG == 0:
                             eng_sentence[primary_idx][0][0] = "are "+verb
-                            break
                         else:
                             eng_sentence[primary_idx][0][0] = "are not "+verb
-                            break
                     else:
                         if NEG == 0:
                             eng_sentence[primary_idx][0][0] = "am "+verb
-                            break
                         else:
                             eng_sentence[primary_idx][0][0] = "am not "+verb
-                            break
                 elif tense == 'past':
                     if NEG == 0:
                         if PRONOUN == 0:
                             eng_sentence[primary_idx][0][0] = "was "+verb
-                            break
                         else:
                             eng_sentence[primary_idx][0][0] = "were "+verb
-                            break
                     else:
                         if PRONOUN == 0:
                             eng_sentence[primary_idx][0][0] = "was not "+verb
-                            break
                         else:
                             eng_sentence[primary_idx][0][0] = "were not "+verb
-                            break
                 elif tense == 'future':
                     for v in verbs:
                         if v[0] == verb:
                             if NEG == 0:
                                 eng_sentence[primary_idx][0][0] = 'will be '+verb
-                                break
                             else:
                                 eng_sentence[primary_idx][0][0] = 'will not be '+verb
-                                break
                 elif tense == 'continous':
                     if PRONOUN == 0:
                         if NEG == 0:
                             eng_sentence[primary_idx][0][0] = "is "+verb
-                            break
                         else:
                             eng_sentence[primary_idx][0][0] = "is not "+verb
-                            break
                     elif I_flag == False:
                         if NEG == 0:
                             eng_sentence[primary_idx][0][0] = "are "+verb
-                            break
                         else:
                             eng_sentence[primary_idx][0][0] = "are not "+verb
-                            break
                     else:
                         if NEG == 0:
                             eng_sentence[primary_idx][0][0] = "am "+verb
-                            break
                         else:
                             eng_sentence[primary_idx][0][0] = "am not "+verb
-                            break
         else:
             if tense == 'present':
                 if PRONOUN == 0:
                     if NEG == 0:
                         eng_sentence[primary_idx][0][0] = "is"
-                        break
                     else:
                         eng_sentence[primary_idx][0][0] = "is not"
-                        break
                 elif I_flag == False:
                     if NEG == 0:
                         eng_sentence[primary_idx][0][0] = "are"
-                        break
                     else:
                         eng_sentence[primary_idx][0][0] = "are not"
-                        break
                 else:
                     if NEG == 0:
                         eng_sentence[primary_idx][0][0] = "am"
-                        break
                     else:
                         eng_sentence[primary_idx][0][0] = "am not"
-                        break
             elif tense == 'past':
                 if NEG == 0:
                     if PRONOUN == 0:
                         eng_sentence[primary_idx][0][0] = "was"
-                        break
                     else:
                         eng_sentence[primary_idx][0][0] = "were"
-                        break
                 else:
                     if PRONOUN == 0:
                         eng_sentence[primary_idx][0][0] = "was not"
-                        break
                     else:
                         eng_sentence[primary_idx][0][0] = "were not"
-                        break
             elif tense == 'future':
                 for v in verbs:
                     if v[0] == verb:
@@ -503,26 +476,20 @@ if __name__ == "__main__":
                 if PRONOUN == 0:
                     if NEG == 0:
                         eng_sentence[primary_idx][0][0] = "is"
-                        break
                     else:
                         eng_sentence[primary_idx][0][0] = "is not"
-                        break
                 elif I_flag == False:
                     if NEG == 0:
                         eng_sentence[primary_idx][0][0] = "are"
-                        break
                     else:
                         eng_sentence[primary_idx][0][0] = "are not"
-                        break
                 else:
                     if NEG == 0:
                         eng_sentence[primary_idx][0][0] = "am"
-                        break
                     else:
                         eng_sentence[primary_idx][0][0] = "am not"
-                        break
         # 5. Re-organize sentence
-        for word in eng_sentence:
+        for index, word in enumerate(eng_sentence):
             # Adjective comes before nouns
             if word[1][0] == 'adj':
                 adj_idx_en = word[1][1]
@@ -559,15 +526,30 @@ if __name__ == "__main__":
                         eng_sentence[i][0] =  word[0] + " " + eng_sentence[i][0] 
                         word[0] = ""
                         word[1][0] = None
+            if word[0][0] == 'a':
+                try:
+                    next_word = eng_sentence[index][0][0]
+                    if next_word[0][0][0] in ['u', 'e', 'o', 'a', 'i']:
+                        word[0][0] = 'an'
+                        word[0][1] = 'a'
+                except:
+                    word[0][0] = 'a'
             
         # 6. Show result & Suggest 
         for i in eng_sentence:
             if i[1][1] != None:
                 print(i[0], end=" ")
         print("")
-        for i in eng_sentence:
+        for idx, i in enumerate(eng_sentence):
             if i[1][1] != None:
-                print(i[0][0], end=" ")
+                if i[0][0] == "I":
+                    print("I", end=" ")
+                    continue
+                if idx == 0:
+                    print(i[0][0][0].upper(), end="")
+                    print(i[0][0][1:], end=" ")
+                else:
+                    print(i[0][0].lower(), end=" ")
         break
         
 

@@ -24524,7 +24524,8 @@
         "word": "cam",
         "type": [
             "noun",
-            "verb"
+            "verb",
+            "adj"
         ],
         "trans1": [
             "Orange"
@@ -24532,6 +24533,9 @@
         "trans2": [
             "content oneself with",
             "resign oneself to"
+        ],
+        "trans3": [
+            "Orange"
         ]
     },
     {
@@ -166982,18 +166986,11 @@
     },
     {
         "word": "táo",
-        "trans0": [
-            "apple"
-        ],
         "type": [
             "noun"
         ],
-        "trans1": [
-            "jujube",
-            "jujubetree",
-            "Chinese date.",
-            "táo tây) apple",
-            "apple-tree"
+        "trans0": [
+            "apple"
         ]
     },
     {
@@ -173669,8 +173666,8 @@
             "buddhist"
         ],
         "trans2": [
-            "nudge to like",
-            "be fond of to tattoo",
+            "like",
+            "love",
             "engrave"
         ]
     },
@@ -194221,9 +194218,9 @@
             "noun"
         ],
         "trans1": [
-            "I",
+            "he",
             "you",
-            "he"
+            "I"
         ],
         "trans2": [
             "older brother"
