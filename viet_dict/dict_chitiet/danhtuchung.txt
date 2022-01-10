@@ -199,7 +199,6 @@ XML
 XN
 XNK
 Zn
-a
 accordeon
 account
 acetone
@@ -271,7 +270,6 @@ atmosphere
 au
 audio
 automat
-b
 ba
 ba ba
 ba bị
@@ -556,6 +554,7 @@ bá hộ
 bá quyền
 bá tước
 bá vương
+bác
 bác học
 bác sĩ
 bách
@@ -729,7 +728,6 @@ bê rê
 bê tông
 bê tông cốt sắt
 bê tông cốt thép
-bên
 bên bị
 bên nguyên
 bì
@@ -1081,7 +1079,6 @@ bảo tàng
 bảo vật
 bảo vệ
 bảo đảm
-bảy
 bấc
 bất cập
 bất hợp lí
@@ -1259,7 +1256,6 @@ bố tời
 bốc
 bối
 bối cảnh
-bốn
 bốn biển
 bốn bể
 bốn phương
@@ -1418,7 +1414,6 @@ bữa tê
 bựa
 bực
 bựng
-c
 cassette
 ca Huế
 ca bin
@@ -1981,7 +1976,6 @@ chạo
 chạp
 chạt
 chạy việt dã
-chả
 chả chìa
 chả giò
 chả giò rế
@@ -3468,7 +3462,6 @@ cự li
 cự ly
 cự mã
 cựa
-cực
 cực hình
 cực quang
 cực tiểu
@@ -3476,12 +3469,10 @@ cực trị
 cực từ
 cực điểm
 cực đại
-cực độ
 cựu binh
 cựu chiến binh
 cựu trào
 cựu ước
-d
 da
 da bánh mật
 da bát
@@ -3854,8 +3845,6 @@ dương liễu
 dương lịch
 dương vật
 dương xỉ
-dưới
-dướng
 dưỡng chất
 dưỡng khí
 dược
@@ -3870,7 +3859,6 @@ dược tá
 dược tính
 dược điển
 dượng
-dạ
 dạ con
 dạ cỏ
 dạ cửa
@@ -3923,7 +3911,6 @@ dấu phẩy
 dấu vết
 dấu ấn
 dầm
-dần
 dầu
 dầu bóng
 dầu bạc hà
@@ -4481,8 +4468,6 @@ giờ phút
 giờ quốc tế
 giờ địa phương
 giời
-giủi
-giữa
 glaucoma
 glucide
 glucose
@@ -4686,10 +4671,7 @@ gợn
 gụ
 gừng
 gừng gió
-h
-ha
 hacker
-hai
 hai chấm
 hai lá mầm
 halogen
@@ -5204,7 +5186,6 @@ hăng gô
 hđnd
 hĩm
 hũ
-hơi
 hơi hám
 hơi hướm
 hơi hướng
@@ -5411,7 +5392,6 @@ hệ đếm nhị phân
 hệ đếm thập phân
 hỉ
 hịch
-họ
 họ hàng
 họ mạc
 họ tộc
@@ -5832,14 +5812,6 @@ khói hương
 khói lửa
 khói sương
 khóm
-khô
-khô dầu
-khô dầu lá
-khô mộc
-khô vằn
-khôi
-khôn
-không
 không bào
 không gian
 không khí
@@ -5923,7 +5895,6 @@ khứu giác
 ki
 ki lô
 ki ốt
-kia
 kilobit
 kilobyte
 kilogram
@@ -6387,6 +6358,7 @@ luỹ
 luỹ thừa
 ly
 ly loạn
+là lượt
 lài
 làn
 làn sóng
@@ -7702,7 +7674,6 @@ nghịch phách
 nghịch đảo
 ngoa dụ
 ngoe
-ngoài
 ngoáo
 ngoáo ộp
 ngoé
@@ -7798,7 +7769,6 @@ nguỵ quyền
 nguỵ quân
 ngà
 ngà voi
-ngài
 ngàm
 ngàn
 ngàn thu
@@ -8351,7 +8321,6 @@ niên vụ
 niên đại
 niêu
 niết bàn
-niềm
 niềng niễng
 niễng
 niệt
@@ -8450,7 +8419,6 @@ núi rừng
 núi sông
 núm
 nút
-năm
 năm dương lịch
 năm học
 năm kia
@@ -9776,7 +9744,6 @@ sao thiên vương
 sao thuỷ
 sao thổ
 sao đổi ngôi
-sau
 sau cùng
 sau hết
 sau này
@@ -9950,7 +9917,6 @@ sáp
 sáp ong
 sát khí
 sát thủ
-sáu
 sâm
 sâm banh
 sâm cầm
@@ -10143,7 +10109,6 @@ sắc độ
 sắn
 sắn dây
 sắn thuyền
-sắp
 sắt
 sắt tây
 sặt
@@ -10301,7 +10266,6 @@ sự vật
 sự vụ
 sự đời
 t
-ta
 ta luy
 taekwondo
 tai
@@ -11146,7 +11110,6 @@ thể trạng
 thể trọng
 thể tích
 thể xác
-thị
 thị chính
 thị giá
 thị giác
@@ -11279,20 +11242,13 @@ thủ tự
 thủ vĩ ngâm
 thủ đoạn
 thủ đô
-thứ
-thứ ba
-thứ bảy
 thứ bậc
 thứ bực
 thứ dân viện
-thứ hai
 thứ hạng
 thứ liệu
-thứ năm
 thứ phẩm
-thứ sáu
 thứ trưởng
-thứ tư
 thứ tự
 thức
 thức ăn
@@ -11640,7 +11596,6 @@ triệu chứng
 triệu phú
 tro
 trompet
-trong
 trong ngoài
 tru
 trumpet
@@ -11741,8 +11696,6 @@ trâu ngựa
 trâu nước
 trã
 trê
-trên
-trên dưới
 trên hết
 trình duyệt
 trình dược viên
@@ -11813,7 +11766,6 @@ trĩ
 trĩ mũi
 trưa
 trương lực
-trước
 trước hết
 trước kia
 trước mắt
@@ -12152,7 +12104,6 @@ tác phong
 tác phẩm
 tác động
 tách
-tám
 tám hoánh
 tám thơm
 tám xoan
@@ -13331,9 +13282,6 @@ vốn điều lệ
 vồ
 vồng
 vớ
-với
-vờ
-vời
 vở
 vợ
 vợ bé
@@ -13612,7 +13560,6 @@ xừ
 xử thử
 xửng
 xự
-y
 y bạ
 y cụ
 y học
@@ -13793,11 +13740,7 @@ zn
 âu đất
 é
 én
-ê
-ê cu
-ê ke
 ê kíp
-ê tô
 ích
 ích lợi
 ích mẫu
@@ -13811,7 +13754,6 @@ zn
 óc đậu
 óng
 ót
-ô
 ô dù
 ô liu
 ô mai
@@ -14217,7 +14159,6 @@ zn
 đòng
 đòng đong
 đòng đòng
-đó
 đóm
 đóng dấu
 đót
@@ -14967,7 +14908,6 @@ zn
 đức độ
 đứng
 đứt gãy
-ơ
 ơn
 ơn huệ
 ơn nghĩa
@@ -15037,7 +14977,6 @@ zn
 ốc vặn
 ốc xà cừ
 ốc đảo
-ối
 ống
 ống bô
 ống bơ

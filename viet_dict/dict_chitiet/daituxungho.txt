@@ -1,19 +1,15 @@
 ai
 ai ai
 ai nấy
-bay
 bậu
 cô
 chị
 dì
 chú
-bác
 cậu
 mợ
 anh
 em
-ông
-bà
 chú mày
 chú mình
 chúng
@@ -24,22 +20,17 @@ chúng ta
 chúng tao
 chúng tôi
 cu cậu
-cưng
 hắn
 họ
-mi
 mày
 mình
 mầy
 mỗ
 ngài
-người ta
 những ai
 nó
 ta
 tao
-thị
 tui
 tôi
 tớ
-y

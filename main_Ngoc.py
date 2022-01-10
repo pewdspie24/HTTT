@@ -2,15 +2,16 @@ import json
 from underthesea import word_tokenize as vn_token_uts
 from underthesea import pos_tag
 import pandas
+import numpy as np
 from googletrans import Translator
 translator = Translator()
 
 WTYPE_MATCH = {'danhtuchung':'noun', 'dongtu':'verb', 'tinhtu':'adj', 'sotu':'number', 'luongtu':'adj', 'photu':'advA', 'photuchimucdo':'advB', 'photuthoigian':'advB', 'daitu':'pronoun', 'thantu':'excl', 'quanhetulietke':'conj', 'quanhetudinhvi':'prep', 'chitu':'det', 'daituxungho':'pronoun'}
 TENSE = ['present', 'past', 'future', 'continous']
 FLAG = 0
-PATH_VI = ["chitu.txt", "daituchi_hd.txt", "daituxungho.txt", "danhtuchiloai.txt", "danhtuchung.txt", "danhtudonvi.txt", 
-        "dongtu.txt", "luongtu.txt", "photuchimucdo.txt", "photuphudinh.txt", "photuthoigian.txt", 
-        "quanhetudinhvi.txt", "quanhetulietke.txt", "sotu.txt", "thantu.txt", "tinhtu.txt"]
+PATH_VI = ["danhtuchiloai.txt", "sotu.txt","luongtu.txt", "chitu.txt", "thantu.txt",
+        "photuchimucdo.txt", "photuphudinh.txt", "photuthoigian.txt", "quanhetudinhvi.txt", "quanhetulietke.txt", 
+        "daituxungho.txt", "danhtuchung.txt", "dongtu.txt", "tinhtu.txt"]
 VI_DICT_PATH = "viet_dict/dict_chitiet/"
 word_type_vi = {}
 
@@ -21,95 +22,126 @@ def get_token(text):
         final += " "
     return final
 
+def check_number(word):
+    tmp = word
+    tmp = tmp.replace(",","")
+    try:
+        float(tmp)
+        return True
+    except ValueError:
+        return False
+
 def get_word_type_vi(tokens):
     word = []
     type_word = []
     thi = "present"
-    main_verb = 0 
+    main_verb = 0
+    neg = 0
     check =True
-    while (check):
-        for token in tokens:
-            try:
-                type_word.append(word_type_vi[token])
+    for token in tokens:
+        try: # if Vi word exist in Vi dict
+            type_word.append(word_type_vi[token])
+            word.append(token)
+        except :
+            # if is ",", may be consider as quanhetulietke
+            if token in ",":
                 word.append(token)
-                # print("co trong dict")
-                # print(word)
-            except :
-                if token in ",":
-                    word.append(token)
-                    type_word.append('lietke')
-                    # print("là dấu câu")
-                    # print(word)
-                elif "A" <= token[0] and token[0] <= "Z":
-                    word.append(token)
-                    type_word.append("daituxungho")
-                    # print("là tên riêng")
-                    # print(word)
-                else:
-                    word.append(token)
-                    type_word.append("")
-                    if len(word) == 0:
-                        type_word.append("danhtuchung")
+                type_word.append("lietke")
+            # if is special character
+            if token in "-:%'(){}[]":
+                word.append(token)
+                type_word.append("kytu")
+            # if the first character is uppper, consider as a name
+            elif "A" <= token[0] and token[0] <= "Z":
+                word.append(token)
+                type_word.append("daituxungho")
+            # if is number
+            elif check_number(token) == True:
+                word.append(token)
+                type_word.append("so")
+            # if is the first word, consider as a noun
+            elif len(word) == 0:
+                word.append(token)
+                type_word.append("danhtuchung")
+
     num = len(word)
-    for idx in range(num) :
-        word_type = type_word[idx].split(" ")
-        # print(idx, ". ",word[idx], ": ", type_word[idx])
-        # decide thi 
-        if word[idx] in ["đã", "mới", "vừa", "từng"]:
-            thi = "past"
-        elif word[idx] == "đang":
-            thi = "continous"
-        elif word[idx] in ["sẽ", "sắp", "sắp sửa"]:
-            thi = "future"  
-        # convert danhtuchiloai to noun
-        if type_word[idx] == "danhtuchiloai": 
-            if idx+1 == num or (idx+1 < num and type_word[idx+1] not in ["danhtuchung", "danhtuchiloai"]):
-                type_word[idx] = "danhtuchung"
-        # in case multiple word type
-        if len(word_type) > 1:
-            if idx >= 1:
-                # decide 
-                if type_word[idx-1] in ["lietke", "quanhetulietke"]:
-                    type_word[idx] = type_word[idx-2]
-                # decide photuchimucdo
-                elif "photuchimucdo" in type_word[idx]:
-                    if type_word[idx-1] in ["dongtu", "tinhtu"]:
-                        type_word[idx] = "photuchimucdo"
-                # decide noun
-                elif type_word[idx-1] == "danhtuchiloai":
-                    type_word[idx] = "danhtuchung"
-                # decide verb
-                elif type_word[idx-1] == "photuthoigian":
+    while (check): # if check == True, it mean, still having changes
+        tmp = type_word
+        for idx in range(num) :
+            word_type = type_word[idx].split(" ")
+            # determine tense 
+            if word[idx] in ["đã", "từng"]:
+                thi = "past"
+            elif word[idx] == "đang":
+                thi = "continous"
+            elif word[idx] == "sẽ":
+                thi = "future"  
+            #determine danhtuchiloai or verb: bó, cuốn, tập, ...
+            if "danhtuchiloai" in type_word[idx] and len(type_word[idx].split(" ")) > 2:
+                # if before word is sotu or luong tu
+                if idx-1>0 and type_word[idx-1] in ["sotu", "luongtu", "dongtu"]:
+                    type_word[idx] = "danhtuchiloai"
+                elif  idx-1>0 and type_word[idx-1] in ["daituxungho", "danhtuchung", "tinhtu"]:
                     type_word[idx] = "dongtu"
-                
-                elif type_word[idx-1] == "photuchimucdo":
-                    if "dongtu" in type_word[idx]:
-                        type_word[idx] = "dongtu"
-                    elif "tinhtu" in type_word[idx]:
-                        type_word[idx] = "tinhtu"
-                # decide adj
-                elif type_word[idx-1] in ["danhtuchung", "dongtu", "photuchimucdo"]:
-                    type_word[idx] = "tinhtu"    
-                        
-            elif idx+1 < num:
-                # decide 
-                if type_word[idx+1] in ["lietke", "quanhetulietke"]:
-                    type_word[idx] = type_word[idx+2]
-                # decide noun
-                elif type_word[idx+1] != "danhtuchung":
+            # convert danhtuchiloai to noun
+            if "danhtuchiloai" in type_word[idx]: 
+                if idx+1 == num or (idx+1 < num and "danhtu" not in type_word[idx+1]):
                     type_word[idx] = "danhtuchung"
-                elif type_word[idx+1] == "chitu":
+            # determine noun or sotu
+            if word[idx] == "ba":
+                check =True
+                if idx+1<num and "danhtu" in type_word[idx+1]:
+                    type_word[idx] = "sotu"
+                else:
                     type_word[idx] = "danhtuchung"
-                # decide verb
-                elif type_word[idx+1] == "photuchimucdo":
-                    if "dongtu" in type_word[idx]:
+            #determine quanhetudinhvi or verb or noun
+            if "quanhetudinhvi" in type_word[idx]:
+                if idx+1 <num and np.any([i in type_word[idx+1] for i in ["danhtu", "sotu", "luongtu", "daituxungho", "so"]]):
+                    type_word[idx] = "quanhetudinhvi"
+                else:
+                    type_word[idx] = type_word[idx].replace("quanhetudinhvi","")    
+            # in case multiple word type
+            if len(word_type) > 1:
+                if idx >= 1: # base on before word
+                    # determine type of word basing on "," or quanhetulietke
+                    if type_word[idx-1] in ["lietke", "quanhetulietke"]:
+                        type_word[idx] = type_word[idx-2]
+                    # determine noun
+                    elif np.any([i in type_word[idx-1] for i in ["sotu", "luongtu", "danhtuchiloai"]]):
+                        type_word[idx] = "danhtuchung"
+                    # determine verb or adj, priority verb first
+                    elif  "photu" in type_word[idx-1]:
+                        if "dongtu" in type_word[idx]:
+                            type_word[idx] = "dongtu"
+                        elif "tinhtu" in type_word[idx]:
+                            type_word[idx] = "tinhtu"
+                    # determine adj
+                    elif type_word[idx-1] in ["danhtuchung", "dongtu", "daituxungho"]:
+                        type_word[idx] = "tinhtu"    
+                            
+                elif idx+1 < num:
+                    # determine type of word basing on "," or quanhetulietke 
+                    if type_word[idx+1] in ["lietke", "quanhetulietke"]:
+                        type_word[idx] = type_word[idx+2]
+                    # determine noun
+                    elif "danhtuchung" in type_word[idx] and np.any(i in type_word[idx+1] for i in ["chitu", "dongtu", "tinhtu", "photu"]) :
+                        type_word[idx] = "danhtuchung"
+                    # determine verb
+                    elif "dongtu" in type_word[idx] and "quanhetudinhvi" in type_word[idx+1]:
                         type_word[idx] = "dongtu"
-                    elif "tinhtu" in type_word[idx]:
-                        type_word[idx] = "tinhtu"
-        # print(word_type)
+                    # determine verb or adj
+                    elif type_word[idx+1] == "photuchimucdo":
+                        if "dongtu" in type_word[idx]:
+                            type_word[idx] = "dongtu"
+                        elif "tinhtu" in type_word[idx]:
+                            type_word[idx] = "tinhtu"
+        check = not np.array_equal(tmp, type_word)
+        print("lap")
                         
     for idx, type_word1 in enumerate(type_word) :
-        if type_word1 in ["danhtuchiloai", "photuthoigian"]:
+        if type_word1 in ["danhtuchiloai", "photuthoigian", "photuphudinh"]:
+            if type_word1 == "photuphuduinh":
+                neg = 1
             word.pop(idx)
             type_word.pop(idx)
     for idx, type_word1 in enumerate(type_word) :
@@ -121,7 +153,7 @@ def get_word_type_vi(tokens):
             if type_word1 == "tinhtu":
                 main_verb = idx
                 break
-    return word, type_word, thi, main_verb
+    return word, type_word, thi, main_verb, neg
 
 def get_CV(tokens):
     idx = 0
@@ -173,17 +205,17 @@ if __name__ == "__main__":
         PRONOUN = 0
         NEG = 0
         # 1. Input text
-        sequence = "cô ấy đẹp"
+        sequence = "anh ấy ngoan"
         # 2. Tokenize text
         tokens = vn_token_uts(sequence)
         # 3.1 Get VI type, primary Verb, Tense
-        word_list_vi, word_type_vi, tense, primary_idx = get_word_type_vi(tokens)
+        word_list_vi, word_type_vi, tense, primary_idx, neg = get_word_type_vi(tokens)
         for idx, word in enumerate(word_list_vi):
-            print(word+" "+word_type_vi[idx])
+            print(word+": "+word_type_vi[idx])
         # print(primary_idx)
         # 3.2 Get C-V
         # primary_idx += 1
-        NEG = get_neg(tokens)
+        NEG = neg
         # 4.1 Matching word
         vi_sentence = []
         # vi_sentence = ((tu1,(loaitu1, 1)), (tu2,(loaitu2, 2)), ...)
