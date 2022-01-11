@@ -1507,7 +1507,7 @@
             "noun"
         ],
         "trans1": [
-            "Austria",
+            "shirt",
             "Jacket",
             "coat",
             "tunic",
@@ -30285,17 +30285,11 @@
     {
         "word": "cậu",
         "type": [
-            "noun"
+            "pronoun"
         ],
         "trans1": [
-            "Uncle",
-            "mother's brother",
-            "oung man",
-            "aster",
-            "ld boy",
-            "old chap",
-            "ather",
-            "dad"
+            "you",
+            "unclde"
         ]
     },
     {
@@ -36936,10 +36930,9 @@
             "noun"
         ],
         "trans1": [
-            "Cur",
-            "ass",
-            "donkey",
-            "og spaniel boxer saluki"
+            "dog",
+            "cur",
+            "donkey"
         ]
     },
     {
@@ -41775,8 +41768,8 @@
             "verb"
         ],
         "trans1": [
+            "have",
             "be",
-            "o have",
             "own"
         ]
     },
@@ -129204,10 +129197,9 @@
     {
         "word": "nhiều",
         "trans0": [
-            "numerous",
+            "much",
             "abundant",
             "very much",
-            "much",
             "many",
             "several",
             "a great deal"

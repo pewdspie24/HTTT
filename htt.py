@@ -9,10 +9,7 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-import main
 
-
-myModule = main.MainProcess()
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -113,16 +110,6 @@ class Ui_MainWindow(object):
         item.setText(_translate("MainWindow", "Suggested Word"))
         item = self.table_translate.horizontalHeaderItem(3)
         item.setText(_translate("MainWindow", "Word Type"))
-        self.backend()
-    
-    def backend(self):
-        self.translate_button.clicked.connect(self.translate)
-    
-    def translate(self):
-        sentence = self.vn_text.toPlainText()
-        vi_sentence, eng_sentence, result, tense = myModule.process(sentence)
-        self.en_text.setPlainText(result)
-        print(eng_sentence)
 
 
 if __name__ == "__main__":

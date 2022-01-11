@@ -46,7 +46,7 @@
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QPlainTextEdit" name="plainTextEdit">
+   <widget class="QPlainTextEdit" name="vn_text">
     <property name="geometry">
      <rect>
       <x>50</x>
@@ -74,7 +74,7 @@
      <string>Vietnamese Sentence Input</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="translate_button">
     <property name="geometry">
      <rect>
       <x>50</x>
@@ -105,7 +105,7 @@
      <string>English Sentence Output</string>
     </property>
    </widget>
-   <widget class="QPlainTextEdit" name="plainTextEdit_2">
+   <widget class="QPlainTextEdit" name="en_text">
     <property name="geometry">
      <rect>
       <x>50</x>
@@ -136,7 +136,7 @@
        <height>309</height>
       </rect>
      </property>
-     <widget class="QTableWidget" name="tableWidget">
+     <widget class="QTableWidget" name="table_translate">
       <property name="geometry">
        <rect>
         <x>-5</x>
