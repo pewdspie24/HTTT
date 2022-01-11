@@ -5151,12 +5151,8 @@ hói
 hóp
 hô hấp
 hô-li-gân
-hôm
 hôm kia
-hôm kìa
 hôm mai
-hôm nay
-hôm qua
 hôm sớm
 hôn lễ
 hôn nhân
@@ -7783,8 +7779,6 @@ ngày
 ngày công
 ngày giờ
 ngày kia
-ngày kìa
-ngày mai
 ngày mùa
 ngày nay
 ngày rày
@@ -7793,7 +7787,6 @@ ngày sinh
 ngày tháng
 ngày tiết
 ngày trước
-ngày xưa
 ngày đêm
 ngày đường
 ngách

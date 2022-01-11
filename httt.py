@@ -9,7 +9,8 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-import main
+# import main
+import main_Ngoc as main
 
 
 myModule = main.MainProcess()
