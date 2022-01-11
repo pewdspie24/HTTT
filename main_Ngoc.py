@@ -168,16 +168,13 @@ class MainProcess():
             print(word)          
             print(type_word) 
             print(dem, " ", num, " ", type_word[dem], " ", word[dem])
-            print(type_word[dem] in ["photuchimucdo", "photuphudinh"])
-            print(dem+1<num and np.any([i in type_word[dem+1] for i in ["dongtu", "tinhtu"]]))
-            if type_word[dem] in ["photuchimucdo", "photuphudinh"] and dem+1<num and np.any([i in type_word[dem+1] for i in ["dongtu", "tinhtu"]]) :
-                main_verb = dem
-            if word[dem] in ["đã", "từng", "đang", "sẽ"] and dem+1<num and np.any([i in type_word[dem+1] for i in ["dongtu", "tinhtu"]]):
-                main_verb = dem
+            if (dem+1<num and np.any([i in type_word[dem+1] for i in ["dongtu", "tinhtu"]])):
+                if "photuphudinh" in type_word[dem] or word[dem] in ["đã", "từng", "đang", "sẽ"]:
+                    main_verb = dem  
+                elif "photuchimucdo" in type_word[dem]:
+                    main_verb = dem + 1
             if type_word[dem] in ["danhtuchiloai", "photuphudinh"] or word[dem] in ["đã", "từng", "đang", "sẽ"]:
-                print("cc---------")
                 if "photuphudinh" in type_word[dem]:
-                    print("phu dinh--------------")
                     neg = 1
                 word.pop(dem)
                 type_word.pop(dem)
