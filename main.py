@@ -187,6 +187,8 @@ class MainProcess():
         # Process
         PRONOUN = 0
         NEG = 0
+        vi_sentence = []
+        eng_sentence = []
         # 1. Input text
         sequence = sentence
         # 2. Tokenize text
@@ -200,23 +202,22 @@ class MainProcess():
         # primary_idx = 4
         # NEG = self.get_neg(tokens)
         # 4 Matching word
-        vi_sentence = []
         # vi_sentence = ((tu1,(loaitu1, 1)), (tu2,(loaitu2, 2)), ...)
         for idx, token in enumerate(word_list_vi):
             vi_sentence.append([token,[word_type_vi[idx], idx]])
-        eng_sentence = []
+        # print(vi_sentence)
         # eng_sentence = ((tu1,(loaitu1, 1)), (tu2,(loaitu2, 2)), ...)
         idx = 0
+        list_words = []
         for word in vi_sentence:
             k, v = word[0], word[1]
+            c = []
             # print("ATT",v[0])
             if v[0] == 'kitu':
-                c = []
                 c.append(k)
                 eng_sentence.append([c,['kitu', idx]])
                 continue
             if v[0] == 'daituxungho' and k[0].isupper():
-                c = []
                 c.append(k)
                 # print(c)
                 eng_sentence.append([c,['proper', idx]])
@@ -225,6 +226,7 @@ class MainProcess():
             idx+=1
             for idx_en, i in enumerate(self.vi_eng_dict):
                 if k == i['word']:
+                    print(i)
                     vi_type = v[0]
                     # print(vi_type)
                     # Exist in matching-type
@@ -249,7 +251,7 @@ class MainProcess():
                                         name_trans = 'trans'+str(trans_idx)
                                 trans_idx+=1
                             # print(i[name_trans])
-                            list_words = i[name_trans]
+                            list_words = i[name_trans].copy()
                             # print(list_words)
                             eng_sentence.append([list_words,[WTYPE_MATCH.get(vi_type), idx]])
                             flag = 1
@@ -259,7 +261,7 @@ class MainProcess():
                             for key in i.keys():
                                 if key[0:3] == 'tra':
                                     for obj in i.get(key):
-                                        list_words.append(obj)
+                                        list_words.append(obj.copy())
                             eng_sentence.append([list_words,[WTYPE_MATCH.get(vi_type), idx]])
                             flag = 2
                     # Don't existed in matching-type
@@ -268,7 +270,7 @@ class MainProcess():
                         for key in i.keys():
                             if key[0:3] == 'tra':
                                 for obj in i.get(key):
-                                    list_words.append(obj)
+                                    list_words.append(obj.copy())
                         eng_sentence.append([list_words,[None, idx]])
                         flag = 3
             # Can't find in dict

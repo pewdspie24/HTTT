@@ -120,6 +120,7 @@ class Ui_MainWindow(object):
     
     def translate(self):
         sentence = self.vn_text.toPlainText()
+        print(sentence)
         vi_sentence, eng_sentence, result, tense = myModule.process(sentence)
         self.en_text.setPlainText(result)
         print(eng_sentence)
