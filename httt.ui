@@ -84,7 +84,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>PushButton</string>
+     <string>Translate!</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_3">
@@ -151,16 +151,12 @@
         <height>311</height>
        </rect>
       </property>
-      <row>
-       <property name="text">
-        <string>c</string>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string>d</string>
-       </property>
-      </row>
+      <property name="sizeAdjustPolicy">
+       <enum>QAbstractScrollArea::AdjustToContents</enum>
+      </property>
+      <property name="editTriggers">
+       <set>QAbstractItemView::NoEditTriggers</set>
+      </property>
       <column>
        <property name="text">
         <string>VN Char</string>
@@ -173,12 +169,12 @@
       </column>
       <column>
        <property name="text">
-        <string>Suggested Word</string>
+        <string>Word Type</string>
        </property>
       </column>
       <column>
        <property name="text">
-        <string>Word Type</string>
+        <string>Suggested Word</string>
        </property>
       </column>
      </widget>
