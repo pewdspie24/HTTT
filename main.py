@@ -46,13 +46,14 @@ class MainProcess():
                     else:
                         self.word_type_vi[tmp] = i[:-4]    
 
-    def check_number(word):
+    def check_number(self, word):
         tmp = word
-        tmp = tmp.replace(",","")
+        if "," in tmp:
+            tmp = tmp.replace(",","")
         try:
             float(tmp)
             return True
-        except ValueError:
+        except:
             return False
 
     def get_word_type_vi(self, tokens):
@@ -80,9 +81,9 @@ class MainProcess():
                     word.append(token)
                     type_word.append("daituxungho")
                 # if is number
-                elif self.check_number(token) == True:
-                    word.append(token)
-                    type_word.append("so")
+                # elif self.check_number(self, token) == True:
+                #     word.append(token)
+                #     type_word.append("so")
                 # if is the first word, consider as a noun
                 elif len(word) == 0:
                     word.append(token)
@@ -164,7 +165,8 @@ class MainProcess():
                             
         for idx, type_word1 in enumerate(type_word) :
             if type_word1 in ["danhtuchiloai", "photuthoigian", "photuphudinh"]:
-                if type_word1 == "photuphuduinh":
+                # print(type_word1)
+                if type_word1 == "photuphudinh":
                     neg = 1
                 word.pop(idx)
                 type_word.pop(idx)
@@ -198,6 +200,7 @@ class MainProcess():
         for idx, word in enumerate(word_list_vi):
             print(word+" "+word_type_vi[idx])
         print("Primary",primary_idx)
+        print("NEG", NEG)
         # 3.2 Get C-V
         # primary_idx = 4
         # NEG = self.get_neg(tokens)
@@ -234,7 +237,10 @@ class MainProcess():
                         # print(WTYPE_MATCH.get(vi_type))
                         # Exist in dictionary with type
                         # print(i['type'])
-                        if 'type' in i and WTYPE_MATCH.get(vi_type) in i['type']: 
+                        type_match = WTYPE_MATCH.get(vi_type)
+                        if vi_type[0:5] == "photu":
+                            type_match = type_match[:-1]
+                        if 'type' in i and type_match in i['type']: 
                             # print("cc")
                             trans_idx = 0
                             res = {}
@@ -242,15 +248,15 @@ class MainProcess():
                             for type in i['type']:
                                 if 'trans'+str(trans_idx) in i:
                                     res.update(type=i['trans'+str(trans_idx)])
-                                    if type == WTYPE_MATCH.get(vi_type):
+                                    if type == type_match:
                                         name_trans = 'trans'+str(trans_idx)
                                 else:
                                     trans_idx+=1
                                     res.update(type=i['trans'+str(trans_idx)])
-                                    if type == WTYPE_MATCH.get(vi_type):
+                                    if type == type_match:
                                         name_trans = 'trans'+str(trans_idx)
                                 trans_idx+=1
-                            # print(i[name_trans])
+                            print(name_trans)
                             list_words = i[name_trans].copy()
                             # print(list_words)
                             eng_sentence.append([list_words,[WTYPE_MATCH.get(vi_type), idx]])
@@ -261,7 +267,7 @@ class MainProcess():
                             for key in i.keys():
                                 if key[0:3] == 'tra':
                                     for obj in i.get(key):
-                                        list_words.append(obj.copy())
+                                        list_words.append(obj)
                             eng_sentence.append([list_words,[WTYPE_MATCH.get(vi_type), idx]])
                             flag = 2
                     # Don't existed in matching-type
@@ -270,12 +276,12 @@ class MainProcess():
                         for key in i.keys():
                             if key[0:3] == 'tra':
                                 for obj in i.get(key):
-                                    list_words.append(obj.copy())
-                        eng_sentence.append([list_words,[None, idx]])
+                                    list_words.append(obj)
+                        eng_sentence.append([list_words,["manytype", idx]])
                         flag = 3
             # Can't find in dict
             if flag == 0:
-                eng_sentence.append([k,[None, idx]])
+                eng_sentence.append([k,["NA", idx]])
 
         # 6. Find the right Subject 
         # Define type of subject
