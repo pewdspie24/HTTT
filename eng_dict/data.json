@@ -39049,9 +39049,8 @@
             "acid",
             "vinegary",
             "luminous",
-            "arsh",
-            "sharp",
-            "ough"
+            "harsh",
+            "sharp"
         ]
     },
     {
@@ -88133,12 +88132,16 @@
     {
         "word": "hơi",
         "type": [
-            "noun"
+            "noun",
+            "adv"
         ],
         "trans1": [
             "gas",
             "steam",
             "air"
+        ],
+        "trans2": [
+            "a little bit"
         ]
     },
     {
@@ -138775,7 +138778,8 @@
         "word": "phải",
         "type": [
             "adj",
-            "verb"
+            "verb",
+            "prep"
         ],
         "trans1": [
             "right"
@@ -138783,6 +138787,9 @@
         "trans2": [
             "must",
             "should"
+        ],
+        "trans3": [
+            "right"
         ]
     },
     {
@@ -166041,7 +166048,8 @@
     {
         "word": "tại",
         "type": [
-            "adv"
+            "adv",
+            "prep"
         ],
         "trans1": [
             "at",
@@ -166049,6 +166057,10 @@
             "due to",
             "owing to",
             "because"
+        ],
+        "trans2": [
+            "at",
+            "in"
         ]
     },
     {
@@ -181503,11 +181515,8 @@
     },
     {
         "word": "trái",
-        "type": [
-            "adj"
-        ],
         "trans1": [
-            "left wrong contrary"
+            "left"
         ]
     },
     {
@@ -182594,7 +182603,7 @@
         "word": "trên",
         "type": [
             "adj",
-            "adv",
+            "prep",
             "adj"
         ],
         "trans1": [
@@ -183276,7 +183285,7 @@
             "adj",
             "conj",
             "adj",
-            "adv"
+            "prep"
         ],
         "trans1": [
             "clear",
@@ -184805,7 +184814,8 @@
         "word": "trước",
         "type": [
             "adj",
-            "adv"
+            "adv",
+            "prep"
         ],
         "trans1": [
             "former",
@@ -184816,6 +184826,9 @@
             "ahead last",
             "past first",
             "before hand"
+        ],
+        "trans3": [
+            "before"
         ]
     },
     {
@@ -186183,7 +186196,7 @@
             "temple guard"
         ],
         "trans2": [
-            "rom",
+            "from",
             "since"
         ],
         "trans3": [
@@ -192024,8 +192037,8 @@
             "adj"
         ],
         "trans1": [
-            "blue",
-            "green"
+            "green",
+            "blue"
         ]
     },
     {

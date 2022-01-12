@@ -126,39 +126,55 @@ class Ui_MainWindow(object):
         self.en_text.setPlainText(result)
         print(eng_sentence)
         print(tense)
+        print(self.list_chars)
         self.table_translate.setRowCount(len(self.list_chars))
         combo_list = [] 
         for idx, i in enumerate(self.list_chars):   
             self.table_translate.setItem(idx, 0, QtWidgets.QTableWidgetItem(i.get('word')))
             types = []
-            for it in i.get('type'):
-                types.append(it)
+            try:
+                for it in i.get('type'):
+                    types.append(it)
+            except Exception:
+                types.append('unknown')
             combo = QtWidgets.QComboBox()
             combo.addItems(types)
             combo.currentTextChanged.connect(partial(self.showText,idx))
             combo_list.append(combo)
             self.showText(idx, types[0])
             self.table_translate.setCellWidget(idx, 2, combo_list[idx])
-            self.table_translate.setItem(idx, 1, QtWidgets.QTableWidgetItem(eng_sentence[idx][0][0]))
+            if eng_sentence[idx][0][0] != None:
+                self.table_translate.setItem(idx, 1, QtWidgets.QTableWidgetItem(eng_sentence[idx][0][0]))
 
     def showText(self, idx, value):
         res_txt = ''
-        types = self.list_chars[idx].get('type')
         res = {}
         trans_idx = 0
-        for index, type1 in enumerate(types):
-            if 'trans'+str(trans_idx) in self.list_chars[idx]:
-                res.update({type1:'trans'+str(trans_idx)})
-            else:
+        try:
+            types = self.list_chars[idx].get('type')
+            for index, type1 in enumerate(types):
+                if 'trans'+str(trans_idx) in self.list_chars[idx]:
+                    res.update({type1:'trans'+str(trans_idx)})
+                else:
+                    trans_idx+=1
+                    res.update({type1:'trans'+str(trans_idx)})
                 trans_idx+=1
-                res.update({type1:'trans'+str(trans_idx)})
-            trans_idx+=1
-        # print(idx)
-        trans_name = res.get(value)
-        for index, i in enumerate(self.list_chars[idx].get(trans_name)):
-            res_txt += i
-            if index != len(self.list_chars[idx].get(trans_name))-1:
-                res_txt += '\n'
+            # print(idx)
+            trans_name = res.get(value)
+            for index, i in enumerate(self.list_chars[idx].get(trans_name)):
+                res_txt += i
+                if index != len(self.list_chars[idx].get(trans_name))-1:
+                    res_txt += '\n'
+        except Exception:
+            for keys in self.list_chars[idx]:
+                if keys[0:4] == 'trans':
+                    print(keys)
+                    print(self.list_chars[idx])
+                    list_texts = self.list_chars[idx].get(keys)
+                    for text in list_texts:
+                        res_txt += text
+                        if index != len(self.list_chars[idx].get(keys))-1:
+                            res_txt += '\n'
         self.table_translate.setItem(idx, 3, QtWidgets.QTableWidgetItem(res_txt))
         self.table_translate.resizeRowsToContents()
 

@@ -8,7 +8,7 @@ import numpy as np
 from googletrans import Translator
 translator = Translator()
 
-WTYPE_MATCH = {'danhtuchung':'noun', 'dongtu':'verb', 'tinhtu':'adj', 'sotu':'number', 'luongtu':'adj', 'photu':'advA', 'photuchimucdo':'advB', 'photuthoigian':'advB', 'daitu':'pronoun', 'thantu':'excl', 'quanhetulietke':'conj', 'quanhetudinhvi':'prep', 'chitu':'det', 'daituxungho':'pronoun'}
+WTYPE_MATCH = {'danhtuchung':'noun', 'dongtu':'verb', 'tinhtu':'adj', 'sotu':'number', 'luongtu':'adj', 'photu':'advA', 'photuchimucdo':'advB', 'photuthoigian':'advB', 'daitu':'pronoun', 'thantu':'excl', 'quanhetulietke':'conj', 'quanhetudinhvi':'prep', 'chitu':'det', 'daituxungho':'pronoun', 'quanhetudinhvi':'conj'}
 TENSE = ['present', 'past', 'future', 'continous']
 FLAG = 0
 PATH_VI = ["chitu.txt", "daituxungho.txt", "danhtuchiloai.txt", "danhtuchung.txt",  
@@ -34,8 +34,8 @@ class MainProcess():
             self.uncount_noun = j.read().splitlines() 
             
         nouns = pandas.read_csv("eng_dict\\noun.csv")
-        self.plural = nouns['plural']
-        self.singular = nouns['singular']
+        self.plural = nouns.plural.to_list()
+        self.singular = nouns.singular.to_list()
         # Vietnamese loading
         for i in PATH_VI:
             with open(VI_DICT_PATH + i, "r+", encoding="utf-8" ) as f:
@@ -88,40 +88,44 @@ class MainProcess():
                 elif len(word) == 0:
                     word.append(token)
                     type_word.append("danhtuchung")
+                else: 
+                    word.append(token)
+                    type_word.append("unknown")
 
         num = len(word)
+        print(word)          
+        print(type_word)
         while (check): # if check == True, it mean, still having changes
             tmp = type_word
             for idx in range(num) :
-                word_type = type_word[idx].split(" ")
+                word_type = type_word[idx].strip().split(" ")
                 # determine tense 
-                if word[idx] in ["đã", "từng"]:
+                if word[idx] in ["đã", "từng", "hôm qua", "hôm xưa", "ngày xưa"]:
                     thi = "past"
-                elif word[idx] == "đang":
+                elif word[idx] in ["đang", "hôm nay"]:
                     thi = "continous"
-                elif word[idx] == "sẽ":
+                elif word[idx] in ["sẽ", "ngày kìa", "ngày mai"]:
                     thi = "future"  
                 #determine danhtuchiloai or verb: bó, cuốn, tập, ...
-                if "danhtuchiloai" in type_word[idx] and len(type_word[idx].split(" ")) > 2:
+                if "danhtuchiloai dongtu" in type_word[idx]:
                     # if before word is sotu or luong tu
-                    if idx-1>0 and type_word[idx-1] in ["sotu", "luongtu", "dongtu"]:
+                    if idx-1>0 and type_word[idx-1] in ["sotu", "luongtu", "dongtu", "quanhetudinhvi"]:
                         type_word[idx] = "danhtuchiloai"
-                    elif  idx-1>0 and type_word[idx-1] in ["daituxungho", "danhtuchung", "tinhtu"]:
+                    else:
                         type_word[idx] = "dongtu"
                 # convert danhtuchiloai to noun
-                if "danhtuchiloai" in type_word[idx]: 
-                    if idx+1 == num or (idx+1 < num and "danhtu" not in type_word[idx+1]):
+                if "danhtuchiloai" in type_word[idx] and (idx+1 == num or (idx+1 < num and "danhtu" not in type_word[idx+1])): 
                         type_word[idx] = "danhtuchung"
                 # determine noun or sotu
                 if word[idx] == "ba":
-                    check =True
-                    if idx+1<num and "danhtu" in type_word[idx+1]:
+                    if (idx>0 and "danhtuchung" in type_word[idx-1])or (idx+1<num and "danhtu" in type_word[idx+1]):
                         type_word[idx] = "sotu"
                     else:
                         type_word[idx] = "danhtuchung"
                 #determine quanhetudinhvi or verb or noun
                 if "quanhetudinhvi" in type_word[idx]:
-                    if idx+1 <num and np.any([i in type_word[idx+1] for i in ["danhtu", "sotu", "luongtu", "daituxungho", "so"]]):
+                    # if idx+1 <num and np.any([i in type_word[idx+1] for i in ["danhtu", "sotu", "luongtu", "daituxungho", "so"]]):
+                    if idx>1 and np.any([i in type_word[idx-1] for i in ["dongtu", "tinhtu"]]):
                         type_word[idx] = "quanhetudinhvi"
                     else:
                         type_word[idx] = type_word[idx].replace("quanhetudinhvi","")    
@@ -132,18 +136,19 @@ class MainProcess():
                         if type_word[idx-1] in ["lietke", "quanhetulietke"]:
                             type_word[idx] = type_word[idx-2]
                         # determine noun
-                        elif np.any([i in type_word[idx-1] for i in ["sotu", "luongtu", "danhtuchiloai"]]):
-                            type_word[idx] = "danhtuchung"
+                        elif "danhtuchung" in type_word[idx]:
+                            if np.any([i in type_word[idx-1] for i in ["sotu", "luongtu", "danhtuchiloai", "quanhetudinhvi"]]) or word[idx-1] == "của":
+                                type_word[idx] = "danhtuchung"
+                            elif np.any([i in type_word[idx-1] for i in ["daituxungho", "danhtuchung"]]):
+                                type_word[idx] = type_word[idx].replace("danhtuchung","")
                         # determine verb or adj, priority verb first
-                        elif  "photu" in type_word[idx-1]:
+                        elif np.any([i in type_word[idx-1] for i in ["danhtuchung", "photu", "daituxungho"]]):
                             if "dongtu" in type_word[idx]:
                                 type_word[idx] = "dongtu"
                             elif "tinhtu" in type_word[idx]:
-                                type_word[idx] = "tinhtu"
-                        # determine adj
-                        elif type_word[idx-1] in ["danhtuchung", "dongtu", "daituxungho"]:
-                            type_word[idx] = "tinhtu"    
-                                
+                                type_word[idx] = "tinhtu"  
+                        elif "tinhtu" in type_word[idx] and "dongtu" in type_word[idx-1]:
+                            type_word[idx] = "tinhtu" 
                     elif idx+1 < num:
                         # determine type of word basing on "," or quanhetulietke 
                         if type_word[idx+1] in ["lietke", "quanhetulietke"]:
@@ -152,35 +157,46 @@ class MainProcess():
                         elif "danhtuchung" in type_word[idx] and np.any(i in type_word[idx+1] for i in ["chitu", "dongtu", "tinhtu", "photu"]) :
                             type_word[idx] = "danhtuchung"
                         # determine verb
-                        elif "dongtu" in type_word[idx] and "quanhetudinhvi" in type_word[idx+1]:
+                        elif "dongtu" in type_word[idx] and np.any(i in type_word[idx+1] for i in ["photuchimucdo", "quanhetudinhvi", "sotu", "luongtu", "danhtu", "tinhtu"]):
                             type_word[idx] = "dongtu"
                         # determine verb or adj
-                        elif type_word[idx+1] == "photuchimucdo":
-                            if "dongtu" in type_word[idx]:
-                                type_word[idx] = "dongtu"
-                            elif "tinhtu" in type_word[idx]:
-                                type_word[idx] = "tinhtu"
+                        elif "tinhtu" in type_word[idx] and type_word[idx+1] == "photuchimucdo":
+                            type_word[idx] = "tinhtu"
             check = not np.array_equal(tmp, type_word)
             print("lap")
-                            
-        for idx, type_word1 in enumerate(type_word) :
-            if type_word1 in ["danhtuchiloai", "photuthoigian", "photuphudinh"]:
-                # print(type_word1)
-                if type_word1 == "photuphudinh":
+        # delete unneed word  
+        dem = 0              
+        while dem<num:
+            print(word)          
+            print(type_word) 
+            print(dem, " ", num, " ", type_word[dem], " ", word[dem])
+            if (dem+1<num and np.any([i in type_word[dem+1] for i in ["dongtu", "tinhtu"]])):
+                if "photuphudinh" in type_word[dem] or word[dem] in ["đã", "từng", "đang", "sẽ"]:
+                    main_verb = dem  
+                elif "photuchimucdo" in type_word[dem]:
+                    main_verb = dem + 1
+            if type_word[dem] in ["danhtuchiloai", "photuphudinh"] or word[dem] in ["đã", "từng", "đang", "sẽ"]:
+                if "photuphudinh" in type_word[dem]:
                     neg = 1
-                word.pop(idx)
-                type_word.pop(idx)
-        for idx, type_word1 in enumerate(type_word) :
-            if type_word1 == "dongtu":
-                main_verb = idx
-                break
+                word.pop(dem)
+                type_word.pop(dem)
+                num = num-1
+            else:
+                dem +=1
+        # find main verb
+        if main_verb == 0:
+            for idx, type_word1 in enumerate(type_word) :
+                if type_word1 == "dongtu":
+                    main_verb = idx
+                    break
         if main_verb == 0:
             for idx, type_word1 in enumerate(type_word) :
                 if type_word1 == "tinhtu":
                     main_verb = idx
                     break
+        
+        print(thi, " ", main_verb, " ", neg)
         return word, type_word, thi, main_verb, neg
-
     # def get_neg(self, tokens):
     #     return 0
 
@@ -290,6 +306,8 @@ class MainProcess():
         # 6. Find the right Subject 
         # Define type of subject
         print(eng_sentence)
+        MANY_N = False
+        I_flag = False
         try:
             for i in range(0, primary_idx):
                 type_vi = vi_sentence[i][1][0]
@@ -327,7 +345,17 @@ class MainProcess():
                 # If plural noun
                 if word_en in self.plural:
                     PRONOUN = 1
-                    break     
+                    break
+                if type_en == 'number' and eng_sentence[i+1][1][0] == 'noun':
+                    MANY_N = True
+                    continue
+                if type_en == 'noun' and MANY_N:
+                    PRONOUN = 1
+                    # print("CCCCCCCCCCC")
+                    print(self.singular.index(word_en))
+                    eng_sentence[i][0][0] = self.plural[self.singular.index(word_en)]
+                    break
+
         except Exception:
                 print('Error') 
         # 7. Verb conjugation
