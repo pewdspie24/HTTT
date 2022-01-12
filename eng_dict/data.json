@@ -428,14 +428,15 @@
     {
         "word": "ai",
         "type": [
-            "pronoun"
+            "noun"
         ],
         "trans1": [
+            "people",
+            "someone",
+            "anyone",
             "Who",
             "whom",
-            "someone",
             "somebody",
-            "anyone",
             "anybody"
         ]
     },
@@ -661,8 +662,8 @@
             "verb"
         ],
         "trans1": [
-            "realize",
             "know inside out",
+            "realize",
             "have a good command of",
             "know like the back of one's hand",
             "have a thorough knowledge of",
@@ -5209,13 +5210,14 @@
             "noun"
         ],
         "trans1": [
+            "lesson",
             "Tag",
             "tablet",
             "Card",
             "card-game",
             "Resort",
-            "course of action",
-            "Lesson"
+            "course of action"
+            
         ]
     },
     {
@@ -19551,22 +19553,17 @@
         "type": [
             "noun",
             "verb",
-            "adj",
-            "noun"
+            "adj"
         ],
         "trans1": [
-            "singing"
+            "Multiple"
         ],
         "trans2": [
-            "break",
-            "act counter to"
+            "break"
         ],
         "trans3": [
             "Multifold",
             "greater"
-        ],
-        "trans4": [
-            "Multiple"
         ]
     },
     {
@@ -23273,12 +23270,12 @@
             "noun"
         ],
         "trans1": [
+            "Fish",
             "Click",
             "pawl",
             "Steel tip",
-            "toe plate",
-            "Fish",
-            ""
+            "toe plate"
+            
         ]
     },
     {
@@ -42648,8 +42645,7 @@
         "type": [
             "noun",
             "verb",
-            "pronoun",
-            "pronoun-obj"
+            "pronoun"
         ],
         "trans1": [
             "she",
@@ -42663,9 +42659,6 @@
         "trans3": [
             "her",
             "she"
-        ],
-        "trans4": [
-            "her"
         ]
     },
     {
@@ -43887,9 +43880,9 @@
             "noun"
         ],
         "trans1": [
+            "meal",
             "rice",
-            "pulp",
-            "Meal"
+            "pulp"
         ]
     },
     {
@@ -58439,22 +58432,13 @@
     {
         "word": "đây",
         "type": [
-            "adv",
-            "pronoun",
-            "noun",
-            "det"
+            "det",
+            "noun" 
         ],
         "trans1": [
             "here"
         ],
         "trans2": [
-            "this"
-        ],
-        "trans3": [
-            "here",
-            "this"
-        ],
-        "trans4":[
             "this"
         ]
     },
@@ -68363,7 +68347,6 @@
             "verb"
         ],
         "trans1": [
-            "aw rice",
             "rice",
             "Bot) bombax"
         ],
@@ -98854,23 +98837,14 @@
     {
         "word": "kia",
         "type": [
-            "adv",
             "noun",
-            "pronoun",
             "det"
         ],
         "trans1": [
-            "over",
             "that"
         ],
         "trans2": [
-            "that"
-        ],
-        "trans3": [
-            "that"
-        ],
-        "trans4":[
-            "that"
+            "there"
         ]
     },
     {
@@ -111950,7 +111924,6 @@
         "type": [
             "noun",
             "verb",
-            "verb",
             "adj"
         ],
         "trans1": [
@@ -111959,14 +111932,12 @@
         ],
         "trans2": [
             "strop",
-            "set"
-        ],
-        "trans3": [
+            "set",
             "meak",
             "tell tales"
         ],
-        "trans4": [
-            "pale"
+        "trans3": [
+           "pale"
         ]
     },
     {
@@ -112702,8 +112673,9 @@
     {
         "word": "mọi",
         "trans0": [
-            "all",
-            "every"
+            "every",
+            "all"
+            
         ]
     },
     {
@@ -115792,20 +115764,14 @@
         "word": "nài",
         "type": [
             "verb",
-            "verb",
-            "verb",
             "noun"
         ],
         "trans1": [
-            "mind"
-        ],
-        "trans2": [
+            "tie",
+            "mind",
             "insists"
         ],
-        "trans3": [
-            "tie"
-        ],
-        "trans4": [
+        "trans2": [
             "jockey"
         ]
     },
@@ -124413,8 +124379,8 @@
             "noun"
         ],
         "trans1": [
-            "man",
             "person",
+            "man",
             "people",
             "individual"
         ]
@@ -127032,30 +126998,19 @@
         "word": "nhân",
         "type": [
             "verb",
-            "noun",
-            "noun",
-            "noun",
-            "noun",
             "noun"
         ],
         "trans1": [
             "multiply"
+            
         ],
         "trans2": [
             "man",
-            "person"
-        ],
-        "trans3": [
-            "cause"
-        ],
-        "trans4": [
+            "person",
+            "cause",
             "kernel",
-            "almond"
-        ],
-        "trans5": [
-            "mucleus"
-        ],
-        "trans6": [
+            "almond",
+            "mucleus",
             "filling"
         ]
     },
@@ -138128,27 +138083,22 @@
         "word": "pha",
         "type": [
             "noun",
-            "noun",
             "verb",
             "adj"
         ],
         "trans1": [
             "phase",
-            "stage"
-        ],
-        "trans2": [
+            "stage",
             "head-light",
             "head-lamp",
             "searchlight"
         ],
-        "trans3": [
+        "trans2": [
             "mix",
-            "mingle",
-            "ađ"
+            "mingle"
         ],
-        "trans4": [
-            "miscellaneons",
-            ""
+        "trans3": [
+            "miscellaneons"
         ]
     },
     {
@@ -161950,7 +161900,6 @@
         "type": [
             "noun",
             "verb",
-            "adj",
             "adj"
         ],
         "trans1": [
@@ -161963,9 +161912,6 @@
         ],
         "trans3": [
             "alive"
-        ],
-        "trans4": [
-            "raw rare"
         ]
     },
     {
@@ -172378,7 +172324,16 @@
             "noun"
         ],
         "trans1": [
-            "shoolmaster"
+            "teacher"
+        ]
+    },
+    {
+        "word": "cô giáo",
+        "type": [
+            "noun"
+        ],
+        "trans1": [
+            "teacher"
         ]
     },
     {
@@ -173624,7 +173579,6 @@
         "word": "thiên",
         "type": [
             "noun",
-            "number",
             "verb",
             "adj"
         ],
@@ -173633,12 +173587,9 @@
             "part piece of"
         ],
         "trans2": [
-            "thousand"
-        ],
-        "trans3": [
             "move"
         ],
-        "trans4": [
+        "trans3": [
             "inclined to",
             "prone to"
         ]
@@ -183138,23 +183089,20 @@
         "type": [
             "adj",
             "conj",
-            "adj",
-            "prep"
+            "adj"
         ],
         "trans1": [
             "clear",
             "pure"
         ],
         "trans2": [
-            "within",
-            "in"
+            "in",
+            "within"
+            
         ],
         "trans3": [
             "internal",
             "interior"
-        ],
-        "trans4": [
-            "in"
         ]
     },
     {

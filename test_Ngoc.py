@@ -17,9 +17,5 @@
 # for k, v in word_type_vi.items():
 #     if len(v.split(" ")) > 1 and "dongtu" in v:
 #         print(k + ": " + v) 
-import json
-with open("eng_dict\data.json", 'r', encoding="utf8") as j:
-    vi_eng_dict = json.loads(j.read())
-for i in vi_eng_dict:
-    if "type" in i and "trans0" in i:
-        print(i["word"]) 
+
+print("ngoc_a_b_".replace("_", ""))

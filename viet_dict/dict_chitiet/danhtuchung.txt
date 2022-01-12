@@ -215,6 +215,7 @@ acquy
 adn
 ag
 agar
+ai
 ai điếu
 aids
 ak
@@ -8410,6 +8411,7 @@ núi rừng
 núi sông
 núm
 nút
+năm
 năm dương lịch
 năm học
 năm kia

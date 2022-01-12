@@ -77,7 +77,7 @@ class MainProcess():
                     word.append(token)
                     type_word.append("kytu")
                 # if the first character is uppper, consider as a name
-                elif token[0].isupper():
+                elif "A" <= token[0] and token[0] <= "Z":
                     word.append(token)
                     type_word.append("daituxungho")
                 # if is number
@@ -194,6 +194,8 @@ class MainProcess():
                 if type_word1 == "tinhtu":
                     main_verb = idx
                     break
+        
+        # print(thi, " ", main_verb, " ", neg)
         return word, type_word, thi, main_verb, neg
 
     def process(self, sentence):
@@ -209,8 +211,8 @@ class MainProcess():
         tokens = vn_token_uts(sequence)
         # 3.1 Get VI type, primary Verb, Tense
         word_list_vi, word_type_vi, tense, primary_idx, NEG = self.get_word_type_vi(tokens)
-        # for idx, word in enumerate(word_list_vi):
-        #     print(word+" "+word_type_vi[idx])
+        for idx, word in enumerate(word_list_vi):
+            print(word+" "+word_type_vi[idx])
         print("Primary",primary_idx)
         print("NEG", NEG)
         # 3.2 Get C-V
@@ -229,7 +231,7 @@ class MainProcess():
             c = []
             # print("ATT",v[0])
             if v[0] == 'kitu':
-                c.append(k) 
+                c.append(k)
                 eng_sentence.append([c,['kitu', idx]])
                 continue
             if v[0] == 'daituxungho' and k[0].isupper():
@@ -251,24 +253,20 @@ class MainProcess():
                         # print(i['type'])
                         type_match = WTYPE_MATCH.get(vi_type)
                         if vi_type[0:5] == "photu":
-                            type_match = type_match[:-1] #adv
+                            type_match = type_match[:-1]
                         if 'type' in i and type_match in i['type']: 
                             # print("cc")
                             trans_idx = 0
                             res = {}
                             name_trans = ""
                             for type in i['type']:
-                                if 'trans'+str(trans_idx) in i:
-                                    res.update(type=i['trans'+str(trans_idx)])
-                                    if type == type_match:
-                                        name_trans = 'trans'+str(trans_idx)
-                                else:
+                                while ('trans'+str(trans_idx) not in i):
                                     trans_idx+=1
-                                    res.update(type=i['trans'+str(trans_idx)])
-                                    if type == type_match:
-                                        name_trans = 'trans'+str(trans_idx)
+                                res.update(type=i['trans'+str(trans_idx)])
+                                if type == type_match:
+                                    name_trans = 'trans'+str(trans_idx)
                                 trans_idx+=1
-                            print(name_trans)
+                            # print(name_trans)
                             list_words = i[name_trans].copy()
                             # print(list_words)
                             eng_sentence.append([list_words,[WTYPE_MATCH.get(vi_type), idx]])
@@ -332,7 +330,7 @@ class MainProcess():
                 continue
             # print(word_en)
             # If plural noun
-            if word_en in self.plural:
+            if word_en in self.plural.values:
                 PRONOUN = 1
                 break      
         # 7. Verb conjugation 
@@ -340,6 +338,7 @@ class MainProcess():
         ext_flag = False
         ext_word = ""
         splited = verb.split(" ")
+        print(splited)
         if len(splited) > 1:
             verb = splited[0]
             ext_flag = True
