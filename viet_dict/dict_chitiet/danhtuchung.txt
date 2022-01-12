@@ -1990,11 +1990,9 @@ chấm phạt đền
 chấm phảy
 chấm phẩy
 chấm than
-chấn
 chấn lưu
 chấn song
 chấn tử
-chất
 chất bán dẫn
 chất béo
 chất bôi trơn
@@ -11235,6 +11233,7 @@ thủ tự
 thủ vĩ ngâm
 thủ đoạn
 thủ đô
+thứ
 thứ bậc
 thứ bực
 thứ dân viện
@@ -14469,7 +14468,6 @@ zn
 đất đai
 đất đèn
 đất đỏ
-đấu
 đấu pháp
 đấu sĩ
 đấu thầu
@@ -14530,9 +14528,6 @@ zn
 đầu đề
 đầu đọc
 đầu ối
-đận
-đập
-đậu
 đậu Hà Lan
 đậu bắp
 đậu cô ve
@@ -14558,10 +14553,8 @@ zn
 đậu đen
 đậu đũa
 đậu đỏ
-đằng
 đằng ngà
 đằng đằng
-đẳng
 đẳng cấp
 đẳng thức
 đẵn
@@ -14584,11 +14577,8 @@ zn
 đặc vụ
 đặc ân
 đặc điểm
-đẹn
-đế
 đế chế
 đế quốc
-đề
 đề bài
 đề can
 đề cương
@@ -14603,7 +14593,6 @@ zn
 đền đài
 đệ tử
 đệm
-đệp
 đỉa
 đỉa hẹ
 đỉa mén
@@ -14611,7 +14600,6 @@ zn
 đỉnh
 đỉnh cao
 đỉnh điểm
-địa
 địa bàn
 địa chi
 địa chánh
@@ -14696,14 +14684,8 @@ zn
 định trị
 định đề
 định ước
-địu
-đọi
-đọn
 đọt
 đỏ đèn
-đỏi
-đố
-đốc
 đốc công
 đốc học
 đối chứng
@@ -14717,9 +14699,7 @@ zn
 đốm
 đốm nâu
 đống
-đốt
 đốt sống
-đồ
 đồ bộ
 đồ chơi
 đồ dùng
@@ -14740,7 +14720,6 @@ zn
 đồi mồi
 đồi não
 đồi thị
-đồn
 đồn bót
 đồn bốt
 đồn luỹ
@@ -14803,11 +14782,8 @@ zn
 đồng đỏ
 đồng đội
 đổi mới
-đỗ
 đỗ quyên
 đỗ trọng
-đỗi
-độ
 độ chính xác
 độ lượng
 độ pH
@@ -14830,7 +14806,6 @@ zn
 độc tính
 độc tấu
 độc tố
-đội
 đội hình
 đội ngũ
 đội quân nhạc
@@ -14838,8 +14813,6 @@ zn
 đội trưởng
 đội tuyển
 đội viên
-độn
-động
 động cơ
 động cơ diesel
 động cơ nhiệt
@@ -14868,30 +14841,22 @@ zn
 động vật học
 động vật nguyên sinh
 động đất
-đột
 đột biến
 đột phá khẩu
-đới
 đới cầu
 đới địa chất
 đới địa lí
 đới địa lý
-đời
 đời chót
 đời mới
 đời sống
 đời thuở
 đời thủa
 đời đầu
-đờm
 đờn
 đợt
-đục
-đụn
-đụt
 đủng đỉnh
 đứa
-đức
 đức cha
 đức hạnh
 đức tin
@@ -14901,12 +14866,8 @@ zn
 đức độ
 đứng
 đứt gãy
-ơn
 ơn huệ
 ơn nghĩa
-ư
-ưng
-ưu
 ưu khuyết điểm
 ưu thế
 ưu điểm
@@ -14919,7 +14880,6 @@ zn
 ước vọng
 ả
 ải
-ảng
 ảnh
 ảnh hưởng
 ảo giác
@@ -14930,10 +14890,8 @@ zn
 ảo ảnh
 Ấn giáo
 Ấn Độ giáo
-ấm
 ấm chuyên
 ấm tích
-ấn
 ấn bản
 ấn kiếm
 ấn phẩm
@@ -14941,14 +14899,10 @@ zn
 ấn tín
 ấn tượng
 ấn độ giáo
-ấp
 ấp chiến lược
 ấp dân sinh
-ất
-ấu
 ấu trùng
 ẩm kế
-ẩn
 ẩn dụ
 ẩn hoa
 ẩn số
@@ -14989,7 +14943,6 @@ zn
 ống tiêm
 ống xả
 ốp lết
-ổ
 ổ bi
 ổ bụng
 ổ chuột
@@ -15028,4 +14981,3 @@ zn
 ứng dụng
 ứng lực
 ứng viên
-ỷ

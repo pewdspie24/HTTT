@@ -3,13 +3,10 @@ an khang
 an lành
 an nhiên
 an nhàn
-an ninh
-an sinh
 an thân
 an toàn
 an tâm
 anh dũng
-anh hùng
 anh hùng chủ nghĩa
 anh hùng cá nhân
 anh hùng rơm
@@ -867,7 +864,6 @@ cóc nhảy
 cóng
 cót ca cót két
 cót két
-cô
 cô liêu
 cô quạnh
 cô đúc
@@ -5181,7 +5177,6 @@ thủ cựu
 thủ đoạn
 thủng
 thủng thẳng
-thứ
 thứ sinh
 thứ yếu
 thức thời

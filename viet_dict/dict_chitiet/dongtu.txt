@@ -47,18 +47,10 @@ bay nhảy
 bi ba bi bô
 bi bô
 bi phẫn
-binh
-binh vận
-biên
-biên chế
 biên dịch
-biên kịch
-biên nhận
-biên phòng
 biên soạn
 biên tập
 biên đạo
-biến
 biến báo
 biến chuyển
 biến chất
@@ -138,11 +130,8 @@ buồn
 buồn đau
 buộc
 buộc tội
-buột
 buột miệng
 buột tay
-bài
-bài bác
 bài ngoại
 bài tiết
 bài trí
@@ -172,7 +161,6 @@ bày biện
 bày tỏ
 bày vẽ
 bày đặt
-bác
 bác bỏ
 bách bộ
 bách phân
@@ -1385,7 +1373,6 @@ có thai
 cóm róm
 cóp
 cóp nhặt
-cô
 cô lập
 cô đúc
 công
@@ -8325,7 +8312,6 @@ vái
 vái lạy
 váy
 vân vê
-vâng
 vâng dạ
 vây
 vây bọc

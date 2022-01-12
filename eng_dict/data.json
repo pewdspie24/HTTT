@@ -17445,8 +17445,8 @@
             "bunch"
         ],
         "trans2": [
+            "a bunch of",
             "aggot",
-            "bunch",
             "bundle"
         ]
     },
@@ -22381,11 +22381,15 @@
     {
         "word": "bước",
         "type": [
-            "noun"
+            "noun",
+            "verb"
         ],
         "trans1": [
             "Step",
             "pace"
+        ],
+        "trans2": [
+            "come"
         ]
     },
     {
@@ -44218,6 +44222,7 @@
             "given kind of food"
         ],
         "trans2": [
+            "of",
             "belong to",
             "from"
         ]
@@ -65853,10 +65858,11 @@
     {
         "word": "đúng",
         "trans0": [
+            "right",
             "just",
             "exact",
             "accurate",
-            "right",
+            
             "precise"
         ]
     },
@@ -69116,13 +69122,17 @@
     {
         "word": "gần",
         "type": [
-            "adj"
+            "adj",
+            "conj"
         ],
         "trans1": [
             "near",
             "next to",
             "early",
             "about"
+        ],
+        "trans2": [
+            "near"
         ]
     },
     {
@@ -168337,8 +168347,8 @@
             "noun"
         ],
         "trans1": [
+            "floor",
             "story",
-            "floor layer",
             "stratum",
             "seam altitude"
         ]
@@ -168370,7 +168380,7 @@
             "verb"
         ],
         "trans1": [
-            "set section booklet volume"
+            "set"
         ],
         "trans2": [
             "drill",
@@ -190833,7 +190843,7 @@
             "verb"
         ],
         "trans1": [
-            "a double handful"
+            "a handful of"
         ],
         "trans2": [
             "scoop"

@@ -88,12 +88,17 @@ class MainProcess():
                 elif len(word) == 0:
                     word.append(token)
                     type_word.append("danhtuchung")
+                else: 
+                    word.append(token)
+                    type_word.append("unknown")
 
         num = len(word)
+        print(word)          
+        print(type_word)
         while (check): # if check == True, it mean, still having changes
             tmp = type_word
             for idx in range(num) :
-                word_type = type_word[idx].split(" ")
+                word_type = type_word[idx].strip().split(" ")
                 # determine tense 
                 if word[idx] in ["đã", "từng", "hôm qua", "hôm xưa", "ngày xưa"]:
                     thi = "past"
@@ -102,26 +107,25 @@ class MainProcess():
                 elif word[idx] in ["sẽ", "ngày kìa", "ngày mai"]:
                     thi = "future"  
                 #determine danhtuchiloai or verb: bó, cuốn, tập, ...
-                if "danhtuchiloai" in type_word[idx] and len(type_word[idx].split(" ")) > 2:
+                if "danhtuchiloai dongtu" in type_word[idx]:
                     # if before word is sotu or luong tu
-                    if idx-1>0 and type_word[idx-1] in ["sotu", "luongtu", "dongtu"]:
+                    if idx-1>0 and type_word[idx-1] in ["sotu", "luongtu", "dongtu", "quanhetudinhvi"]:
                         type_word[idx] = "danhtuchiloai"
-                    elif  idx-1>0 and type_word[idx-1] in ["daituxungho", "danhtuchung", "tinhtu"]:
+                    else:
                         type_word[idx] = "dongtu"
                 # convert danhtuchiloai to noun
-                if "danhtuchiloai" in type_word[idx]: 
-                    if idx+1 == num or (idx+1 < num and "danhtu" not in type_word[idx+1]):
+                if "danhtuchiloai" in type_word[idx] and (idx+1 == num or (idx+1 < num and "danhtu" not in type_word[idx+1])): 
                         type_word[idx] = "danhtuchung"
                 # determine noun or sotu
                 if word[idx] == "ba":
-                    check =True
-                    if idx+1<num and "danhtu" in type_word[idx+1]:
+                    if (idx>0 and "danhtuchung" in type_word[idx-1])or (idx+1<num and "danhtu" in type_word[idx+1]):
                         type_word[idx] = "sotu"
                     else:
                         type_word[idx] = "danhtuchung"
                 #determine quanhetudinhvi or verb or noun
                 if "quanhetudinhvi" in type_word[idx]:
-                    if idx+1 <num and np.any([i in type_word[idx+1] for i in ["danhtu", "sotu", "luongtu", "daituxungho", "so"]]):
+                    # if idx+1 <num and np.any([i in type_word[idx+1] for i in ["danhtu", "sotu", "luongtu", "daituxungho", "so"]]):
+                    if idx>1 and np.any([i in type_word[idx-1] for i in ["dongtu", "tinhtu"]]):
                         type_word[idx] = "quanhetudinhvi"
                     else:
                         type_word[idx] = type_word[idx].replace("quanhetudinhvi","")    
@@ -132,18 +136,19 @@ class MainProcess():
                         if type_word[idx-1] in ["lietke", "quanhetulietke"]:
                             type_word[idx] = type_word[idx-2]
                         # determine noun
-                        elif np.any([i in type_word[idx-1] for i in ["sotu", "luongtu", "danhtuchiloai"]]):
-                            type_word[idx] = "danhtuchung"
+                        elif "danhtuchung" in type_word[idx]:
+                            if np.any([i in type_word[idx-1] for i in ["sotu", "luongtu", "danhtuchiloai", "quanhetudinhvi"]]) or word[idx-1] == "của":
+                                type_word[idx] = "danhtuchung"
+                            elif np.any([i in type_word[idx-1] for i in ["daituxungho", "danhtuchung"]]):
+                                type_word[idx] = type_word[idx].replace("danhtuchung","")
                         # determine verb or adj, priority verb first
-                        elif  "photu" in type_word[idx-1]:
+                        elif np.any([i in type_word[idx-1] for i in ["danhtuchung", "photu", "daituxungho"]]):
                             if "dongtu" in type_word[idx]:
                                 type_word[idx] = "dongtu"
                             elif "tinhtu" in type_word[idx]:
-                                type_word[idx] = "tinhtu"
-                        # determine adj
-                        elif type_word[idx-1] in ["danhtuchung", "dongtu", "daituxungho"]:
-                            type_word[idx] = "tinhtu"    
-                                
+                                type_word[idx] = "tinhtu"  
+                        elif "tinhtu" in type_word[idx] and "dongtu" in type_word[idx-1]:
+                            type_word[idx] = "tinhtu" 
                     elif idx+1 < num:
                         # determine type of word basing on "," or quanhetulietke 
                         if type_word[idx+1] in ["lietke", "quanhetulietke"]:
@@ -152,14 +157,11 @@ class MainProcess():
                         elif "danhtuchung" in type_word[idx] and np.any(i in type_word[idx+1] for i in ["chitu", "dongtu", "tinhtu", "photu"]) :
                             type_word[idx] = "danhtuchung"
                         # determine verb
-                        elif "dongtu" in type_word[idx] and "quanhetudinhvi" in type_word[idx+1]:
+                        elif "dongtu" in type_word[idx] and np.any(i in type_word[idx+1] for i in ["photuchimucdo", "quanhetudinhvi", "sotu", "luongtu", "danhtu", "tinhtu"]):
                             type_word[idx] = "dongtu"
                         # determine verb or adj
-                        elif type_word[idx+1] == "photuchimucdo":
-                            if "dongtu" in type_word[idx]:
-                                type_word[idx] = "dongtu"
-                            elif "tinhtu" in type_word[idx]:
-                                type_word[idx] = "tinhtu"
+                        elif "tinhtu" in type_word[idx] and type_word[idx+1] == "photuchimucdo":
+                            type_word[idx] = "tinhtu"
             check = not np.array_equal(tmp, type_word)
             print("lap")
         # delete unneed word  
@@ -665,7 +667,7 @@ class MainProcess():
         
 if __name__ == "__main__":
     my = MainProcess()
-    vi_sentence, eng_sentence, result, tense = my.process("tớ yêu cậu")
+    vi_sentence, eng_sentence, result, tense = my.process("quan niệm này rất đúng")
     print(vi_sentence)
     print(eng_sentence)
     print(result)
