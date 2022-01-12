@@ -603,10 +603,7 @@
         ]
     },
     {
-        "word": "",
-        "trans0": [
-            "ái nữ"
-        ],
+        "word": "ái nữ",
         "type": [
             "noun"
         ],
@@ -1548,18 +1545,6 @@
         ]
     },
     {
-        "word": "",
-        "trans0": [
-            "áo giáp"
-        ],
-        "type": [
-            "noun"
-        ],
-        "trans1": [
-            "Armour"
-        ]
-    },
-    {
         "word": "áo giáp",
         "type": [
             "noun"
@@ -1949,21 +1934,6 @@
             "take stealthy rake off",
             "get pickings",
             "appropriate part of profits"
-        ]
-    },
-    {
-        "word": "",
-        "trans0": [
-            "ăn cánh"
-        ],
-        "type": [
-            "verb"
-        ],
-        "trans1": [
-            "be in collusion with",
-            "be in confederacy with",
-            "be in cahoots with",
-            "be hand in glove with"
         ]
     },
     {
@@ -10791,18 +10761,6 @@
         ]
     },
     {
-        "word": "",
-        "trans0": [
-            "bẩm tính"
-        ],
-        "type": [
-            "noun"
-        ],
-        "trans1": [
-            "Innate character"
-        ]
-    },
-    {
         "word": "bẩm tính",
         "type": [
             "noun"
@@ -15974,13 +15932,6 @@
         "trans1": [
             "Multi-battalion",
             "corps"
-        ]
-    },
-    {
-        "word": "",
-        "trans0": [
-            "binh đội",
-            "từ cũ"
         ]
     },
     {
@@ -23909,19 +23860,6 @@
         ]
     },
     {
-        "word": "",
-        "trans0": [
-            "cách chức"
-        ],
-        "type": [
-            "verb"
-        ],
-        "trans1": [
-            "dismiss from office",
-            "relieve of one's function"
-        ]
-    },
-    {
         "word": "cách cấu tạo",
         "trans0": [
             "tructure"
@@ -28309,18 +28247,6 @@
         ]
     },
     {
-        "word": "",
-        "trans0": [
-            "cẩm lai"
-        ],
-        "type": [
-            "noun"
-        ],
-        "trans1": [
-            "Barian kingwood"
-        ]
-    },
-    {
         "word": "cầm lòng",
         "trans0": [
             "hold back one's feeling"
@@ -28622,13 +28548,6 @@
         ],
         "trans1": [
             "Forbidden citadel"
-        ]
-    },
-    {
-        "word": "",
-        "trans0": [
-            "cấm vận",
-            "o put an embargo on"
         ]
     },
     {
@@ -33446,13 +33365,6 @@
         ]
     },
     {
-        "word": "",
-        "trans0": [
-            "chạp mả",
-            "isit one's ancestor tombs"
-        ]
-    },
-    {
         "word": "chập chà chập choạng",
         "trans0": [
             "Half-light"
@@ -34074,23 +33986,6 @@
             "guillotine",
             "o sting",
             "stick it on"
-        ]
-    },
-    {
-        "word": "",
-        "trans0": [
-            "chêm"
-        ],
-        "type": [
-            "verb",
-            "noun"
-        ],
-        "trans1": [
-            "wedge",
-            "o cut in"
-        ],
-        "trans2": [
-            "Wedge"
         ]
     },
     {
@@ -35733,10 +35628,7 @@
         ]
     },
     {
-        "word": "",
-        "trans0": [
-            "chiến địa"
-        ],
+        "word": "chiến địa",
         "type": [
             "noun"
         ],
@@ -39789,10 +39681,7 @@
         ]
     },
     {
-        "word": "",
-        "trans0": [
-            "chuỗi"
-        ],
+        "word": "chuỗi",
         "type": [
             "noun"
         ],
@@ -47542,9 +47431,12 @@
         ]
     },
     {
-        "word": "",
-        "trans0": [
-            "dẫn dắt",
+        "word": "dẫn dắt",
+        "type": [
+            "verb"
+        ],
+        "trans1": [
+            "",
             "uide",
             "conduct",
             "lead up to",
@@ -52312,18 +52204,6 @@
         ]
     },
     {
-        "word": "",
-        "trans0": [
-            "dụng ý"
-        ],
-        "type": [
-            "verb"
-        ],
-        "trans1": [
-            "intend to"
-        ]
-    },
-    {
         "word": "dụng ý",
         "type": [
             "verb"
@@ -55554,9 +55434,12 @@
         ]
     },
     {
-        "word": "",
+        "word": "đanh đá",
+        "type": [
+            "adj"
+        ],
         "trans0": [
-            "đanh đá",
+            "",
             "harp-tongued",
             "shrewish"
         ]
@@ -62171,10 +62054,12 @@
         ]
     },
     {
-        "word": "",
+        "word": "đoán định",
+        "type": [
+            "verb"
+        ],
         "trans0": [
-            "đoán định",
-            "dge and decide"
+            "decide"
         ]
     },
     {
@@ -71317,9 +71202,12 @@
         ]
     },
     {
-        "word": "",
-        "trans0": [
-            "giải hạn",
+        "word": "giải hạn",
+        "type": [
+            "verb"
+        ],
+        "trans1": [
+            "",
             "elieve  of his run of bad luck"
         ]
     },
@@ -72042,26 +71930,12 @@
         ]
     },
     {
-        "word": "",
-        "trans0": [
-            "giản dị"
-        ],
-        "type": [
-            "adj"
-        ],
-        "trans1": [
-            "easy",
-            "simple",
-            "plain"
-        ]
-    },
-    {
         "word": "giản dị",
         "type": [
             "adj"
         ],
         "trans1": [
-            "asy",
+            "easy",
             "simple",
             "plain"
         ]
@@ -86880,14 +86754,6 @@
         ]
     },
     {
-        "word": "",
-        "trans0": [
-            "Hồi giáo",
-            "ohammedanism",
-            "Islam"
-        ]
-    },
-    {
         "word": "hồi giáo",
         "type": [
             "noun"
@@ -87099,18 +86965,6 @@
         "word": "hối cải",
         "trans0": [
             "Show repentance and desire to redeem one's faults"
-        ]
-    },
-    {
-        "word": "",
-        "trans0": [
-            "hối đoái"
-        ],
-        "type": [
-            "noun"
-        ],
-        "trans1": [
-            "exchange"
         ]
     },
     {

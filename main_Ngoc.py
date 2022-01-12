@@ -77,7 +77,7 @@ class MainProcess():
                     word.append(token)
                     type_word.append("kytu")
                 # if the first character is uppper, consider as a name
-                elif "A" <= token[0] and token[0] <= "Z":
+                elif token[0].isupper():
                     word.append(token)
                     type_word.append("daituxungho")
                 # if is number
@@ -194,11 +194,7 @@ class MainProcess():
                 if type_word1 == "tinhtu":
                     main_verb = idx
                     break
-        
-        print(thi, " ", main_verb, " ", neg)
         return word, type_word, thi, main_verb, neg
-    # def get_neg(self, tokens):
-    #     return 0
 
     def process(self, sentence):
         # sys.modules[__name__].__dict__.clear()
@@ -213,8 +209,8 @@ class MainProcess():
         tokens = vn_token_uts(sequence)
         # 3.1 Get VI type, primary Verb, Tense
         word_list_vi, word_type_vi, tense, primary_idx, NEG = self.get_word_type_vi(tokens)
-        for idx, word in enumerate(word_list_vi):
-            print(word+" "+word_type_vi[idx])
+        # for idx, word in enumerate(word_list_vi):
+        #     print(word+" "+word_type_vi[idx])
         print("Primary",primary_idx)
         print("NEG", NEG)
         # 3.2 Get C-V
@@ -233,7 +229,7 @@ class MainProcess():
             c = []
             # print("ATT",v[0])
             if v[0] == 'kitu':
-                c.append(k)
+                c.append(k) 
                 eng_sentence.append([c,['kitu', idx]])
                 continue
             if v[0] == 'daituxungho' and k[0].isupper():
@@ -255,7 +251,7 @@ class MainProcess():
                         # print(i['type'])
                         type_match = WTYPE_MATCH.get(vi_type)
                         if vi_type[0:5] == "photu":
-                            type_match = type_match[:-1]
+                            type_match = type_match[:-1] #adv
                         if 'type' in i and type_match in i['type']: 
                             # print("cc")
                             trans_idx = 0
@@ -667,8 +663,10 @@ class MainProcess():
         
 if __name__ == "__main__":
     my = MainProcess()
-    vi_sentence, eng_sentence, result, tense = my.process("quan niệm này rất đúng")
-    print(vi_sentence)
-    print(eng_sentence)
-    print(result)
-    print(tense)
+    while(True):
+        sen = input()
+        vi_sentence, eng_sentence, result, tense = my.process(sen)
+        print(vi_sentence)
+        print(eng_sentence)
+        print(result)
+        print(tense)
