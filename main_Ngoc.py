@@ -98,7 +98,7 @@ class MainProcess():
         # print(type_word)
         while (check): # if check == True, it mean, still having changes
             check = False
-            tmp = type_word   
+            tmp = type_word
             # print(tmp)
             for idx in range(num) :
                 word_type = type_word[idx].strip().split(" ")

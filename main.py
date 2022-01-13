@@ -8,7 +8,7 @@ import numpy as np
 from googletrans import Translator
 translator = Translator()
 
-WTYPE_MATCH = {'danhtuchung':'noun', 'dongtu':'verb', 'tinhtu':'adj', 'sotu':'number', 'luongtu':'adj', 'photu':'advA', 'photuchimucdo':'advB', 'photuthoigian':'advB', 'daitu':'pronoun', 'thantu':'excl', 'quanhetulietke':'conj', 'quanhetudinhvi':'prep', 'chitu':'det', 'daituxungho':'pronoun', 'quanhetudinhvi':'conj'}
+WTYPE_MATCH = {'danhtuchung':'noun', 'dongtu':'verb', 'tinhtu':'adj', 'sotu':'number', 'luongtu':'adj', 'photu':'advA', 'photuchimucdo':'advB', 'photuthoigian':'advB', 'daitu':'pronoun', 'thantu':'excl', 'quanhetulietke':'conj', 'quanhetudinhvi':'prep', 'chitu':'det', 'daituxungho':'pronoun'}
 TENSE = ['present', 'past', 'future', 'continous']
 FLAG = 0
 PATH_VI = ["chitu.txt", "daituxungho.txt", "danhtuchiloai.txt", "danhtuchung.txt",  
@@ -17,7 +17,7 @@ PATH_VI = ["chitu.txt", "daituxungho.txt", "danhtuchiloai.txt", "danhtuchung.txt
 VI_DICT_PATH = "viet_dict/dict_chitiet/"
 TO_VERB = ["hate", "hope", "intend", "like", "love", "mean", "plan", "try", "want", 'go']
 POSSESIVE = {'I':'my', 'you':'your', 'he':'his', 'she':'her', 'it':'its', 'we':'our', 'they':'their'}
-
+POSSESIVE_LIST = ['my', 'your', 'his', 'her', 'its', 'our', 'their']
 
 class MainProcess():
     def __init__(self):   
@@ -97,7 +97,7 @@ class MainProcess():
         print(word)          
         print(type_word)
         while (check): # if check == True, it mean, still having changes
-            tmp = type_word
+            tmp = type_word.copy()  
             for idx in range(num) :
                 word_type = type_word[idx].strip().split(" ")
                 # determine tense 
@@ -333,6 +333,7 @@ class MainProcess():
                                     eng_sentence[dtu_idx][0][0] = eng_sentence[indx][0][0] + " " + eng_sentence[dtu_idx][0][0]
                                     eng_sentence[indx][0][0] = " "
                                     eng_sentence[indx][1][0] = None
+                                    break
         except Exception:
                 print('Error')
 
@@ -681,7 +682,12 @@ class MainProcess():
                     # if adj_idx_en <
                     for i in range (adj_idx_en-1, -1, -1):
                         if eng_sentence[i][1][0] == 'noun':
-                            eng_sentence[i][0][0] = word[0][0] + " " + eng_sentence[i][0][0]
+                            adv_chr = eng_sentence[i][0][0].split(' ')
+                            print('CCCCCCCCCCCCCCCCCCCCCCCCCCC', adv_chr)
+                            if adv_chr[0] in POSSESIVE_LIST:
+                                eng_sentence[i][0][0] = eng_sentence[i][0][0].replace(adv_chr[0], adv_chr[0] + ' ' + word[0][0])
+                            else:
+                                eng_sentence[i][0][0] = word[0][0] + ' ' + eng_sentence[i][0][0]
                             word[0][0] = ""
                             word[1][0] = None
                             break
@@ -713,10 +719,7 @@ class MainProcess():
                                         if adv_idx > 0:
                                             eng_sentence[i][0][0] += ' ' + chr
                             else:
-                                eng_sentence[i][0][0] = adv_chr[0] + ' ' + word[0][0]
-                                for adv_idx, chr in enumerate(adv_chr):
-                                    if adv_idx > 0:
-                                        eng_sentence[i][0][0] += ' ' + chr
+                                eng_sentence[i][0][0] = word[0][0] + ' ' + adv_chr[0]
                         word[0][0] = ""
                         # print(word[1][0])
                         word[1][0] = None
@@ -745,6 +748,13 @@ class MainProcess():
                             word[0][0] = ""
                             word[1][0] = None
                             break
+            except Exception:
+                print('Error')
+            
+            try:
+                if word[1][0] == 'noun':
+                    if eng_sentence[index][1][0] == 'noun':
+                        word[0][0], eng_sentence[index][0][0] = eng_sentence[index][0][0], word[0][0]
             except Exception:
                 print('Error')
 
@@ -790,6 +800,8 @@ class MainProcess():
                 else:
                     result+=i[0][0].lower()
                     result+=" "
+        result = result.strip()
+        result = result.capitalize()
         return vi_sentence, eng_sentence, result, tense, list_chars
         
 if __name__ == "__main__":
