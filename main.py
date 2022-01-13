@@ -362,7 +362,7 @@ class MainProcess():
                         I_flag = True
                     for j in self.pronoun[1].values():
                         for smt in j:
-                            if word_en == smt:
+                            if word_en.lower() == smt:
                                 PRONOUN = 1
                                 # print("CC")
                                 break
