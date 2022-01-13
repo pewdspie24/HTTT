@@ -793,7 +793,7 @@ class MainProcess():
         
 if __name__ == "__main__":
     my = MainProcess()
-    vi_sentence, eng_sentence, result, tense = my.process("tớ yêu cậu")
+    vi_sentence, eng_sentence, result, tense, list_chars = my.process("tất cả mèo ăn cơm")
     print(vi_sentence)
     print(eng_sentence)
     print(result)
