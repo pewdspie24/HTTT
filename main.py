@@ -16,6 +16,7 @@ PATH_VI = ["chitu.txt", "daituxungho.txt", "danhtuchiloai.txt", "danhtuchung.txt
         "quanhetudinhvi.txt", "quanhetulietke.txt", "sotu.txt", "thantu.txt", "tinhtu.txt"]
 VI_DICT_PATH = "viet_dict/dict_chitiet/"
 TO_VERB = ["hate", "hope", "intend", "like", "love", "mean", "plan", "try", "want"]
+POSSESIVE = {'I':'my', 'you':'your', 'he':'his', 'she':'her', 'it':'its', 'we':'our', 'they':'their'}
 
 
 class MainProcess():
@@ -229,10 +230,13 @@ class MainProcess():
         # eng_sentence = ((tu1,(loaitu1, 1)), (tu2,(loaitu2, 2)), ...)
         idx = 0
         list_words = []
+        possesive_flag = False
         try:
-            for word in vi_sentence:
+            for sodem, word in enumerate(vi_sentence):
                 k, v = word[0], word[1]
                 c = []
+                flag = 0
+                idx+=1
                 # print("ATT",v[0])
                 if v[0] == 'kitu':
                     c.append(k)
@@ -243,8 +247,12 @@ class MainProcess():
                     # print(c)
                     eng_sentence.append([c,['proper', idx]])
                     continue
-                flag = 0
-                idx+=1
+                if sodem < len(vi_sentence)-1:
+                    if k == 'của' and vi_sentence[sodem+1][1][0] == 'daituxungho':
+                        possesive_flag = True
+                        c.append(k)
+                        eng_sentence.append([c,['possesive', idx]])
+                        continue
                 for idx_en, i in enumerate(self.vi_eng_dict):
                     if k == i['word']:
                         print(i)
@@ -306,6 +314,29 @@ class MainProcess():
         # 6. Find the right Subject 
         # Define type of subject
         print(eng_sentence)
+        try:
+            for index, word in enumerate(eng_sentence):
+                if word[1][0] == 'possesive' and possesive_flag:
+                    pos_idx_en = word[1][1]
+                    pos_idx_vi = pos_idx_en
+                    # pos_word = word[0][0]
+                    # print(pos_word)
+                    for indx, i in enumerate(eng_sentence):
+                        if i[1][0] == 'pronoun' and  i[1][1] > pos_idx_en:
+                            # print(i[0][0])
+                            # print(POSSESIVE.get("I"))
+                            eng_sentence[indx][0][0] = POSSESIVE.get(i[0][0])
+                            word[0][0] = ""
+                            word[1][0] = None
+                            for dtu_idx in range(index, -1, -1):
+                                if eng_sentence[dtu_idx][1][0] == 'noun' or eng_sentence[dtu_idx][1][0] == 'pronoun':
+                                    eng_sentence[dtu_idx][0][0] = eng_sentence[indx][0][0] + " " + eng_sentence[dtu_idx][0][0]
+                                    eng_sentence[indx][0][0] = " "
+                                    eng_sentence[indx][1][0] = None
+        except Exception:
+                print('Error')
+
+        print(eng_sentence)
         MANY_N = False
         I_flag = False
         try:
@@ -351,14 +382,15 @@ class MainProcess():
                     continue
                 if type_en == 'noun' and MANY_N:
                     PRONOUN = 1
-                    # print("CCCCCCCCCCC")
                     print(self.singular.index(word_en))
                     eng_sentence[i][0][0] = self.plural[self.singular.index(word_en)]
                     break
 
         except Exception:
                 print('Error') 
+
         # 7. Verb conjugation
+        print(eng_sentence)
         try: 
             verb = eng_sentence[primary_idx][0][0]
             ext_flag = False
@@ -372,7 +404,7 @@ class MainProcess():
             v_type = eng_sentence[primary_idx][1][0]
             # print(eng_sentence)
             # print("dp", primary_idx)
-            # print(verb)
+            # print("Verb day nay",verb)
             # print(v_type)
             print("Pronoun", PRONOUN)
             # Verb is verb
@@ -620,6 +652,8 @@ class MainProcess():
         for index, word in enumerate(eng_sentence):
             # Adjective comes before nouns
             try:
+                # if index < len(eng_sentence)-1:
+                #     next_word = eng_sentence[index+1]
                 if word[1][0] == 'adj':
                     adj_idx_en = word[1][1]
                     # print(adj_idx_en)
@@ -679,6 +713,22 @@ class MainProcess():
                             break
             except Exception:
                 print('Error')
+
+            # if word[1][0] == 'possesive' and possesive_flag:
+            #     print("CDGD")
+            #     print(index)
+            #     pos_idx_en = word[1][1]
+            #     pos_idx_vi = pos_idx_en
+            #     # pos_word = word[0][0]
+            #     # print(pos_word)
+            #     for indx, i in enumerate(eng_sentence):
+            #         if i[1][0] == 'pronoun' and  i[1][1] > pos_idx_en:
+            #             # print(i[0][0])
+            #             # print(POSSESIVE.get("I"))
+            #             eng_sentence[indx][0][0] = POSSESIVE.get(i[0][0])
+            #     word[0][0] = ""
+            #     word[1][0] = None
+
             try:
                 if word[0][0] == 'a':
                     try:
