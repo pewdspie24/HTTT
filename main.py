@@ -1,5 +1,6 @@
 import sys
 import json
+import re
 from typing import Sequence
 from underthesea import word_tokenize as vn_token_uts
 from underthesea import pos_tag
@@ -46,6 +47,24 @@ class MainProcess():
                         self.word_type_vi[tmp] += " " + i[:-4]
                     else:
                         self.word_type_vi[tmp] = i[:-4]    
+
+    def no_accent_vietnamese(self, s):
+        s = re.sub(r'[àáạảãâầấậẩẫăằắặẳẵ]', 'a', s)
+        s = re.sub(r'[ÀÁẠẢÃĂẰẮẶẲẴÂẦẤẬẨẪ]', 'A', s)
+        s = re.sub(r'[èéẹẻẽêềếệểễ]', 'e', s)
+        s = re.sub(r'[ÈÉẸẺẼÊỀẾỆỂỄ]', 'E', s)
+        s = re.sub(r'[òóọỏõôồốộổỗơờớợởỡ]', 'o', s)
+        s = re.sub(r'[ÒÓỌỎÕÔỒỐỘỔỖƠỜỚỢỞỠ]', 'O', s)
+        s = re.sub(r'[ìíịỉĩ]', 'i', s)
+        s = re.sub(r'[ÌÍỊỈĨ]', 'I', s)
+        s = re.sub(r'[ùúụủũưừứựửữ]', 'u', s)
+        s = re.sub(r'[ƯỪỨỰỬỮÙÚỤỦŨ]', 'U', s)
+        s = re.sub(r'[ỳýỵỷỹ]', 'y', s)
+        s = re.sub(r'[ỲÝỴỶỸ]', 'Y', s)
+        s = re.sub(r'[Đ]', 'D', s)
+        s = re.sub(r'[đ]', 'd', s)
+        return s
+
 
     def check_number(self, word):
         tmp = word
@@ -206,9 +225,12 @@ class MainProcess():
         # Process
         PRONOUN = 0
         NEG = 0
+        WORD_COUNT = False
+        counts = []
         vi_sentence = []
         eng_sentence = []
         list_chars = []
+        proper_noun = []
         # 1. Input text
         sequence = sentence
         # 2. Tokenize text
@@ -246,7 +268,11 @@ class MainProcess():
                     c.append(k)
                     # print(c)
                     eng_sentence.append([c,['proper', idx]])
+                    proper_noun.append(k)
                     continue
+                if v[0] == 'luongtu':
+                    WORD_COUNT = True
+                    counts.append(sodem)
                 if sodem < len(vi_sentence)-1:
                     if k == 'của' and vi_sentence[sodem+1][1][0] == 'daituxungho':
                         possesive_flag = True
@@ -354,6 +380,17 @@ class MainProcess():
                     PRONOUN = 1
                     I_flag = False
                     break
+                if type_vi == 'luongtu':
+                    for j in range (i, primary_idx):
+                        if eng_sentence[j][1][0] == 'noun':
+                            if len(eng_sentence[j][0][0].split()) > 1:
+                                # print("CCCCCCCCC", eng_sentence)
+                                main_noun = ' '.join(map(str, eng_sentence[j][0][0].split()[1:]))
+                                eng_sentence[j][0][0] = eng_sentence[j][0][0].split()[0] + " " + self.plural[self.singular.index(main_noun)]
+                            else:
+                                eng_sentence[j][0][0] = self.plural[self.singular.index(eng_sentence[j][0][0])]
+                            PRONOUN = 1
+                            break
                 # If proper, becomes singular
                 if type_en == 'proper':
                     continue
@@ -385,7 +422,7 @@ class MainProcess():
                     continue
                 if type_en == 'noun' and MANY_N:
                     PRONOUN = 1
-                    print(self.singular.index(word_en))
+                    # print(self.singular.index(word_en))
                     eng_sentence[i][0][0] = self.plural[self.singular.index(word_en)]
                     break
 
@@ -793,10 +830,13 @@ class MainProcess():
                 if i[0][0] == "I":
                     result+="I "
                     continue
-                if idx == 0:
+                if idx == 0 and i[1][0] != 'proper':
                     result+=i[0][0][0].upper()
                     result+=i[0][0][1:].lower()
                     result+=" "
+                elif i[1][0] == 'proper':
+                    print("CCCCCCCCC", self.no_accent_vietnamese(i[0][0]))
+                    result+=self.no_accent_vietnamese(i[0][0])+ ' '
                 else:
                     result+=i[0][0].lower()
                     result+=" "
