@@ -25912,11 +25912,15 @@
     {
         "word": "cạnh",
         "type": [
-            "noun"
+            "noun",
+            "prep"
         ],
         "trans1": [
-            "Edge",
-            "ide"
+            "Edge"
+        ]
+        ,
+        "trans2": [
+            "near to"
         ]
     },
     {
@@ -53115,7 +53119,7 @@
     {
         "word": "dưới",
         "trans0": [
-            "Under",
+            "under",
             "below"
         ]
     },
@@ -59900,14 +59904,18 @@
     {
         "word": "đến",
         "type": [
-            "verb"
+            "verb",
+            "prep"
+
         ],
         "trans1": [
-            "arrive",
+            "go",
             "come",
             "get in",
-            "o reach",
             "attain"
+        ],
+        "trans2": [
+            "to"
         ]
     },
     {
@@ -68996,7 +69004,7 @@
         "word": "gần",
         "type": [
             "adj",
-            "conj"
+            "prep"
         ],
         "trans1": [
             "near",
@@ -75628,10 +75636,10 @@
     {
         "word": "giữa",
         "type": [
-            "adv"
+            "prep"
         ],
         "trans1": [
-            "middle",
+            "in the middle of",
             "among",
             "midst"
         ]
@@ -91805,7 +91813,7 @@
     {
         "word": "kề",
         "type": [
-            "adj"
+            "prep"
         ],
         "trans1": [
             "close to",
@@ -121736,8 +121744,8 @@
     {
         "word": "ngoài",
         "trans0": [
-            "out",
             "outside",
+            "out",
             "without",
             "exterior",
             "external"
@@ -156198,12 +156206,6 @@
         ]
     },
     {
-        "word": "san sát",
-        "trans0": [
-            "sát"
-        ]
-    },
-    {
         "word": "san sẻ",
         "type": [
             "verb"
@@ -157341,7 +157343,7 @@
     {
         "word": "sát",
         "type": [
-            "adj"
+            "prep"
         ],
         "trans1": [
             "very close to",
@@ -168049,7 +168051,7 @@
         "word": "tận",
         "type": [
             "adj",
-            "conj"
+            "prep"
         ],
         "trans1": [
             "ending",
@@ -183088,12 +183090,12 @@
         "word": "trong",
         "type": [
             "adj",
-            "conj",
+            "prep",
             "adj"
         ],
         "trans1": [
-            "clear",
-            "pure"
+            "pure",
+            "clear"
         ],
         "trans2": [
             "in",
@@ -184630,6 +184632,7 @@
             "before hand"
         ],
         "trans3": [
+            "in front of",
             "before"
         ]
     },
@@ -185990,7 +185993,7 @@
         "word": "từ",
         "type": [
             "noun",
-            "conj",
+            "prep",
             "verb"
         ],
         "trans1": [
@@ -188533,7 +188536,7 @@
         "word": "vào",
         "type": [
             "verb",
-            "conj",
+            "prep",
             "adj"
         ],
         "trans1": [
@@ -188543,8 +188546,9 @@
             "enter"
         ],
         "trans2": [
-            "on",
-            "into"
+            "into",
+            "on"
+            
         ],
         "trans3": [
             "in",
@@ -189391,16 +189395,16 @@
         "word": "về",
         "type": [
             "verb",
-            "conj"
+            "prep"
         ],
         "trans1": [
             "return",
             "come back to belong to to follow"
         ],
         "trans2": [
+            "as to",
             "o about",
             "on as for",
-            "as to",
             "as regards"
         ]
     },
