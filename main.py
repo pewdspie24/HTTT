@@ -15,7 +15,7 @@ PATH_VI = ["chitu.txt", "daituxungho.txt", "danhtuchiloai.txt", "danhtuchung.txt
         "dongtu.txt", "luongtu.txt", "photuchimucdo.txt", "photuphudinh.txt", "photuthoigian.txt", 
         "quanhetudinhvi.txt", "quanhetulietke.txt", "sotu.txt", "thantu.txt", "tinhtu.txt"]
 VI_DICT_PATH = "viet_dict/dict_chitiet/"
-TO_VERB = ["hate", "hope", "intend", "like", "love", "mean", "plan", "try", "want"]
+TO_VERB = ["hate", "hope", "intend", "like", "love", "mean", "plan", "try", "want", 'go']
 POSSESIVE = {'I':'my', 'you':'your', 'he':'his', 'she':'her', 'it':'its', 'we':'our', 'they':'their'}
 
 
@@ -351,6 +351,7 @@ class MainProcess():
                 # If include conj, becomes plural
                 if type_vi == 'quanhetulietke':
                     PRONOUN = 1
+                    I_flag = False
                     break
                 # If proper, becomes singular
                 if type_en == 'proper':
@@ -367,8 +368,8 @@ class MainProcess():
                                 break
                         if PRONOUN:
                             break # TODO
-                    if PRONOUN:
-                        break
+                    # if PRONOUN:
+                    #     break
                 # If uncountable noun, becomes singular
                 if word_en in self.uncount_noun:
                     continue
