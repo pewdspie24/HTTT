@@ -360,11 +360,12 @@ class MainProcess():
                 if type_en == 'pronoun':
                     if word_en == "I":
                         I_flag = True
+                    if word_en != 'I':
+                        word_en = word_en.lower()
                     for j in self.pronoun[1].values():
                         for smt in j:
                             if word_en == smt:
                                 PRONOUN = 1
-                                # print("CC")
                                 break
                         if PRONOUN:
                             break # TODO
@@ -411,7 +412,7 @@ class MainProcess():
             # Verb is verb
             if v_type == 'verb' and verb != "be":
                 if tense == 'present':
-                    if PRONOUN == 0:
+                    if PRONOUN == 0 and I_flag == False:
                         if NEG == 0:
                             for v in self.verbs:
                                 if v[0] == verb:
@@ -486,113 +487,112 @@ class MainProcess():
                     print("Error")
             # other cases
             elif verb != "be":
-                if PRONOUN == 0:
-                    if tense == 'present':
-                        if PRONOUN == 0:
-                            if NEG == 0:
-                                eng_sentence.insert(primary_idx, [['is'],['verb',primary_idx+1]])
-                                for w in range(primary_idx, len(eng_sentence)):
-                                    # print(eng_sentence[w][0])
-                                    if eng_sentence[w][0][0] != 'is':
-                                        eng_sentence[w][1][1] += 1
-                                # eng_sentence[primary_idx+1][0][0] = "is "+verb
-                            else:
-                                eng_sentence.insert(primary_idx, [['is not'],['verb',primary_idx+1]])
-                                for w in range(primary_idx, len(eng_sentence)):
-                                    if eng_sentence[w][0][0] != 'is not':
-                                        eng_sentence[w][1][1] += 1
-                        elif I_flag == False:
-                            if NEG == 0:
-                                eng_sentence.insert(primary_idx, [['are'],['verb',primary_idx+1]])
-                                for w in range(primary_idx, len(eng_sentence)):
-                                    if eng_sentence[w][0][0] != 'are':
-                                        eng_sentence[w][1][1] += 1
-                            else:
-                                eng_sentence.insert(primary_idx, [['are not'],['verb',primary_idx+1]])
-                                for w in range(primary_idx, len(eng_sentence)):
-                                    if eng_sentence[w][0][0] != 'are not':
-                                        eng_sentence[w][1][1] += 1
-                        else:
-                            if NEG == 0:
-                                eng_sentence.insert(primary_idx, [['am'],['verb',primary_idx+1]])
-                                for w in range(primary_idx, len(eng_sentence)):
-                                    if eng_sentence[w][0][0] != 'am':
-                                        eng_sentence[w][1][1] += 1
-                            else:
-                                eng_sentence.insert(primary_idx, [['am not'],['verb',primary_idx+1]])
-                                for w in range(primary_idx, len(eng_sentence)):
-                                    if eng_sentence[w][0][0] != 'am not':
-                                        eng_sentence[w][1][1] += 1
-                    elif tense == 'past':
+                if tense == 'present':
+                    if PRONOUN == 0:
                         if NEG == 0:
-                            if PRONOUN == 0:
-                                eng_sentence.insert(primary_idx, [['was'],['verb',primary_idx+1]])
-                                for w in range(primary_idx, len(eng_sentence)):
-                                    if eng_sentence[w][0][0] != 'was':
-                                        eng_sentence[w][1][1] += 1
-                            else:
-                                eng_sentence.insert(primary_idx, [['were'],['verb',primary_idx+1]])
-                                for w in range(primary_idx, len(eng_sentence)):
-                                    if eng_sentence[w][0][0] != 'were':
-                                        eng_sentence[w][1][1] += 1
+                            eng_sentence.insert(primary_idx, [['is'],['verb',primary_idx+1]])
+                            for w in range(primary_idx, len(eng_sentence)):
+                                # print(eng_sentence[w][0])
+                                if eng_sentence[w][0][0] != 'is':
+                                    eng_sentence[w][1][1] += 1
+                            # eng_sentence[primary_idx+1][0][0] = "is "+verb
                         else:
-                            if PRONOUN == 0:
-                                eng_sentence.insert(primary_idx, [['was not'],['verb',primary_idx+1]])
-                                for w in range(primary_idx, len(eng_sentence)):
-                                    if eng_sentence[w][0][0] != 'was not':
-                                        eng_sentence[w][1][1] += 1
-                            else:
-                                eng_sentence.insert(primary_idx, [['were not'],['verb',primary_idx+1]])
-                                for w in range(primary_idx, len(eng_sentence)):
-                                    if eng_sentence[w][0][0] != 'were not':
-                                        eng_sentence[w][1][1] += 1
-                    elif tense == 'future':
-                        for v in self.verbs:
-                            if v[0] == verb:
-                                if NEG == 0:
-                                    eng_sentence.insert(primary_idx, [['will be'],['verb',primary_idx+1]])
-                                for w in range(primary_idx, len(eng_sentence)):
-                                    if eng_sentence[w][0][0] != 'will be':
-                                        eng_sentence[w][1][1] += 1
-                                else:
-                                    eng_sentence.insert(primary_idx, [['will not be'],['verb',primary_idx+1]])
-                                for w in range(primary_idx, len(eng_sentence)):
-                                    if eng_sentence[w][0][0] != 'will not be':
-                                        eng_sentence[w][1][1] += 1
-                    elif tense == 'continous':
+                            eng_sentence.insert(primary_idx, [['is not'],['verb',primary_idx+1]])
+                            for w in range(primary_idx, len(eng_sentence)):
+                                if eng_sentence[w][0][0] != 'is not':
+                                    eng_sentence[w][1][1] += 1
+                    elif I_flag == False:
+                        if NEG == 0:
+                            eng_sentence.insert(primary_idx, [['are'],['verb',primary_idx+1]])
+                            for w in range(primary_idx, len(eng_sentence)):
+                                if eng_sentence[w][0][0] != 'are':
+                                    eng_sentence[w][1][1] += 1
+                        else:
+                            eng_sentence.insert(primary_idx, [['are not'],['verb',primary_idx+1]])
+                            for w in range(primary_idx, len(eng_sentence)):
+                                if eng_sentence[w][0][0] != 'are not':
+                                    eng_sentence[w][1][1] += 1
+                    else:
+                        if NEG == 0:
+                            eng_sentence.insert(primary_idx, [['am'],['verb',primary_idx+1]])
+                            for w in range(primary_idx, len(eng_sentence)):
+                                if eng_sentence[w][0][0] != 'am':
+                                    eng_sentence[w][1][1] += 1
+                        else:
+                            eng_sentence.insert(primary_idx, [['am not'],['verb',primary_idx+1]])
+                            for w in range(primary_idx, len(eng_sentence)):
+                                if eng_sentence[w][0][0] != 'am not':
+                                    eng_sentence[w][1][1] += 1
+                elif tense == 'past':
+                    if NEG == 0:
                         if PRONOUN == 0:
-                            if NEG == 0:
-                                eng_sentence.insert(primary_idx, [['is'],['verb',primary_idx+1]])
-                                for w in range(primary_idx, len(eng_sentence)):
-                                    if eng_sentence[w][0][0] != 'is':
-                                        eng_sentence[w][1][1] += 1
-                            else:
-                                eng_sentence.insert(primary_idx, [['is not'],['verb',primary_idx+1]])
-                                for w in range(primary_idx, len(eng_sentence)):
-                                    if eng_sentence[w][0][0] != 'is not':
-                                        eng_sentence[w][1][1] += 1
-                        elif I_flag == False:
-                            if NEG == 0:
-                                eng_sentence.insert(primary_idx, [['are'],['verb',primary_idx+1]])
-                                for w in range(primary_idx, len(eng_sentence)):
-                                    if eng_sentence[w][0][0] != 'are':
-                                        eng_sentence[w][1][1] += 1
-                            else:
-                                eng_sentence.insert(primary_idx, [['are not'],['verb',primary_idx+1]])
-                                for w in range(primary_idx, len(eng_sentence)):
-                                    if eng_sentence[w][0][0] != 'are not':
-                                        eng_sentence[w][1][1] += 1
+                            eng_sentence.insert(primary_idx, [['was'],['verb',primary_idx+1]])
+                            for w in range(primary_idx, len(eng_sentence)):
+                                if eng_sentence[w][0][0] != 'was':
+                                    eng_sentence[w][1][1] += 1
                         else:
+                            eng_sentence.insert(primary_idx, [['were'],['verb',primary_idx+1]])
+                            for w in range(primary_idx, len(eng_sentence)):
+                                if eng_sentence[w][0][0] != 'were':
+                                    eng_sentence[w][1][1] += 1
+                    else:
+                        if PRONOUN == 0:
+                            eng_sentence.insert(primary_idx, [['was not'],['verb',primary_idx+1]])
+                            for w in range(primary_idx, len(eng_sentence)):
+                                if eng_sentence[w][0][0] != 'was not':
+                                    eng_sentence[w][1][1] += 1
+                        else:
+                            eng_sentence.insert(primary_idx, [['were not'],['verb',primary_idx+1]])
+                            for w in range(primary_idx, len(eng_sentence)):
+                                if eng_sentence[w][0][0] != 'were not':
+                                    eng_sentence[w][1][1] += 1
+                elif tense == 'future':
+                    for v in self.verbs:
+                        if v[0] == verb:
                             if NEG == 0:
-                                eng_sentence.insert(primary_idx, [['am'],['verb',primary_idx+1]])
-                                for w in range(primary_idx, len(eng_sentence)):
-                                    if eng_sentence[w][0][0] != 'am':
-                                        eng_sentence[w][1][1] += 1
+                                eng_sentence.insert(primary_idx, [['will be'],['verb',primary_idx+1]])
+                            for w in range(primary_idx, len(eng_sentence)):
+                                if eng_sentence[w][0][0] != 'will be':
+                                    eng_sentence[w][1][1] += 1
                             else:
-                                eng_sentence.insert(primary_idx, [['am not'],['verb',primary_idx+1]])
-                                for w in range(primary_idx, len(eng_sentence)):
-                                    if eng_sentence[w][0][0] != 'am not':
-                                        eng_sentence[w][1][1] += 1
+                                eng_sentence.insert(primary_idx, [['will not be'],['verb',primary_idx+1]])
+                            for w in range(primary_idx, len(eng_sentence)):
+                                if eng_sentence[w][0][0] != 'will not be':
+                                    eng_sentence[w][1][1] += 1
+                elif tense == 'continous':
+                    if PRONOUN == 0:
+                        if NEG == 0:
+                            eng_sentence.insert(primary_idx, [['is'],['verb',primary_idx+1]])
+                            for w in range(primary_idx, len(eng_sentence)):
+                                if eng_sentence[w][0][0] != 'is':
+                                    eng_sentence[w][1][1] += 1
+                        else:
+                            eng_sentence.insert(primary_idx, [['is not'],['verb',primary_idx+1]])
+                            for w in range(primary_idx, len(eng_sentence)):
+                                if eng_sentence[w][0][0] != 'is not':
+                                    eng_sentence[w][1][1] += 1
+                    elif I_flag == False:
+                        if NEG == 0:
+                            eng_sentence.insert(primary_idx, [['are'],['verb',primary_idx+1]])
+                            for w in range(primary_idx, len(eng_sentence)):
+                                if eng_sentence[w][0][0] != 'are':
+                                    eng_sentence[w][1][1] += 1
+                        else:
+                            eng_sentence.insert(primary_idx, [['are not'],['verb',primary_idx+1]])
+                            for w in range(primary_idx, len(eng_sentence)):
+                                if eng_sentence[w][0][0] != 'are not':
+                                    eng_sentence[w][1][1] += 1
+                    else:
+                        if NEG == 0:
+                            eng_sentence.insert(primary_idx, [['am'],['verb',primary_idx+1]])
+                            for w in range(primary_idx, len(eng_sentence)):
+                                if eng_sentence[w][0][0] != 'am':
+                                    eng_sentence[w][1][1] += 1
+                        else:
+                            eng_sentence.insert(primary_idx, [['am not'],['verb',primary_idx+1]])
+                            for w in range(primary_idx, len(eng_sentence)):
+                                if eng_sentence[w][0][0] != 'am not':
+                                    eng_sentence[w][1][1] += 1
             else:
                 if tense == 'present':
                     if PRONOUN == 0:
