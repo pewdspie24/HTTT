@@ -25,3 +25,9 @@
 # # if s in plural.values:
 # df_new = nouns[(nouns.singular == s)]["plural"]
 # print(df_new)
+import numpy as np
+from numpy.lib import type_check
+tmp = ['daituxungho', 'danhtuchung dongtu tinhtu', 'dongtu quanhetudinhvi', 'danhtuchung', 'danhtuchung sotu']
+type_word = ['daituxungho', ' dongtu tinhtu', 'quanhetudinhvi', 'danhtuchung', 'sotu']
+check = not np.array_equal(tmp, type_word)
+print(check)

@@ -74,7 +74,7 @@ class MainProcess():
                     word.append(token)
                     type_word.append("lietke")
                 # if is special character
-                if token in "-:%'(){}[]":
+                elif token in "-:%'(){}[]":
                     word.append(token)
                     type_word.append("kytu")
                 # if the first character is uppper, consider as a name

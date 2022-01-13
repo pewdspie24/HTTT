@@ -105111,12 +105111,16 @@
     {
         "word": "lên",
         "type": [
-            "verb"
+            "verb",
+            "prep"
         ],
         "trans1": [
             "go up",
             "come up",
             "rise"
+        ],
+        "trans2": [
+            "up"
         ]
     },
     {

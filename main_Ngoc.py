@@ -58,7 +58,6 @@ class MainProcess():
             return False
 
     def get_word_type_vi(self, tokens):
-        print(tokens)
         word = []
         type_word = []
         thi = "present"
@@ -95,10 +94,12 @@ class MainProcess():
                     type_word.append("unknown")
 
         num = len(word)
-        print(word)          
-        print(type_word)
+        print(word)     
+        # print(type_word)
         while (check): # if check == True, it mean, still having changes
-            tmp = type_word
+            check = False
+            tmp = type_word   
+            # print(tmp)
             for idx in range(num) :
                 word_type = type_word[idx].strip().split(" ")
                 # determine tense 
@@ -120,11 +121,11 @@ class MainProcess():
                         type_word[idx] = "danhtuchung"
                 # determine noun or sotu
                 if word[idx] == "ba":
-                    if (idx>0 and "danhtuchung" in type_word[idx-1])or (idx+1<num and "danhtu" in type_word[idx+1]):
+                    if (idx>0 and "danhtuchung" in type_word[idx-1]) or (idx+1<num and "danhtu" in type_word[idx+1]):
                         type_word[idx] = "sotu"
                     else:
                         type_word[idx] = "danhtuchung"
-                #determine quanhetudinhvi or verb or noun
+                # determine quanhetudinhvi or verb or noun
                 if "quanhetudinhvi" in type_word[idx]:
                     # if idx+1 <num and np.any([i in type_word[idx+1] for i in ["danhtu", "sotu", "luongtu", "daituxungho", "so"]]):
                     if idx>1 and np.any([i in type_word[idx-1] for i in ["dongtu", "tinhtu"]]):
@@ -164,8 +165,17 @@ class MainProcess():
                         # determine verb or adj
                         elif "tinhtu" in type_word[idx] and type_word[idx+1] == "photuchimucdo":
                             type_word[idx] = "tinhtu"
-            check = not np.array_equal(tmp, type_word)
-            print("lap")
+            print(tmp)
+            print(type_word)
+            # check = not np.array_equal(tmp, type_word)
+            for idx, i in enumerate(type_word):
+                print(type_word[idx])
+                print(tmp[idx])
+                if type_word[idx] != tmp[idx]:
+                    check = True
+                    break
+            print(check)
+            tmp = type_word
         # delete unneed word  
         dem = 0              
         while dem<num:
@@ -794,7 +804,7 @@ class MainProcess():
         
 if __name__ == "__main__":
     my = MainProcess()
-    vi_sentence, eng_sentence, result, tense, list_chars = my.process("tôi, Quang và bạn đang đi ăn")
+    vi_sentence, eng_sentence, result, tense, list_chars = my.process("tôi sống ở tầng ba")
     print(vi_sentence)
     print(eng_sentence)
     print(result)
