@@ -30211,7 +30211,7 @@
         ],
         "trans1": [
             "you",
-            "unclde"
+            "uncle"
         ]
     },
     {
@@ -35168,12 +35168,15 @@
     {
         "word": "chị",
         "type": [
-            "noun"
+            "noun",
+            "pronoun"
         ],
         "trans1": [
             "Elder sister",
-            "first cousin",
-            ""
+            "first cousin"
+        ],
+        "trans2": [
+            "she"
         ]
     },
     {
@@ -38844,15 +38847,14 @@
     {
         "word": "chú",
         "type": [
-            "noun"
+            "noun",
+            "pronoun"
         ],
         "trans1": [
-            "Uncle",
-            "uncle",
-            "",
-            "",
-            "",
-            ""
+            "uncle"
+        ],
+        "trans2": [
+            "he"
         ]
     },
     {
@@ -49303,10 +49305,14 @@
     {
         "word": "dì",
         "type": [
-            "noun"
+            "noun",
+            "pronoun"
         ],
         "trans1": [
             "aunt"
+        ],
+        "trans2": [
+            "she"
         ]
     },
     {
@@ -111116,7 +111122,7 @@
     {
         "word": "mày",
         "type": [
-            "adj"
+            "pronoun"
         ],
         "trans1": [
             "you"
@@ -114131,15 +114137,10 @@
     {
         "word": "mợ",
         "trans0": [
-            "Maternal uncle's wife",
+            "she",
             "aunt",
-            "andarin's young son's wife",
-            "ove",
-            "darling",
-            "anma",
             "mummy",
-            "mother.",
-            "used for addressing a daughter-in-law). you"
+            "mother"
         ]
     },
     {
@@ -118488,14 +118489,13 @@
         "word": "ngài",
         "type": [
             "noun",
-            "noun"
+            "pronoun"
         ],
         "trans1": [
-            "ombycid moth"
+            "sir"
         ],
         "trans2": [
-            "how",
-            "your excellency"
+            "you"
         ]
     },
     {
@@ -164926,7 +164926,7 @@
             "pronoun"
         ],
         "trans1": [
-            "",
+            "I",
             "me",
             "my"
         ]
@@ -184605,7 +184605,7 @@
             "noun"
         ],
         "trans1": [
-            "egg ovum"
+            "egg"
         ]
     },
     {
