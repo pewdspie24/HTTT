@@ -360,11 +360,12 @@ class MainProcess():
                 if type_en == 'pronoun':
                     if word_en == "I":
                         I_flag = True
+                    if word_en != 'I':
+                        word_en = word_en.lower()
                     for j in self.pronoun[1].values():
                         for smt in j:
-                            if word_en.lower() == smt:
+                            if word_en == smt:
                                 PRONOUN = 1
-                                # print("CC")
                                 break
                         if PRONOUN:
                             break # TODO
