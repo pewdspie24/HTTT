@@ -33,9 +33,9 @@ class MainProcess():
         with open("eng_dict\\uncountable_noun.txt", 'r', encoding="utf8") as j:
             self.uncount_noun = j.read().splitlines() 
             
-        nouns = pandas.read_csv("eng_dict\\noun.csv")
-        self.plural = nouns['plural']
-        self.singular = nouns['singular']
+        self.nouns = pandas.read_csv("eng_dict\\noun.csv")
+        self.plural = self.nouns['plural']
+        self.singular = self.nouns['singular']
         # Vietnamese loading
         for i in PATH_VI:
             with open(VI_DICT_PATH + i, "r+", encoding="utf-8" ) as f:
@@ -167,8 +167,8 @@ class MainProcess():
         # delete unneed word  
         dem = 0              
         while dem<num:
-            print(word)          
-            print(type_word) 
+            # print(word)          
+            # print(type_word) 
             print(dem, " ", num, " ", type_word[dem], " ", word[dem])
             if (dem+1<num and np.any([i in type_word[dem+1] for i in ["dongtu", "tinhtu"]])):
                 if "photuphudinh" in type_word[dem] or word[dem] in ["đã", "từng", "đang", "sẽ"]:
@@ -295,7 +295,7 @@ class MainProcess():
 
         # 6. Find the right Subject 
         # Define type of subject
-        print(eng_sentence)
+        # print(eng_sentence)
         for i in range(0, primary_idx):
             type_vi = vi_sentence[i][1][0]
             type_en = eng_sentence[i][1][0]
@@ -338,7 +338,7 @@ class MainProcess():
         ext_flag = False
         ext_word = ""
         splited = verb.split(" ")
-        print(splited)
+        # print(splited)
         if len(splited) > 1:
             verb = splited[0]
             ext_flag = True
@@ -582,6 +582,7 @@ class MainProcess():
                         eng_sentence[primary_idx][1][0] = "verb"
         if ext_flag:
             eng_sentence[primary_idx][0][0] += " "+ext_word
+        print(vi_sentence)
         print(eng_sentence)
         # 5. Re-organize sentence
         for index, word in enumerate(eng_sentence):
@@ -634,14 +635,47 @@ class MainProcess():
                         word[0][0] = ""
                         word[1][0] = None
                         break
-            if word[0][0] == 'a':
-                try:
-                    next_word = eng_sentence[index+1][0][0]
-                    if next_word[0][0][0] in ['u', 'e', 'o', 'a', 'i']:
-                        word[0][0] = 'an'
-                        word[0][1] = 'a'
-                except:
-                    word[0][0] = 'a'
+            # convert to nouns
+            if vi_sentence[index][1][0] in ["sotu", "luongtu"]:
+                if vi_sentence[index][0] == "một":
+                    try:
+                        next_word = eng_sentence[index+1][0][0]
+                        if next_word[0][0][0] in ['u', 'e', 'o', 'a', 'i']:
+                            word[0][0] = 'an'
+                            word[0][1] = 'a'
+                    except:
+                        word[0][0] = 'a'
+                else:
+                    PRONOUN = 1
+                    if vi_sentence[index][0] in ["các", "những", "bọn"]:
+                        word[0][0] = ""
+                        word[1][0] = None
+                    for i in range (index+1, len(eng_sentence), 1):
+                        if eng_sentence[i][1][0] == 'noun':
+                            print("aaaaaaa----------")
+                            print(eng_sentence[i][0][0])
+                            if self.nouns[self.nouns["singular"] == eng_sentence[i][0][0]].shape[0] > 0:
+                                print(self.nouns[self.nouns["singular"] == eng_sentence[i][0][0]])
+                                # print(self.singular.values)
+                                # print(eng_sentence[i][0][0] in self.singular.values)
+                                # if eng_sentence[i][0][0] in self.singular.values:
+                                print(eng_sentence[i][0][0])
+                                print(self.nouns[self.nouns["singular"] == eng_sentence[i][0][0]]["plural"].values)
+                                eng_sentence[i][0][0] = self.nouns[self.nouns["singular"] == eng_sentence[i][0][0]]["plural"].values
+                            else:
+                                if np.any([eng_sentence[i][0][0].endswith(i) for i in ["s", "ss", "sh", "ch", "z", "x"]]):
+                                    eng_sentence[i][0][0] += "es"
+                                elif eng_sentence[i][0][0][-2] not in ['u', 'e', 'o', 'a', 'i'] and eng_sentence[i][0][0][-1] == "o":
+                                    eng_sentence[i][0][0] += "es"
+                                elif eng_sentence[i][0][0][-2] not in ['u', 'e', 'o', 'a', 'i'] and eng_sentence[i][0][0][-1] == "y":
+                                    eng_sentence[i][0][0] =  eng_sentence[i][0][0][:-1] + "ies"
+                                elif eng_sentence[i][0][0].endswith("f"):
+                                    eng_sentence[i][0][0] =  eng_sentence[i][0][0][:-1] + "ves"
+                                elif eng_sentence[i][0][0].endswith("fe"):
+                                    eng_sentence[i][0][0] =  eng_sentence[i][0][0][:-2] + "ves"
+                                else:
+                                    eng_sentence[i][0][0] += "s"
+                            break
 
         # 8. Show result & Suggest 
         result = ""

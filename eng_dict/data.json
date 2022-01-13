@@ -12177,10 +12177,7 @@
             "noun"
         ],
         "trans1": [
-            "Flock",
-            "herd",
-            "ang",
-            "band"
+            "band of"
         ]
     },
     {
@@ -17817,9 +17814,10 @@
             "noun"
         ],
         "trans1": [
+            "a group of",
             "Gang",
-            "band",
-            "group"
+            "band"
+            
         ]
     },
     {
@@ -40007,8 +40005,9 @@
     {
         "word": "chút xíu",
         "trans0": [
-            "A dash",
-            "a tiny bit"
+            "a tiny",
+            "A dash"
+            
         ]
     },
     {
@@ -113836,6 +113835,14 @@
         ]
     },
     {
+        "word": "một tí",
+        "trans0": [
+            "several",
+            "a few",
+            "some"
+        ]
+    },
+    {
         "word": "mơ",
         "type": [
             "noun",
@@ -134519,9 +134526,9 @@
             "verb"
         ],
         "trans1": [
-            "nourish",
-            "bring up",
             "feed",
+            "bring up",
+            "nourish",
             "breed"
         ]
     },
@@ -168395,6 +168402,12 @@
         ]
     },
     {
+        "word": "tất thảy",
+        "trans0": [
+            "All"
+        ]
+    },
+    {
         "word": "tất yếu",
         "type": [
             "adj"
@@ -180916,7 +180929,7 @@
             "noun"
         ],
         "trans1": [
-            "small group"
+            "small group of"
         ]
     },
     {
@@ -188248,8 +188261,18 @@
             "adj"
         ],
         "trans1": [
-            "some",
-            "several"
+            "several",
+            "some"
+        ]
+    },
+    {
+        "word": "vài ba",
+        "type": [
+            "adj"
+        ],
+        "trans1": [
+            "several",
+            "some"
         ]
     },
     {

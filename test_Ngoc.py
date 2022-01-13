@@ -17,5 +17,11 @@
 # for k, v in word_type_vi.items():
 #     if len(v.split(" ")) > 1 and "dongtu" in v:
 #         print(k + ": " + v) 
-
-print("ngoc_a_b_".replace("_", ""))
+# import pandas
+# nouns = pandas.read_csv("eng_dict\\noun.csv")
+# plural = nouns['plural']
+# singular = nouns['singular']
+# s = "person"
+# # if s in plural.values:
+# df_new = nouns[(nouns.singular == s)]["plural"]
+# print(df_new)
