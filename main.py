@@ -1,5 +1,6 @@
 import sys
 import json
+import re
 from typing import Sequence
 from underthesea import word_tokenize as vn_token_uts
 from underthesea import pos_tag
@@ -46,6 +47,24 @@ class MainProcess():
                         self.word_type_vi[tmp] += " " + i[:-4]
                     else:
                         self.word_type_vi[tmp] = i[:-4]    
+
+    def no_accent_vietnamese(self, s):
+        s = re.sub(r'[àáạảãâầấậẩẫăằắặẳẵ]', 'a', s)
+        s = re.sub(r'[ÀÁẠẢÃĂẰẮẶẲẴÂẦẤẬẨẪ]', 'A', s)
+        s = re.sub(r'[èéẹẻẽêềếệểễ]', 'e', s)
+        s = re.sub(r'[ÈÉẸẺẼÊỀẾỆỂỄ]', 'E', s)
+        s = re.sub(r'[òóọỏõôồốộổỗơờớợởỡ]', 'o', s)
+        s = re.sub(r'[ÒÓỌỎÕÔỒỐỘỔỖƠỜỚỢỞỠ]', 'O', s)
+        s = re.sub(r'[ìíịỉĩ]', 'i', s)
+        s = re.sub(r'[ÌÍỊỈĨ]', 'I', s)
+        s = re.sub(r'[ùúụủũưừứựửữ]', 'u', s)
+        s = re.sub(r'[ƯỪỨỰỬỮÙÚỤỦŨ]', 'U', s)
+        s = re.sub(r'[ỳýỵỷỹ]', 'y', s)
+        s = re.sub(r'[ỲÝỴỶỸ]', 'Y', s)
+        s = re.sub(r'[Đ]', 'D', s)
+        s = re.sub(r'[đ]', 'd', s)
+        return s
+
 
     def check_number(self, word):
         tmp = word
@@ -206,9 +225,12 @@ class MainProcess():
         # Process
         PRONOUN = 0
         NEG = 0
+        WORD_COUNT = False
+        counts = []
         vi_sentence = []
         eng_sentence = []
         list_chars = []
+        proper_noun = []
         # 1. Input text
         sequence = sentence
         # 2. Tokenize text
@@ -246,7 +268,11 @@ class MainProcess():
                     c.append(k)
                     # print(c)
                     eng_sentence.append([c,['proper', idx]])
+                    proper_noun.append(k)
                     continue
+                if v[0] == 'luongtu':
+                    WORD_COUNT = True
+                    counts.append(sodem)
                 if sodem < len(vi_sentence)-1:
                     if k == 'của' and vi_sentence[sodem+1][1][0] == 'daituxungho':
                         possesive_flag = True
@@ -322,10 +348,13 @@ class MainProcess():
                     # pos_word = word[0][0]
                     # print(pos_word)
                     for indx, i in enumerate(eng_sentence):
-                        if i[1][0] == 'pronoun' and  i[1][1] > pos_idx_en:
+                        if i[1][0] in ['pronoun', 'proper']  and  i[1][1] > pos_idx_en:
                             # print(i[0][0])
                             # print(POSSESIVE.get("I"))
-                            eng_sentence[indx][0][0] = POSSESIVE.get(i[0][0])
+                            if i[1][0] == "pronoun":
+                                eng_sentence[indx][0][0] = POSSESIVE.get(i[0][0])
+                            elif i[1][0] == "proper":
+                                eng_sentence[indx][0][0] += "'s" 
                             word[0][0] = ""
                             word[1][0] = None
                             for dtu_idx in range(index, -1, -1):
@@ -345,6 +374,7 @@ class MainProcess():
                 type_vi = vi_sentence[i][1][0]
                 type_en = eng_sentence[i][1][0]
                 word_en = eng_sentence[i][0][0]
+                word_vi = vi_sentence[i][0]
                 # print("")
                 # print(vi_sentence[i][1][0])
                 # print(eng_sentence[i][1][0])
@@ -354,6 +384,17 @@ class MainProcess():
                     PRONOUN = 1
                     I_flag = False
                     break
+                if type_vi == 'luongtu':
+                    for j in range (i, primary_idx):
+                        if eng_sentence[j][1][0] == 'noun':
+                            if len(eng_sentence[j][0][0].split()) > 1:
+                                # print("CCCCCCCCC", eng_sentence)
+                                main_noun = ' '.join(map(str, eng_sentence[j][0][0].split()[1:]))
+                                eng_sentence[j][0][0] = eng_sentence[j][0][0].split()[0] + " " + self.plural[self.singular.index(main_noun)]
+                            else:
+                                eng_sentence[j][0][0] = self.plural[self.singular.index(eng_sentence[j][0][0])]
+                            PRONOUN = 1
+                            break
                 # If proper, becomes singular
                 if type_en == 'proper':
                     continue
@@ -380,12 +421,12 @@ class MainProcess():
                 if word_en in self.plural:
                     PRONOUN = 1
                     break
-                if type_en == 'number' and eng_sentence[i+1][1][0] == 'noun':
+                if type_en == 'number' and word_vi != "một" and eng_sentence[i+1][1][0] == 'noun':
                     MANY_N = True
                     continue
                 if type_en == 'noun' and MANY_N:
                     PRONOUN = 1
-                    print(self.singular.index(word_en))
+                    # print(self.singular.index(word_en))
                     eng_sentence[i][0][0] = self.plural[self.singular.index(word_en)]
                     break
 
@@ -793,10 +834,13 @@ class MainProcess():
                 if i[0][0] == "I":
                     result+="I "
                     continue
-                if idx == 0:
+                if idx == 0 and i[1][0] != 'proper':
                     result+=i[0][0][0].upper()
                     result+=i[0][0][1:].lower()
                     result+=" "
+                elif i[1][0] == 'proper':
+                    print("CCCCCCCCC", self.no_accent_vietnamese(i[0][0]))
+                    result+=self.no_accent_vietnamese(i[0][0])+ ' '
                 else:
                     result+=i[0][0].lower()
                     result+=" "
@@ -806,7 +850,7 @@ class MainProcess():
         
 if __name__ == "__main__":
     my = MainProcess()
-    vi_sentence, eng_sentence, result, tense, list_chars = my.process("tất cả mèo ăn cơm")
+    vi_sentence, eng_sentence, result, tense, list_chars = my.process("một con mèo ăn cơm")
     print(vi_sentence)
     print(eng_sentence)
     print(result)
