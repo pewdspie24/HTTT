@@ -376,6 +376,10 @@ class MainProcess():
                     for indx in range (index, len(eng_sentence)):
                         if eng_sentence[indx][1][0] == 'noun':
                             eng_sentence[indx][0][0] = self.plural[self.singular.index(eng_sentence[indx][0][0])]
+                if index > primary_idx-1 and vi_sentence[index][1][0] == 'luongtu':
+                    for indx in range (index, len(eng_sentence)):
+                        if eng_sentence[indx][1][0] == 'noun':
+                            eng_sentence[indx][0][0] = self.plural[self.singular.index(eng_sentence[indx][0][0])]
         except Exception:
                 print('Error')
 
