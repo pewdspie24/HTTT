@@ -822,8 +822,8 @@ class MainProcess():
             # 8.5 Nếu có 2 danh từ liên tiếp, đảo vị trí cho nhau
             try:
                 if word[1][0] == 'noun':
-                    if eng_sentence[index][1][0] == 'noun':
-                        word[0][0], eng_sentence[index][0][0] = eng_sentence[index][0][0], word[0][0]
+                    if eng_sentence[index+1][1][0] == 'noun':
+                        word[0][0], eng_sentence[index+1][0][0] = eng_sentence[index+1][0][0], word[0][0]
             except Exception:
                 print('Error')
 
