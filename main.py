@@ -363,7 +363,20 @@ class MainProcess():
                                     eng_sentence[indx][0][0] = " "
                                     eng_sentence[indx][1][0] = None
                                     break
+                        if i[1][0] == 'proper' and  i[1][1] > pos_idx_en:
+                            for dtu_idx in range(index, -1, -1):
+                                if eng_sentence[dtu_idx][1][0] == 'noun' or eng_sentence[dtu_idx][1][0] == 'pronoun':
+                                    eng_sentence[dtu_idx][0][0] = self.no_accent_vietnamese(eng_sentence[indx][0][0]) + "'s " + eng_sentence[dtu_idx][0][0]
+                                    eng_sentence[indx][0][0] = " "
+                                    eng_sentence[indx][1][0] = None
+                                    word[0][0] = ""
+                                    word[1][0] = None
+                                    break
                 if index > primary_idx-1 and word[1][0] == 'number' and word[0][0] != 'one' and word[0][0] != 'a':
+                    for indx in range (index, len(eng_sentence)):
+                        if eng_sentence[indx][1][0] == 'noun':
+                            eng_sentence[indx][0][0] = self.plural[self.singular.index(eng_sentence[indx][0][0])]
+                if index > primary_idx-1 and vi_sentence[index][1][0] == 'luongtu':
                     for indx in range (index, len(eng_sentence)):
                         if eng_sentence[indx][1][0] == 'noun':
                             eng_sentence[indx][0][0] = self.plural[self.singular.index(eng_sentence[indx][0][0])]
@@ -723,6 +736,7 @@ class MainProcess():
                 print('Error')
         print(eng_sentence)
         # 8. Sắp xếp lại cấu trúc câu
+        advb_flag = False
         for index, word in enumerate(eng_sentence):
             # 8.1 Tính từ đứng trước danh từ
             try:
@@ -745,6 +759,10 @@ class MainProcess():
                             word[1][0] = None
                             break
                         if eng_sentence[i][1][0] == 'verb':
+                            adv_chr = eng_sentence[i][0][0].split(' ')
+                            if advb_flag:
+                                # print('cccccccccc', adv_chr[0])
+                                eng_sentence[i][0][0] = ' '.join(map(str, adv_chr[1:])) + ' ' + adv_chr[0]
                             eng_sentence[i][0][0] = eng_sentence[i][0][0] + " " + word[0][0] 
                             word[0][0] = ""
                             word[1][0] = None
@@ -774,6 +792,7 @@ class MainProcess():
                                             eng_sentence[i][0][0] += ' ' + chr
                             else:
                                 eng_sentence[i][0][0] = word[0][0] + ' ' + adv_chr[0]
+                            advb_flag = True
                         else:
                             eng_sentence[i][0][0] = word[0][0] + ' ' + eng_sentence[i][0][0]
                         word[0][0] = ""
@@ -809,8 +828,8 @@ class MainProcess():
             # 8.5 Nếu có 2 danh từ liên tiếp, đảo vị trí cho nhau
             try:
                 if word[1][0] == 'noun':
-                    if eng_sentence[index][1][0] == 'noun':
-                        word[0][0], eng_sentence[index][0][0] = eng_sentence[index][0][0], word[0][0]
+                    if eng_sentence[index+1][1][0] == 'noun':
+                        word[0][0], eng_sentence[index+1][0][0] = eng_sentence[index+1][0][0], word[0][0]
             except Exception:
                 print('Error')
 
