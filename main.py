@@ -231,21 +231,21 @@ class MainProcess():
         eng_sentence = []
         list_chars = []
         proper_noun = []
-        # 1. Input text
+        # 1. Nhập câu đầu vào
         sequence = sentence
-        # 2. Tokenize text
+        # 2. Tách từ câu đầu vào
         tokens = vn_token_uts(sequence)
-        # 3.1 Get VI type, primary Verb, Tense
+        # 3.1 Lấy dữ liệu từ, loại từ, thì và động từ chính từ hàm
         word_list_vi, word_type_vi, tense, primary_idx, NEG = self.get_word_type_vi(tokens)
         for idx, word in enumerate(word_list_vi):
             print(word+" "+word_type_vi[idx])
         # primary_idx = 1
         print("Primary",primary_idx)
         print("NEG", NEG)
-        # 3.2 Get C-V
+        # Alt.
         # primary_idx = 4
         # NEG = self.get_neg(tokens)
-        # 4 Matching word
+        # 4. Ánh xạ từ loại A-V và tìm từ tương ứng trong TA
         # vi_sentence = ((tu1,(loaitu1, 1)), (tu2,(loaitu2, 2)), ...)
         for idx, token in enumerate(word_list_vi):
             vi_sentence.append([token,[word_type_vi[idx], idx]])
@@ -261,19 +261,19 @@ class MainProcess():
                 flag = 0
                 idx+=1
                 # print("ATT",v[0])
+                # 4.1 Nếu là ký tự, bỏ qua
                 if v[0] == 'kitu':
                     c.append(k)
                     eng_sentence.append([c,['kitu', idx]])
                     continue
+                # 4.2 Nếu là tên riêng, bỏ qua
                 if v[0] == 'daituxungho' and k[0].isupper():
                     c.append(k)
                     # print(c)
                     eng_sentence.append([c,['proper', idx]])
                     proper_noun.append(k)
                     continue
-                if v[0] == 'luongtu':
-                    WORD_COUNT = True
-                    counts.append(sodem)
+                # 4.3 Nếu là xuất hiện từ của, đưa về possessive noun
                 if sodem < len(vi_sentence)-1:
                     if k == 'của' and vi_sentence[sodem+1][1][0] == 'daituxungho':
                         possesive_flag = True
@@ -286,10 +286,10 @@ class MainProcess():
                         list_chars.append(i)
                         vi_type = v[0].strip()
                         # print(vi_type)
-                        # Exist in matching-type
+                        # 4.4 Nếu tồn tại loại từ phù hợp A-V
                         if vi_type in WTYPE_MATCH:
                             # print(WTYPE_MATCH.get(vi_type))
-                            # Exist in dictionary with type
+                            # 4.5 Nếu tồn tại loại từ phù hợp trên trong từ điển
                             # print(i['type'])
                             type_match = WTYPE_MATCH.get(vi_type)
                             if vi_type[0:5] == "photu":
@@ -315,7 +315,7 @@ class MainProcess():
                                 # print(list_words)
                                 eng_sentence.append([list_words,[WTYPE_MATCH.get(vi_type), idx]])
                                 flag = 1
-                            # Don't exist in dictionary with type
+                            # 4.5 Nếu từ điển không chứa loại từ tương ứng cho từ có được
                             else:
                                 list_words = []
                                 for key in i.keys():
@@ -324,7 +324,7 @@ class MainProcess():
                                             list_words.append(obj)
                                 eng_sentence.append([list_words,[WTYPE_MATCH.get(vi_type), idx]])
                                 flag = 2
-                        # Don't existed in matching-type
+                        # 4.5 Không tìm được luật liên kết 2 loại từ A-V
                         else:
                             list_words = []
                             for key in i.keys():
@@ -333,13 +333,13 @@ class MainProcess():
                                         list_words.append(obj)
                             eng_sentence.append([list_words,["manytype", idx]])
                             flag = 3
-                # Can't find in dict
+                # 4.6 Không tìm được từ trong từ điển
                 if flag == 0:
                     eng_sentence.append([k,["NA", idx]])
         except Exception:
                 print('Error')
-        # 6. Find the right Subject 
-        # Define type of subject
+        # 6. Xử lý danh từ và chủ ngữ
+        # 6.1 Xử lý danh từ có xuất hiện từ 'của'
         print(eng_sentence)
         try:
             for index, word in enumerate(eng_sentence):
@@ -369,6 +369,7 @@ class MainProcess():
                 print('Error')
 
         print(eng_sentence)
+        # 6.2 Xử lý tìm ngôi của chủ ngữ
         MANY_N = False
         I_flag = False
         try:
@@ -380,11 +381,12 @@ class MainProcess():
                 # print(vi_sentence[i][1][0])
                 # print(eng_sentence[i][1][0])
                 # print(eng_sentence[i][0][0])
-                # If include conj, becomes plural
+                # 6.2.1 Nếu tồn tại quan hệ từ liệt kê
                 if type_vi == 'quanhetulietke':
                     PRONOUN = 1
                     I_flag = False
                     break
+                # 6.2.2 Nếu tồn tại lượng từ
                 if type_vi == 'luongtu':
                     for j in range (i, primary_idx):
                         if eng_sentence[j][1][0] == 'noun':
@@ -396,10 +398,10 @@ class MainProcess():
                                 eng_sentence[j][0][0] = self.plural[self.singular.index(eng_sentence[j][0][0])]
                             PRONOUN = 1
                             break
-                # If proper, becomes singular
+                # 6.2.3 Nếu tồn tại tên riêng
                 if type_en == 'proper':
                     continue
-                # Decide pronoun in database
+                # 6.2.4 Nếu tồn tại đại từ số nhiều
                 if type_en == 'pronoun':
                     if word_en == "I":
                         I_flag = True
@@ -414,14 +416,15 @@ class MainProcess():
                             break # TODO
                     # if PRONOUN:
                     #     break
-                # If uncountable noun, becomes singular
+                # 6.2.5 Nếu tồn tại danh từ không đếm được
                 if word_en in self.uncount_noun:
                     continue
                 # print(word_en)
-                # If plural noun
+                # 6.2.6 Nếu tồn tại danh từ số nhiều
                 if word_en in self.plural:
                     PRONOUN = 1
                     break
+                # 6.2.7 Nếu tồn tại số từ hoặc lượng từ
                 if type_en == 'number' and word_en.lower() != 'one' and eng_sentence[i+1][1][0] == 'noun':
                     MANY_N = True
                     continue
@@ -434,13 +437,14 @@ class MainProcess():
         except Exception:
                 print('Error') 
 
-        # 7. Verb conjugation
+        # 7. Chia động từ
         print(eng_sentence)
         try: 
             verb = eng_sentence[primary_idx][0][0]
             ext_flag = False
             ext_word = ""
             splited = verb.split(" ")
+            # 7.0 Xử lý từ ngoại lai
             if len(splited) > 1:
                 verb = splited[0]
                 ext_flag = True
@@ -452,7 +456,7 @@ class MainProcess():
             # print("Verb day nay",verb)
             # print(v_type)
             print("Pronoun", PRONOUN)
-            # Verb is verb
+            # 7.1 Có động từ là không phải là 'be'
             if v_type == 'verb' and verb != "be":
                 if tense == 'present':
                     if PRONOUN == 0 and I_flag == False:
@@ -528,7 +532,7 @@ class MainProcess():
                         eng_sentence[primary_idx][0][0] += " " + "to"
                 except Exception:
                     print("Error")
-            # other cases
+            # 7.2 Không có động từ
             elif verb != "be":
                 if tense == 'present':
                     if PRONOUN == 0:
@@ -636,6 +640,7 @@ class MainProcess():
                             for w in range(primary_idx, len(eng_sentence)):
                                 if eng_sentence[w][0][0] != 'am not':
                                     eng_sentence[w][1][1] += 1
+            # 7.2 Động từ là từ be
             else:
                 if tense == 'present':
                     if PRONOUN == 0:
@@ -705,15 +710,16 @@ class MainProcess():
                             eng_sentence[primary_idx][1][0] = "verb"
         except Exception:
                 print('Error')
+        # 7.4 Chèn từ ngoại lai vào động từ
         try:
             if ext_flag:
                 eng_sentence[primary_idx][0][0] += " "+ext_word
         except Exception:
                 print('Error')
         print(eng_sentence)
-        # 5. Re-organize sentence
+        # 8. Sắp xếp lại cấu trúc câu
         for index, word in enumerate(eng_sentence):
-            # Adjective comes before nouns
+            # 8.1 Tính từ đứng trước danh từ
             try:
                 # if index < len(eng_sentence)-1:
                 #     next_word = eng_sentence[index+1]
@@ -740,13 +746,14 @@ class MainProcess():
                             break
             except Exception:
                 print('Error')
-            # Adverbs Before comes before nouns
+            # 8.2 Trạng từ đứng trước danh, động, tính từ gần nhất mà nó bổ trợ
             if word[1][0] == 'advB' and word[0][0] != 'yesterday' and word[0][0] != 'today' and word[0][0] != 'tomorrow':
                 adv_idx_en = word[1][1]
                 adv_idx_vi = adv_idx_en
                 for i in range (adv_idx_en-1, len(eng_sentence)):
                     if eng_sentence[i][1][0] == 'noun' or eng_sentence[i][1][0] == 'verb' or eng_sentence[i][1][0] == 'adj':
                         # print(eng_sentence[i][0][0])
+                        # 8.2.1 Nếu là động từ và có từ ngoại lai, xử lý từ ngoại lai
                         if eng_sentence[i][1][0] == 'verb':
                             adv_chr = eng_sentence[i][0][0].split(' ')
                             if len(adv_chr) > 1:
@@ -768,7 +775,7 @@ class MainProcess():
                         # print(word[1][0])
                         word[1][0] = None
                         break
-            # Adverbs After comes after nouns
+            # 8.3 Trạng từ đứng sau danh, động, tính từ gần nhất mà nó bổ trợ
             try:
                 if word[1][0] == 'advA':
                     adv_idx_en = word[1][1]
@@ -781,7 +788,7 @@ class MainProcess():
                             break
             except Exception:
                 print('Error')
-            # Deteminers comes before nouns
+            # 8.4 Từ định danh đứng trước danh từ
             try:
                 if word[1][0] == 'det':
                     det_idx_en = word[1][1]
@@ -794,7 +801,7 @@ class MainProcess():
                             break
             except Exception:
                 print('Error')
-            
+            # 8.5 Nếu có 2 danh từ liên tiếp, đảo vị trí cho nhau
             try:
                 if word[1][0] == 'noun':
                     if eng_sentence[index][1][0] == 'noun':
@@ -817,6 +824,7 @@ class MainProcess():
             #     word[0][0] = ""
             #     word[1][0] = None
 
+            # 8.6 Xử lý 'a', 'an' cho ngôi danh từ
             try:
                 if word[0][0] == 'a':
                     try:
@@ -829,7 +837,7 @@ class MainProcess():
             except Exception:
                 print('Error')
 
-        # 8. Show result & Suggest 
+        # 9. Trả về kết quả và các từ gợi ý
         result = ""
         for idx, i in enumerate(eng_sentence):
             if i[1][0] != None:
@@ -842,7 +850,6 @@ class MainProcess():
                     result+=i[0][0][1:].lower()
                     result+=" "
                 elif i[1][0] == 'proper':
-                    # print("CCCCCCCCC", self.no_accent_vietnamese(i[0][0]))
                     result+=self.no_accent_vietnamese(i[0][0])+ ' '
                 else:
                     result+=i[0][0].lower()

@@ -10,11 +10,11 @@ myModule = main.MainProcess()
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(900, 598) #800, 598 
+        MainWindow.resize(800, 598) #800, 598 
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.label = QtWidgets.QLabel(self.centralwidget)
-        self.label.setGeometry(QtCore.QRect(160, 40, 571, 61))
+        self.label.setGeometry(QtCore.QRect(160, 40, 471, 61))
         font = QtGui.QFont()
         font.setFamily("Segoe UI Variable Text")
         font.setPointSize(18)
@@ -53,31 +53,28 @@ class Ui_MainWindow(object):
         self.en_text.setReadOnly(True)
         self.en_text.setObjectName("en_text")
         self.scrollArea = QtWidgets.QScrollArea(self.centralwidget)
-        self.scrollArea.setGeometry(QtCore.QRect(450, 160, 411, 311))
+        self.scrollArea.setGeometry(QtCore.QRect(450, 160, 311, 311))
         self.scrollArea.setWidgetResizable(True)
         self.scrollArea.setObjectName("scrollArea")
         self.scrollAreaWidgetContents = QtWidgets.QWidget()
-        self.scrollAreaWidgetContents.setGeometry(QtCore.QRect(0, 0, 411, 309))
+        self.scrollAreaWidgetContents.setGeometry(QtCore.QRect(0, 0, 311, 309))
         self.scrollAreaWidgetContents.setObjectName("scrollAreaWidgetContents")
         self.table_translate = QtWidgets.QTableWidget(self.scrollAreaWidgetContents)
-        self.table_translate.setGeometry(QtCore.QRect(0, 0, 411, 309))
+        self.table_translate.setGeometry(QtCore.QRect(0, 0, 311, 309))
         self.table_translate.setSizeAdjustPolicy(QtWidgets.QAbstractScrollArea.AdjustToContents)
         self.table_translate.setEditTriggers(QtWidgets.QAbstractItemView.NoEditTriggers)
         self.table_translate.setObjectName("table_translate")
-        self.table_translate.setColumnCount(4)
+        self.table_translate.setColumnCount(3)
         item = QtWidgets.QTableWidgetItem()
         self.table_translate.setHorizontalHeaderItem(0, item)
         item = QtWidgets.QTableWidgetItem()
         self.table_translate.setHorizontalHeaderItem(1, item)
         item = QtWidgets.QTableWidgetItem()
         self.table_translate.setHorizontalHeaderItem(2, item)
-        item = QtWidgets.QTableWidgetItem()
-        self.table_translate.setHorizontalHeaderItem(3, item)
         header = self.table_translate.horizontalHeader()       
         header.setSectionResizeMode(0, QtWidgets.QHeaderView.ResizeToContents)
         header.setSectionResizeMode(1, QtWidgets.QHeaderView.ResizeToContents)
-        header.setSectionResizeMode(2, QtWidgets.QHeaderView.ResizeToContents)
-        header.setSectionResizeMode(3, QtWidgets.QHeaderView.Stretch)
+        header.setSectionResizeMode(2, QtWidgets.QHeaderView.Stretch)
         self.scrollArea.setWidget(self.scrollAreaWidgetContents)
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
@@ -101,10 +98,8 @@ class Ui_MainWindow(object):
         item = self.table_translate.horizontalHeaderItem(0)
         item.setText(_translate("MainWindow", "VN Char"))
         item = self.table_translate.horizontalHeaderItem(1)
-        item.setText(_translate("MainWindow", "ENG Char"))
-        item = self.table_translate.horizontalHeaderItem(2)
         item.setText(_translate("MainWindow", "Word Type"))
-        item = self.table_translate.horizontalHeaderItem(3)
+        item = self.table_translate.horizontalHeaderItem(2)
         item.setText(_translate("MainWindow", "Suggested Word"))
         self.backend()
     
@@ -134,14 +129,15 @@ class Ui_MainWindow(object):
             combo.currentTextChanged.connect(partial(self.showText,idx))
             combo_list.append(combo)
             self.showText(idx, types[0])
-            self.table_translate.setCellWidget(idx, 2, combo_list[idx])
-            if eng_sentence[idx][0][0] != None:
-                self.table_translate.setItem(idx, 1, QtWidgets.QTableWidgetItem(eng_sentence[idx][0][0]))
+            self.table_translate.setCellWidget(idx, 1, combo_list[idx])
+            # if eng_sentence[idx][0][0] != None:
+            #     self.table_translate.setItem(idx, 1, QtWidgets.QTableWidgetItem(eng_sentence[idx][0][0]))
 
     def showText(self, idx, value):
         res_txt = ''
         res = {}
         trans_idx = 0
+        # print(self.list_chars[idx])
         try:
             types = self.list_chars[idx].get('type')
             for index, type1 in enumerate(types):
@@ -154,20 +150,21 @@ class Ui_MainWindow(object):
             # print(idx)
             trans_name = res.get(value)
             for index, i in enumerate(self.list_chars[idx].get(trans_name)):
-                res_txt += i
+                res_txt += i.capitalize()
                 if index != len(self.list_chars[idx].get(trans_name))-1:
                     res_txt += '\n'
         except Exception:
-            for keys in self.list_chars[idx]:
-                if keys[0:4] == 'trans':
-                    print(keys)
-                    print(self.list_chars[idx])
+            # print('CCCC')
+            for index, keys in enumerate(self.list_chars[idx]):
+                if keys[0:4] == 'tran':
+                    # print(keys)
+                    # print(self.list_chars[idx])
                     list_texts = self.list_chars[idx].get(keys)
                     for text in list_texts:
-                        res_txt += text
+                        res_txt += text.capitalize()
                         if index != len(self.list_chars[idx].get(keys))-1:
                             res_txt += '\n'
-        self.table_translate.setItem(idx, 3, QtWidgets.QTableWidgetItem(res_txt))
+        self.table_translate.setItem(idx, 2, QtWidgets.QTableWidgetItem(res_txt))
         self.table_translate.resizeRowsToContents()
 
 if __name__ == "__main__":
