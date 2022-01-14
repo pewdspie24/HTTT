@@ -720,7 +720,7 @@ class MainProcess():
                     for i in range (adj_idx_en-1, -1, -1):
                         if eng_sentence[i][1][0] == 'noun':
                             adv_chr = eng_sentence[i][0][0].split(' ')
-                            print('CCCCCCCCCCCCCCCCCCCCCCCCCCC', adv_chr)
+                            # print('CCCCCCCCCCCCCCCCCCCCCCCCCCC', adv_chr)
                             if adv_chr[0] in POSSESIVE_LIST:
                                 eng_sentence[i][0][0] = eng_sentence[i][0][0].replace(adv_chr[0], adv_chr[0] + ' ' + word[0][0])
                             else:
