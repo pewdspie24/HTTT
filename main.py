@@ -361,7 +361,7 @@ class MainProcess():
                                     eng_sentence[indx][0][0] = " "
                                     eng_sentence[indx][1][0] = None
                                     break
-                if index > primary_idx-1 and word[1][0] == 'number':
+                if index > primary_idx-1 and word[1][0] == 'number' and word[0][0] != 'one' and word[0][0] != 'a':
                     for indx in range (index, len(eng_sentence)):
                         if eng_sentence[indx][1][0] == 'noun':
                             eng_sentence[indx][0][0] = self.plural[self.singular.index(eng_sentence[indx][0][0])]
@@ -387,7 +387,8 @@ class MainProcess():
                     I_flag = False
                     break
                 # 6.2.2 Nếu tồn tại lượng từ
-                if type_vi == 'luongtu':
+                if type_vi == 'luongtu' and word_en != 'one' and word_en != 'a':
+                    print(word_en)
                     for j in range (i, primary_idx):
                         if eng_sentence[j][1][0] == 'noun':
                             if len(eng_sentence[j][0][0].split()) > 1:
@@ -425,7 +426,7 @@ class MainProcess():
                     PRONOUN = 1
                     break
                 # 6.2.7 Nếu tồn tại số từ hoặc lượng từ
-                if type_en == 'number' and word_en.lower() != 'one' and eng_sentence[i+1][1][0] == 'noun':
+                if type_en == 'number' and word_en.lower() != 'one' and word_en.lower() != 'a' and eng_sentence[i+1][1][0] == 'noun':
                     MANY_N = True
                     continue
                 if type_en == 'noun' and MANY_N:
