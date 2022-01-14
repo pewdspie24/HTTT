@@ -361,6 +361,15 @@ class MainProcess():
                                     eng_sentence[indx][0][0] = " "
                                     eng_sentence[indx][1][0] = None
                                     break
+                        if i[1][0] == 'proper' and  i[1][1] > pos_idx_en:
+                            for dtu_idx in range(index, -1, -1):
+                                if eng_sentence[dtu_idx][1][0] == 'noun' or eng_sentence[dtu_idx][1][0] == 'pronoun':
+                                    eng_sentence[dtu_idx][0][0] = self.no_accent_vietnamese(eng_sentence[indx][0][0]) + "'s " + eng_sentence[dtu_idx][0][0]
+                                    eng_sentence[indx][0][0] = " "
+                                    eng_sentence[indx][1][0] = None
+                                    word[0][0] = ""
+                                    word[1][0] = None
+                                    break
                 if index > primary_idx-1 and word[1][0] == 'number' and word[0][0] != 'one' and word[0][0] != 'a':
                     for indx in range (index, len(eng_sentence)):
                         if eng_sentence[indx][1][0] == 'noun':
