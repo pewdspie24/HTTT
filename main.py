@@ -736,6 +736,7 @@ class MainProcess():
                 print('Error')
         print(eng_sentence)
         # 8. Sắp xếp lại cấu trúc câu
+        advb_flag = False
         for index, word in enumerate(eng_sentence):
             # 8.1 Tính từ đứng trước danh từ
             try:
@@ -758,6 +759,10 @@ class MainProcess():
                             word[1][0] = None
                             break
                         if eng_sentence[i][1][0] == 'verb':
+                            adv_chr = eng_sentence[i][0][0].split(' ')
+                            if advb_flag:
+                                # print('cccccccccc', adv_chr[0])
+                                eng_sentence[i][0][0] = ' '.join(map(str, adv_chr[1:])) + ' ' + adv_chr[0]
                             eng_sentence[i][0][0] = eng_sentence[i][0][0] + " " + word[0][0] 
                             word[0][0] = ""
                             word[1][0] = None
@@ -787,6 +792,7 @@ class MainProcess():
                                             eng_sentence[i][0][0] += ' ' + chr
                             else:
                                 eng_sentence[i][0][0] = word[0][0] + ' ' + adv_chr[0]
+                            advb_flag = True
                         else:
                             eng_sentence[i][0][0] = word[0][0] + ' ' + eng_sentence[i][0][0]
                         word[0][0] = ""
