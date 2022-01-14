@@ -239,6 +239,7 @@ class MainProcess():
         word_list_vi, word_type_vi, tense, primary_idx, NEG = self.get_word_type_vi(tokens)
         for idx, word in enumerate(word_list_vi):
             print(word+" "+word_type_vi[idx])
+        # primary_idx = 1
         print("Primary",primary_idx)
         print("NEG", NEG)
         # 3.2 Get C-V
@@ -283,7 +284,7 @@ class MainProcess():
                     if k == i['word']:
                         print(i)
                         list_chars.append(i)
-                        vi_type = v[0]
+                        vi_type = v[0].strip()
                         # print(vi_type)
                         # Exist in matching-type
                         if vi_type in WTYPE_MATCH:
@@ -360,6 +361,10 @@ class MainProcess():
                                     eng_sentence[indx][0][0] = " "
                                     eng_sentence[indx][1][0] = None
                                     break
+                if index > primary_idx-1 and word[1][0] == 'number':
+                    for indx in range (index, len(eng_sentence)):
+                        if eng_sentence[indx][1][0] == 'noun':
+                            eng_sentence[indx][0][0] = self.plural[self.singular.index(eng_sentence[indx][0][0])]
         except Exception:
                 print('Error')
 
@@ -417,7 +422,7 @@ class MainProcess():
                 if word_en in self.plural:
                     PRONOUN = 1
                     break
-                if type_en == 'number' and eng_sentence[i+1][1][0] == 'noun':
+                if type_en == 'number' and word_en.lower() != 'one' and eng_sentence[i+1][1][0] == 'noun':
                     MANY_N = True
                     continue
                 if type_en == 'noun' and MANY_N:
@@ -757,6 +762,8 @@ class MainProcess():
                                             eng_sentence[i][0][0] += ' ' + chr
                             else:
                                 eng_sentence[i][0][0] = word[0][0] + ' ' + adv_chr[0]
+                        else:
+                            eng_sentence[i][0][0] = word[0][0] + ' ' + eng_sentence[i][0][0]
                         word[0][0] = ""
                         # print(word[1][0])
                         word[1][0] = None
@@ -835,7 +842,7 @@ class MainProcess():
                     result+=i[0][0][1:].lower()
                     result+=" "
                 elif i[1][0] == 'proper':
-                    print("CCCCCCCCC", self.no_accent_vietnamese(i[0][0]))
+                    # print("CCCCCCCCC", self.no_accent_vietnamese(i[0][0]))
                     result+=self.no_accent_vietnamese(i[0][0])+ ' '
                 else:
                     result+=i[0][0].lower()
