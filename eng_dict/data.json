@@ -42662,7 +42662,6 @@
             "boil down"
         ],
         "trans3": [
-            "her",
             "she"
         ]
     },
@@ -44099,15 +44098,9 @@
     {
         "word": "của",
         "type": [
-            "noun",
             "conj"
         ],
         "trans1": [
-            "property",
-            "belongings",
-            "given kind of food"
-        ],
-        "trans2": [
             "of",
             "belong to",
             "from"
@@ -83329,14 +83322,14 @@
         "word": "họ",
         "type": [
             "noun",
-            "noun"
+            "pronoun"
         ],
         "trans1": [
             "last name",
             "family name"
         ],
         "trans2": [
-            "tontine"
+            "they"
         ]
     },
     {

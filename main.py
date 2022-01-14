@@ -193,8 +193,8 @@ class MainProcess():
             if (dem+1<num and np.any([i in type_word[dem+1] for i in ["dongtu", "tinhtu"]])):
                 if "photuphudinh" in type_word[dem] or word[dem] in ["đã", "từng", "đang", "sẽ"]:
                     main_verb = dem  
-                elif "photuchimucdo" in type_word[dem]:
-                    main_verb = dem + 1
+                # elif "photuchimucdo" in type_word[dem]:
+                #     main_verb = dem + 1
             if type_word[dem] in ["danhtuchiloai", "photuphudinh"] or word[dem] in ["đã", "từng", "đang", "sẽ"]:
                 if "photuphudinh" in type_word[dem]:
                     neg = 1
@@ -865,7 +865,7 @@ class MainProcess():
         
 if __name__ == "__main__":
     my = MainProcess()
-    vi_sentence, eng_sentence, result, tense, list_chars = my.process("tất cả mèo ăn cơm")
+    vi_sentence, eng_sentence, result, tense, list_chars = my.process("Quang chạy rất nhanh")
     print(vi_sentence)
     print(eng_sentence)
     print(result)
