@@ -19,6 +19,6 @@ def no_accent_vietnamese(s):
     return s
 
 if __name__ == '__main__':
-    print(no_accent_vietnamese("Việt Nam Đất Nước Con Người"))
+    print(no_accent_vietnamese("Quang"))
     print(no_accent_vietnamese("Welcome to Vietnam !"))
     print(no_accent_vietnamese("VIỆT NAM ĐẤT NƯỚC CON NGƯỜI"))

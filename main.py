@@ -48,6 +48,7 @@ class MainProcess():
                     else:
                         self.word_type_vi[tmp] = i[:-4]    
 
+    # Chuyển tên riêng từ tiếng việt sang anh
     def no_accent_vietnamese(self, s):
         s = re.sub(r'[àáạảãâầấậẩẫăằắặẳẵ]', 'a', s)
         s = re.sub(r'[ÀÁẠẢÃĂẰẮẶẲẴÂẦẤẬẨẪ]', 'A', s)
@@ -64,7 +65,6 @@ class MainProcess():
         s = re.sub(r'[Đ]', 'D', s)
         s = re.sub(r'[đ]', 'd', s)
         return s
-
 
     def check_number(self, word):
         tmp = word
@@ -450,6 +450,8 @@ class MainProcess():
                 ext_flag = True
                 for i in range (1, len(splited)):
                     ext_word+=splited[i]
+                    if i != len(splited)-1:
+                        ext_word+=' '
             v_type = eng_sentence[primary_idx][1][0]
             # print(eng_sentence)
             # print("dp", primary_idx)
@@ -854,8 +856,10 @@ class MainProcess():
                 else:
                     result+=i[0][0].lower()
                     result+=" "
+        print(result)
         result = result.strip()
-        result = result.capitalize()
+        result = result
+        print(result)
         return vi_sentence, eng_sentence, result, tense, list_chars
         
 if __name__ == "__main__":

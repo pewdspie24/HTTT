@@ -150,9 +150,10 @@ class Ui_MainWindow(object):
             # print(idx)
             trans_name = res.get(value)
             for index, i in enumerate(self.list_chars[idx].get(trans_name)):
-                res_txt += i.capitalize()
-                if index != len(self.list_chars[idx].get(trans_name))-1:
-                    res_txt += '\n'
+                if len(i.split(' ')) < 4:
+                    res_txt += i.capitalize()
+                    if index != len(self.list_chars[idx].get(trans_name))-1:
+                        res_txt += '\n'
         except Exception:
             # print('CCCC')
             for index, keys in enumerate(self.list_chars[idx]):
@@ -160,10 +161,11 @@ class Ui_MainWindow(object):
                     # print(keys)
                     # print(self.list_chars[idx])
                     list_texts = self.list_chars[idx].get(keys)
-                    for text in list_texts:
-                        res_txt += text.capitalize()
-                        if index != len(self.list_chars[idx].get(keys))-1:
-                            res_txt += '\n'
+                    for idxx, text in enumerate(list_texts):
+                        if len(text.split(' ')) < 4:
+                            res_txt += text.capitalize()
+                            if idxx != len(self.list_chars[idx].get(keys))-1:
+                                res_txt += '\n'
         self.table_translate.setItem(idx, 2, QtWidgets.QTableWidgetItem(res_txt))
         self.table_translate.resizeRowsToContents()
 
