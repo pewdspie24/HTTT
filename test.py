@@ -22,4 +22,11 @@ def no_accent_vietnamese(s):
 if __name__ == '__main__':
     print(no_accent_vietnamese("Quang"))
     print(no_accent_vietnamese("Welcome to Vietnam !"))
-    print(vn_token_uts('tôi và Ngọc đang chạy rất nhanh'))
+    print(vn_token_uts('bây giờ tôi sắp ăn'))
+    if 4> 3:
+        if 5 > 3:
+            if 3>5:
+                print("SMT")
+        elif 6 > 4:
+            if 5 > 3:
+                print('SMT2')

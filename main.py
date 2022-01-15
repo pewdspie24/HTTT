@@ -8,7 +8,6 @@ import numpy as np
 
 WTYPE_MATCH = {'danhtuchung':'noun', 'dongtu':'verb', 'tinhtu':'adj', 'sotu':'number', 'luongtu':'adj', 'photu':'advA', 'photuchimucdo':'advB', 'photuthoigian':'advB', 'daitu':'pronoun', 'thantu':'excl', 'quanhetulietke':'conj', 'quanhetudinhvi':'prep', 'chitu':'det', 'daituxungho':'pronoun'}
 TENSE = ['present', 'past', 'future', 'continous']
-FLAG = 0
 PATH_VI = ["chitu.txt", "daituxungho.txt", "danhtuchiloai.txt", "danhtuchung.txt",  
         "dongtu.txt", "luongtu.txt", "photuchimucdo.txt", "photuphudinh.txt", "photuthoigian.txt", 
         "quanhetudinhvi.txt", "quanhetulietke.txt", "sotu.txt", "thantu.txt", "tinhtu.txt"]
@@ -16,7 +15,6 @@ VI_DICT_PATH = "viet_dict/dict_chitiet/"
 TO_VERB = ["hate", "hope", "intend", "like", "love", "mean", "plan", "try", "want", 'go']
 POSSESIVE = {'I':'my', 'you':'your', 'he':'his', 'she':'her', 'it':'its', 'we':'our', 'they':'their'}
 POSSESIVE_LIST = ['my', 'your', 'his', 'her', 'its', 'our', 'their']
-
 class MainProcess():
     def __init__(self):   
         self.word_type_vi = {}
@@ -115,10 +113,11 @@ class MainProcess():
                 # Xác định thì dựa vào phó từ chỉ thời gian
                 if word[idx] in ["đã", "từng", "hôm qua", "hôm xưa", "ngày xưa"]:
                     thi = "past"
-                elif word[idx] in ["đang", "hôm nay"]:
+                elif word[idx] in ["đang", "bây giờ"]:
                     thi = "continous"
-                elif word[idx] in ["sẽ", "ngày kìa", "ngày mai"]:
+                elif word[idx] in ["sẽ", "ngày kìa", "ngày mai", "sắp"]:
                     thi = "future"  
+                # Cần xác định phó từ, danh từ chỉ loại, quan hệ từ, số từ, lượng từ trước
                 # Một số danh từ chỉ loại có thể là động từ, xác định nó là danh từ chỉ loại hay động từ: bó, cuốn, tập, ...
                 if "danhtuchiloai dongtu" in type_word[idx]:
                     # nếu trước nó là số từ, lượng từ, động từ hoặc quan hệ từ định vị thì nó là danh từ chỉ loại
@@ -146,6 +145,7 @@ class MainProcess():
                     else:
                         type_word[idx] = type_word[idx].replace("quanhetudinhvi","")    
                 # Trong trường hợp từ đang xét có nhiều từ loại
+                # typeword vs tmp
                 if len(word_type) > 1:
                     if idx >= 1: # Xác định dựa vào từ đứng trước nó
                         # Xác định từ loại của từ đang xét dựa vào dấu phẩy và quan hệ từ liệt kê
@@ -165,7 +165,9 @@ class MainProcess():
                                 type_word[idx] = "tinhtu"  
                         elif "tinhtu" in type_word[idx] and "dongtu" in type_word[idx-1]:
                             type_word[idx] = "tinhtu" 
-                    elif idx+1 < num:
+                    if not np.array_equal(tmp, type_word):
+                        continue
+                    if idx+1 < num:
                         # Xác định từ loại của từ đang xét dựa vào dấu phẩy và quan hệ từ liệt kê
                         if type_word[idx+1] in ["lietke", "quanhetulietke"]:
                             type_word[idx] = type_word[idx+2]
@@ -188,10 +190,10 @@ class MainProcess():
             print(dem, " ", num, " ", type_word[dem], " ", word[dem])
             # Nếu nó là động từ hoặc tính từ và trước nó là phó từ chỉ thời gian hoặc phó từ phủ định thì nó là động từ chính
             if (dem+1<num and np.any([i in type_word[dem+1] for i in ["dongtu", "tinhtu"]])):
-                if "photuphudinh" in type_word[dem] or word[dem] in ["đã", "từng", "đang", "sẽ"]:
+                if "photuphudinh" in type_word[dem] or word[dem] in ["đã", "từng", "đang", "sẽ", "sắp"]:
                     main_verb = dem  
             # Bỏ các danh từ chỉ loại, phó từ phủ định, phó từ chỉ thời gian
-            if type_word[dem] in ["danhtuchiloai", "photuphudinh"] or word[dem] in ["đã", "từng", "đang", "sẽ"]:
+            if type_word[dem] in ["danhtuchiloai", "photuphudinh"] or word[dem] in ["đã", "từng", "đang", "sẽ", "sắp"]:
                 if "photuphudinh" in type_word[dem]:
                     neg = 1
                 word.pop(dem)
@@ -223,8 +225,6 @@ class MainProcess():
         # Process
         PRONOUN = 0
         NEG = 0
-        WORD_COUNT = False
-        counts = []
         vi_sentence = []
         eng_sentence = []
         list_chars = []
@@ -234,7 +234,7 @@ class MainProcess():
         # 2. Tách từ câu đầu vào
         tokens = vn_token_uts(sequence)
         print(tokens)
-        # 3.1 Lấy dữ liệu từ, loại từ, thì và động từ chính từ hàm
+        # 3 Lấy dữ liệu từ, loại từ, thì và động từ chính từ hàm
         word_list_vi, word_type_vi, tense, primary_idx, NEG = self.get_word_type_vi(tokens)
         for idx, word in enumerate(word_list_vi):
             print(word+" "+word_type_vi[idx])
@@ -245,7 +245,7 @@ class MainProcess():
         # primary_idx = 4
         # NEG = self.get_neg(tokens)
         # 4. Ánh xạ từ loại A-V và tìm từ tương ứng trong TA
-        # vi_sentence = ((tu1,(loaitu1, 1)), (tu2,(loaitu2, 2)), ...)
+        # vi_sentence = ((tu1,(loaitu1, 0)), (tu2,(loaitu2, 1)), ...)
         for idx, token in enumerate(word_list_vi):
             vi_sentence.append([token,[word_type_vi[idx], idx]])
         # print(vi_sentence)
@@ -288,11 +288,11 @@ class MainProcess():
                         # 4.4 Nếu tồn tại loại từ phù hợp A-V
                         if vi_type in WTYPE_MATCH:
                             # print(WTYPE_MATCH.get(vi_type))
-                            # 4.5 Nếu tồn tại loại từ phù hợp trên trong từ điển
                             # print(i['type'])
                             type_match = WTYPE_MATCH.get(vi_type)
                             if vi_type[0:5] == "photu":
                                 type_match = type_match[:-1]
+                            # 4.5 Nếu tồn tại loại từ phù hợp trên trong từ điển
                             if 'type' in i and type_match in i['type']: 
                                 # print("cc")
                                 trans_idx = 0
@@ -314,7 +314,7 @@ class MainProcess():
                                 # print(list_words)
                                 eng_sentence.append([list_words,[WTYPE_MATCH.get(vi_type), idx]])
                                 flag = 1
-                            # 4.5 Nếu từ điển không chứa loại từ tương ứng cho từ có được
+                            # 4.6 Nếu từ điển không chứa loại từ tương ứng cho từ có được
                             else:
                                 list_words = []
                                 for key in i.keys():
@@ -323,7 +323,7 @@ class MainProcess():
                                             list_words.append(obj)
                                 eng_sentence.append([list_words,[WTYPE_MATCH.get(vi_type), idx]])
                                 flag = 2
-                        # 4.5 Không tìm được luật liên kết 2 loại từ A-V
+                        # 4.7 Không tìm được luật liên kết 2 loại từ A-V
                         else:
                             list_words = []
                             for key in i.keys():
@@ -332,9 +332,11 @@ class MainProcess():
                                         list_words.append(obj)
                             eng_sentence.append([list_words,["manytype", idx]])
                             flag = 3
-                # 4.6 Không tìm được từ trong từ điển
+                # 4.8 Không tìm được từ trong từ điển
                 if flag == 0:
-                    eng_sentence.append([k,["NA", idx]])
+                    cg = []
+                    cg.append(k)
+                    eng_sentence.append([cg,["NA", idx]])
         except Exception:
                 print('Error')
         # 6. Xử lý danh từ và chủ ngữ
@@ -384,6 +386,7 @@ class MainProcess():
         # 6.2 Xử lý tìm ngôi của chủ ngữ
         MANY_N = False
         I_flag = False
+        word_num = ''
         try:
             for i in range(0, primary_idx):
                 type_vi = vi_sentence[i][1][0]
@@ -400,13 +403,14 @@ class MainProcess():
                     break
                 # 6.2.2 Nếu tồn tại lượng từ
                 if type_vi == 'luongtu' and word_en != 'one' and word_en != 'a':
-                    print(word_en)
                     for j in range (i, primary_idx):
                         if eng_sentence[j][1][0] == 'noun':
-                            if len(eng_sentence[j][0][0].split()) > 1:
+                            if len(eng_sentence[j][0][0].split(" ")) > 1:
                                 # print("CCCCCCCCC", eng_sentence)
                                 main_noun = ' '.join(map(str, eng_sentence[j][0][0].split()[1:]))
-                                eng_sentence[j][0][0] = eng_sentence[j][0][0].split()[0] + " " + self.plural[self.singular.index(main_noun)]
+                                eng_sentence[j][0][0] = eng_sentence[j][0][0].split()[0]+ " "+ word_en + " " + self.plural[self.singular.index(main_noun)]
+                                eng_sentence[i][0][0] = ""
+                                eng_sentence[i][1][0] = None
                             else:
                                 eng_sentence[j][0][0] = self.plural[self.singular.index(eng_sentence[j][0][0])]
                             PRONOUN = 1
@@ -440,11 +444,18 @@ class MainProcess():
                 # 6.2.7 Nếu tồn tại số từ hoặc lượng từ
                 if type_en == 'number' and word_en.lower() != 'one' and word_en.lower() != 'a' and eng_sentence[i+1][1][0] == 'noun':
                     MANY_N = True
+                    word_num = word_en
+                    eng_sentence[i][0][0] = ""
+                    eng_sentence[i][1][0] = None
                     continue
                 if type_en == 'noun' and MANY_N:
+                    if len(eng_sentence[i][0][0].split(" ")) > 1:
+                        # print("CCCCCCCCC", eng_sentence)
+                        main_noun = ' '.join(map(str, eng_sentence[i][0][0].split()[1:]))
+                        eng_sentence[i][0][0] = eng_sentence[i][0][0].split()[0] + " " + word_num + " " + self.plural[self.singular.index(main_noun)]
+                    else:
+                        eng_sentence[i][0][0] = self.plural[self.singular.index(eng_sentence[i][0][0])]
                     PRONOUN = 1
-                    # print(self.singular.index(word_en))
-                    eng_sentence[i][0][0] = self.plural[self.singular.index(word_en)]
                     break
 
         except Exception:
@@ -746,9 +757,9 @@ class MainProcess():
                     # if adj_idx_en <
                     for i in range (adj_idx_en-1, -1, -1):
                         if eng_sentence[i][1][0] == 'noun':
-                            adv_chr = eng_sentence[i][0][0].split(' ')
+                            adv_chr = eng_sentence[i][0][0].split(' ') 
                             # print('CCCCCCCCCCCCCCCCCCCCCCCCCCC', adv_chr)
-                            if adv_chr[0] in POSSESIVE_LIST:
+                            if adv_chr[0] in POSSESIVE_LIST or adv_chr[0].endswith("'s"):
                                 eng_sentence[i][0][0] = eng_sentence[i][0][0].replace(adv_chr[0], adv_chr[0] + ' ' + word[0][0])
                             else:
                                 eng_sentence[i][0][0] = word[0][0] + ' ' + eng_sentence[i][0][0]
@@ -767,35 +778,38 @@ class MainProcess():
             except Exception:
                 print('Error')
             # 8.2 Trạng từ đứng trước danh, động, tính từ gần nhất mà nó bổ trợ
-            if word[1][0] == 'advB' and word[0][0] != 'yesterday' and word[0][0] != 'today' and word[0][0] != 'tomorrow':
-                adv_idx_en = word[1][1]
-                adv_idx_vi = adv_idx_en
-                for i in range (adv_idx_en-1, len(eng_sentence)):
-                    if eng_sentence[i][1][0] == 'noun' or eng_sentence[i][1][0] == 'verb' or eng_sentence[i][1][0] == 'adj':
-                        # print(eng_sentence[i][0][0])
-                        # 8.2.1 Nếu là động từ và có từ ngoại lai, xử lý từ ngoại lai
-                        if eng_sentence[i][1][0] == 'verb':
-                            adv_chr = eng_sentence[i][0][0].split(' ')
-                            if len(adv_chr) > 1:
-                                if adv_chr[1] == 'not':
-                                    eng_sentence[i][0][0] = adv_chr[0] + ' ' + adv_chr[1] + ' ' + word[0][0]
-                                    for adv_idx, chr in enumerate(adv_chr):
-                                        if adv_idx > 1:
-                                            eng_sentence[i][0][0] += ' ' + chr
+            try:
+                if word[1][0] == 'advB' and word[0][0] != 'yesterday' and word[0][0] != 'today' and word[0][0] != 'tomorrow':
+                    adv_idx_en = word[1][1]
+                    adv_idx_vi = adv_idx_en
+                    for i in range (adv_idx_en-1, len(eng_sentence)):
+                        if eng_sentence[i][1][0] == 'noun' or eng_sentence[i][1][0] == 'verb' or eng_sentence[i][1][0] == 'adj':
+                            # print(eng_sentence[i][0][0])
+                            # 8.2.1 Nếu là động từ và có từ ngoại lai, xử lý từ ngoại lai
+                            if eng_sentence[i][1][0] == 'verb':
+                                adv_chr = eng_sentence[i][0][0].split(' ')
+                                if len(adv_chr) > 1:
+                                    if adv_chr[1] == 'not':
+                                        eng_sentence[i][0][0] = adv_chr[0] + ' ' + adv_chr[1] + ' ' + word[0][0]
+                                        for adv_idx, chr in enumerate(adv_chr):
+                                            if adv_idx > 1:
+                                                eng_sentence[i][0][0] += ' ' + chr
+                                    else:
+                                        eng_sentence[i][0][0] = adv_chr[0] + ' ' + word[0][0]
+                                        for adv_idx, chr in enumerate(adv_chr):
+                                            if adv_idx > 0:
+                                                eng_sentence[i][0][0] += ' ' + chr
                                 else:
-                                    eng_sentence[i][0][0] = adv_chr[0] + ' ' + word[0][0]
-                                    for adv_idx, chr in enumerate(adv_chr):
-                                        if adv_idx > 0:
-                                            eng_sentence[i][0][0] += ' ' + chr
+                                    eng_sentence[i][0][0] = word[0][0] + ' ' + adv_chr[0]
+                                advb_flag = True
                             else:
-                                eng_sentence[i][0][0] = word[0][0] + ' ' + adv_chr[0]
-                            advb_flag = True
-                        else:
-                            eng_sentence[i][0][0] = word[0][0] + ' ' + eng_sentence[i][0][0]
-                        word[0][0] = ""
-                        # print(word[1][0])
-                        word[1][0] = None
-                        break
+                                eng_sentence[i][0][0] = word[0][0] + ' ' + eng_sentence[i][0][0]
+                            word[0][0] = ""
+                            # print(word[1][0])
+                            word[1][0] = None
+                            break
+            except Exception:
+                print('Error')
             # 8.3 Trạng từ đứng sau danh, động, tính từ gần nhất mà nó bổ trợ
             try:
                 if word[1][0] == 'advA':
@@ -860,11 +874,19 @@ class MainProcess():
 
         # 9. Trả về kết quả và các từ gợi ý
         result = ""
+        cap_flag = False
         for idx, i in enumerate(eng_sentence):
+            # print(i)
             if i[1][0] != None:
                 # print(i[0][0].lower())
                 if i[0][0] == "I":
                     result+="I "
+                    continue
+                if cap_flag:
+                    result+=i[0][0][0].upper()
+                    result+=i[0][0][1:].lower()
+                    result+=" "
+                    cap_flag = False
                     continue
                 if idx == 0 and i[1][0] != 'proper':
                     result+=i[0][0][0].upper()
@@ -875,6 +897,8 @@ class MainProcess():
                 else:
                     result+=i[0][0].lower()
                     result+=" "
+            elif idx == 0 and i[1][0] == None:
+                cap_flag = True
         print(result)
         result = result.strip()
         result = result
