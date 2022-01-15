@@ -20,7 +20,7 @@ POSSESIVE_LIST = ['my', 'your', 'his', 'her', 'its', 'our', 'their']
 class MainProcess():
     def __init__(self):   
         self.word_type_vi = {}
-         # English loading, list of dict
+         # load dữ liệu Tiếng Anh
         with open("eng_dict\data.json", 'r', encoding="utf8") as j:
             self.vi_eng_dict = json.loads(j.read())
         with open("eng_dict\pronouns.json", 'r', encoding="utf8") as j:
@@ -35,7 +35,7 @@ class MainProcess():
         nouns = pandas.read_csv("eng_dict\\noun.csv")
         self.plural = nouns.plural.to_list()
         self.singular = nouns.singular.to_list()
-        # Vietnamese loading
+        # load dữ liệu Tiếng Việt
         for i in PATH_VI:
             with open(VI_DICT_PATH + i, "r+", encoding="utf-8" ) as f:
                 for line in f.readlines():
@@ -81,27 +81,23 @@ class MainProcess():
         neg = 0
         check =True
         for token in tokens:
-            try: # if Vi word exist in Vi dict
+            try: # Nếu từ đang xét có trong từ điển
                 type_word.append(self.word_type_vi[token])
                 word.append(token)
-            except :
-                # if is ",", may be consider as quanhetulietke
+            except : # Nếu từ đang xét không có trong từ điển
+                # Nếu từ đang xét là dấu phẩy, cho nó là từ loại liệt kê
                 if token in ",":
                     word.append(token)
                     type_word.append("lietke")
-                # if is special character
+                # Nếu từ đang xét là các ký tự đặc biệt thì coi nó là từ loại ký tự
                 elif token in "-:%'(){}[]":
                     word.append(token)
                     type_word.append("kytu")
-                # if the first character is uppper, consider as a name
+                # Nếu từ đang xét viết hoa chữ cái đầu tiên thì coi nó là danh từ riêng, gán từ loại của nó là đại từ xưng hô
                 elif "A" <= token[0] and token[0] <= "Z":
                     word.append(token)
                     type_word.append("daituxungho")
-                # if is number
-                # elif self.check_number(self, token) == True:
-                #     word.append(token)
-                #     type_word.append("so")
-                # if is the first word, consider as a noun
+                # Nếu từ đang xét là từ đầu tiên trong câu thì coi nó là danh từ chung
                 elif len(word) == 0:
                     word.append(token)
                     type_word.append("danhtuchung")
@@ -112,53 +108,56 @@ class MainProcess():
         num = len(word)
         print(word)          
         print(type_word)
-        while (check): # if check == True, it mean, still having changes
+        while (check): # Nếu check = True nghĩa là vẫn có sự thay đổi từ loại của mỗi từ
             tmp = type_word.copy()  
             for idx in range(num) :
                 word_type = type_word[idx].strip().split(" ")
-                # determine tense 
+                # Xác định thì dựa vào phó từ chỉ thời gian
                 if word[idx] in ["đã", "từng", "hôm qua", "hôm xưa", "ngày xưa"]:
                     thi = "past"
                 elif word[idx] in ["đang", "hôm nay"]:
                     thi = "continous"
                 elif word[idx] in ["sẽ", "ngày kìa", "ngày mai"]:
                     thi = "future"  
-                #determine danhtuchiloai or verb: bó, cuốn, tập, ...
+                # Một số danh từ chỉ loại có thể là động từ, xác định nó là danh từ chỉ loại hay động từ: bó, cuốn, tập, ...
                 if "danhtuchiloai dongtu" in type_word[idx]:
-                    # if before word is sotu or luong tu
+                    # nếu trước nó là số từ, lượng từ, động từ hoặc quan hệ từ định vị thì nó là danh từ chỉ loại
                     if idx-1>0 and type_word[idx-1] in ["sotu", "luongtu", "dongtu", "quanhetudinhvi"]:
                         type_word[idx] = "danhtuchiloai"
                     else:
                         type_word[idx] = "dongtu"
-                # convert danhtuchiloai to noun
+                # Chuyển danh từ chỉ loại thành danh từ chung nếu sau nó không phải là danh từ chung hoặc nó nằm ở cuối câu
                 if "danhtuchiloai" in type_word[idx] and (idx+1 == num or (idx+1 < num and "danhtu" not in type_word[idx+1])): 
                         type_word[idx] = "danhtuchung"
-                # determine noun or sotu
+                # Từ "ba" có thể là danh từ chung hoặc số từ
                 if word[idx] == "ba":
-                    if (idx>0 and "danhtuchung" in type_word[idx-1])or (idx+1<num and "danhtu" in type_word[idx+1]):
+                    # Nếu trước nó là danh từ chung hoặc sau nó là danh từ thì nó là số từ
+                    if (idx>0 and "danhtuchung" in type_word[idx-1]) or (idx+1<num and "danhtu" in type_word[idx+1]):
                         type_word[idx] = "sotu"
+                    # Trường hợp còn lại thì nó là danh từ chung
                     else:
                         type_word[idx] = "danhtuchung"
-                #determine quanhetudinhvi or verb or noun
+                # Một số quan hệ từ định vị có thể là danh động tính: ở, cạnh, trong, ...
                 if "quanhetudinhvi" in type_word[idx]:
-                    # if idx+1 <num and np.any([i in type_word[idx+1] for i in ["danhtu", "sotu", "luongtu", "daituxungho", "so"]]):
+                    # Nếu trước nó là động từ hoặc tính từ thì nó là quan hệ từ định vị:
                     if idx>1 and np.any([i in type_word[idx-1] for i in ["dongtu", "tinhtu"]]):
                         type_word[idx] = "quanhetudinhvi"
+                    # Trường hợp còn lại là các từ loại khác
                     else:
                         type_word[idx] = type_word[idx].replace("quanhetudinhvi","")    
-                # in case multiple word type
+                # Trong trường hợp từ đang xét có nhiều từ loại
                 if len(word_type) > 1:
-                    if idx >= 1: # base on before word
-                        # determine type of word basing on "," or quanhetulietke
+                    if idx >= 1: # Xác định dựa vào từ đứng trước nó
+                        # Xác định từ loại của từ đang xét dựa vào dấu phẩy và quan hệ từ liệt kê
                         if type_word[idx-1] in ["lietke", "quanhetulietke"]:
                             type_word[idx] = type_word[idx-2]
-                        # determine noun
+                        # Xác định danh từ chung
                         elif "danhtuchung" in type_word[idx]:
                             if np.any([i in type_word[idx-1] for i in ["sotu", "luongtu", "danhtuchiloai", "quanhetudinhvi"]]) or word[idx-1] == "của":
                                 type_word[idx] = "danhtuchung"
                             elif np.any([i in type_word[idx-1] for i in ["daituxungho", "danhtuchung"]]):
                                 type_word[idx] = type_word[idx].replace("danhtuchung","")
-                        # determine verb or adj, priority verb first
+                        # Xác định động từ, tính từ
                         elif np.any([i in type_word[idx-1] for i in ["danhtuchung", "photu", "daituxungho"]]):
                             if "dongtu" in type_word[idx]:
                                 type_word[idx] = "dongtu"
@@ -167,42 +166,45 @@ class MainProcess():
                         elif "tinhtu" in type_word[idx] and "dongtu" in type_word[idx-1]:
                             type_word[idx] = "tinhtu" 
                     elif idx+1 < num:
-                        # determine type of word basing on "," or quanhetulietke 
+                        # Xác định từ loại của từ đang xét dựa vào dấu phẩy và quan hệ từ liệt kê
                         if type_word[idx+1] in ["lietke", "quanhetulietke"]:
                             type_word[idx] = type_word[idx+2]
-                        # determine noun
+                        # Xác định danh từ chung
                         elif "danhtuchung" in type_word[idx] and np.any(i in type_word[idx+1] for i in ["chitu", "dongtu", "tinhtu", "photu"]) :
                             type_word[idx] = "danhtuchung"
-                        # determine verb
+                        # Xác định động từ
                         elif "dongtu" in type_word[idx] and np.any(i in type_word[idx+1] for i in ["photuchimucdo", "quanhetudinhvi", "sotu", "luongtu", "danhtu", "tinhtu"]):
                             type_word[idx] = "dongtu"
-                        # determine verb or adj
+                        # Xác định tính từ
                         elif "tinhtu" in type_word[idx] and type_word[idx+1] == "photuchimucdo":
                             type_word[idx] = "tinhtu"
             check = not np.array_equal(tmp, type_word)
             print("lap")
-        # delete unneed word  
+        # Xóa các từ không cần thiết và xác định động từ chính
         dem = 0              
         while dem<num:
             print(word)          
             print(type_word) 
             print(dem, " ", num, " ", type_word[dem], " ", word[dem])
+            # Nếu nó là động từ hoặc tính từ và trước nó là phó từ chỉ thời gian hoặc phó từ phủ định thì nó là động từ chính
             if (dem+1<num and np.any([i in type_word[dem+1] for i in ["dongtu", "tinhtu"]])):
                 if "photuphudinh" in type_word[dem] or word[dem] in ["đã", "từng", "đang", "sẽ"]:
                     main_verb = dem  
+            # Bỏ các danh từ chỉ loại, phó từ phủ định, phó từ chỉ thời gian
             if type_word[dem] in ["danhtuchiloai", "photuphudinh"] or word[dem] in ["đã", "từng", "đang", "sẽ"]:
                 if "photuphudinh" in type_word[dem]:
                     neg = 1
                 word.pop(dem)
                 type_word.pop(dem)
                 num = num-1
+            # Bỏ chỉ từ nếu trước nó là đại từ xưng hô: anh ấy -> anh
             elif dem>0 and type_word[dem] == "chitu" and type_word[dem-1] == "daituxungho":
                 word.pop(dem)
                 type_word.pop(dem)
                 num = num-1
             else:
                 dem +=1
-        # find main verb
+        # Nếu chưa xác định được động từ chính thì coi động từ hoặc tính từ đầu tiên xuất hiện trong câu là động từ chính
         if main_verb == 0:
             for idx, type_word1 in enumerate(type_word) :
                 if type_word1 == "dongtu":
@@ -216,11 +218,8 @@ class MainProcess():
         
         print(thi, " ", main_verb, " ", neg)
         return word, type_word, thi, main_verb, neg
-    # def get_neg(self, tokens):
-    #     return 0
 
     def process(self, sentence):
-        # sys.modules[__name__].__dict__.clear()
         # Process
         PRONOUN = 0
         NEG = 0
