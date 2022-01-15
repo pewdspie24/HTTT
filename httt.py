@@ -90,17 +90,17 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
-        self.label.setText(_translate("MainWindow", "VIETNAMESE-ENGLISH TRANSLATOR"))
-        self.label_2.setText(_translate("MainWindow", "Vietnamese Sentence Input"))
-        self.translate_button.setText(_translate("MainWindow", "Translate!"))
-        self.label_3.setText(_translate("MainWindow", "English Sentence Output"))
+        MainWindow.setWindowTitle(_translate("MainWindow", "QN-Translator"))
+        self.label.setText(_translate("MainWindow", "DỊCH CÂU VIETNAMESE-ENGLISH"))
+        self.label_2.setText(_translate("MainWindow", "Đầu vào câu văn Việt"))
+        self.translate_button.setText(_translate("MainWindow", "Dịch!"))
+        self.label_3.setText(_translate("MainWindow", "Đầu ra câu văn Anh"))
         item = self.table_translate.horizontalHeaderItem(0)
-        item.setText(_translate("MainWindow", "VN Char"))
+        item.setText(_translate("MainWindow", "Từ Tiếng Việt"))
         item = self.table_translate.horizontalHeaderItem(1)
-        item.setText(_translate("MainWindow", "Word Type"))
+        item.setText(_translate("MainWindow", "Loại từ Tiếng Anh"))
         item = self.table_translate.horizontalHeaderItem(2)
-        item.setText(_translate("MainWindow", "Suggested Word"))
+        item.setText(_translate("MainWindow", "Từ gợi ý"))
         self.backend()
     
     def backend(self):

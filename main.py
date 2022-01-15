@@ -1,13 +1,10 @@
 import sys
 import json
 import re
-from typing import Sequence
 from underthesea import word_tokenize as vn_token_uts
 from underthesea import pos_tag
 import pandas
 import numpy as np
-from googletrans import Translator
-translator = Translator()
 
 WTYPE_MATCH = {'danhtuchung':'noun', 'dongtu':'verb', 'tinhtu':'adj', 'sotu':'number', 'luongtu':'adj', 'photu':'advA', 'photuchimucdo':'advB', 'photuthoigian':'advB', 'daitu':'pronoun', 'thantu':'excl', 'quanhetulietke':'conj', 'quanhetudinhvi':'prep', 'chitu':'det', 'daituxungho':'pronoun'}
 TENSE = ['present', 'past', 'future', 'continous']
@@ -237,6 +234,7 @@ class MainProcess():
         sequence = sentence
         # 2. Tách từ câu đầu vào
         tokens = vn_token_uts(sequence)
+        print(tokens)
         # 3.1 Lấy dữ liệu từ, loại từ, thì và động từ chính từ hàm
         word_list_vi, word_type_vi, tense, primary_idx, NEG = self.get_word_type_vi(tokens)
         for idx, word in enumerate(word_list_vi):
