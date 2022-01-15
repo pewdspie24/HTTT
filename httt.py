@@ -126,7 +126,7 @@ class Ui_MainWindow(object):
                 types.append('unknown')
             combo = QtWidgets.QComboBox()
             combo.addItems(types)
-            combo.currentTextChanged.connect(partial(self.showText,idx))
+            combo.currentTextChanged.connect(partial(self.showText,idx)) #tên
             combo_list.append(combo)
             self.showText(idx, types[0])
             self.table_translate.setCellWidget(idx, 1, combo_list[idx])

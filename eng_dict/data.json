@@ -42662,7 +42662,8 @@
             "boil down"
         ],
         "trans3": [
-            "she"
+            "she",
+            "her"
         ]
     },
     {
@@ -72460,7 +72461,7 @@
             "verb"
         ],
         "trans1": [
-            "o have sexual intercourse"
+            "have sexual intercourse"
         ]
     },
     {
@@ -113733,6 +113734,9 @@
     },
     {
         "word": "một chút",
+        "type": [
+            "adj"
+        ],
         "trans0": [
             "a little",
             "moment",
@@ -189419,10 +189423,7 @@
             "come back to belong to to follow"
         ],
         "trans2": [
-            "as to",
-            "o about",
-            "on as for",
-            "as regards"
+            "to"
         ]
     },
     {

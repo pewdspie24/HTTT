@@ -143,7 +143,7 @@ class MainProcess():
                         type_word[idx] = "quanhetudinhvi"
                     # Trường hợp còn lại là các từ loại khác
                     else:
-                        type_word[idx] = type_word[idx].replace("quanhetudinhvi","")    
+                        type_word[idx] = type_word[idx].replace("quanhetudinhvi","").strip()   
                 # Trong trường hợp từ đang xét có nhiều từ loại
                 # typeword vs tmp
                 if len(word_type) > 1:
@@ -156,7 +156,7 @@ class MainProcess():
                             if np.any([i in type_word[idx-1] for i in ["sotu", "luongtu", "danhtuchiloai", "quanhetudinhvi"]]) or word[idx-1] == "của":
                                 type_word[idx] = "danhtuchung"
                             elif np.any([i in type_word[idx-1] for i in ["daituxungho", "danhtuchung"]]):
-                                type_word[idx] = type_word[idx].replace("danhtuchung","")
+                                type_word[idx] = type_word[idx].replace("danhtuchung","").strip()
                         # Xác định động từ, tính từ
                         elif np.any([i in type_word[idx-1] for i in ["danhtuchung", "photu", "daituxungho"]]):
                             if "dongtu" in type_word[idx]:
@@ -207,6 +207,7 @@ class MainProcess():
             else:
                 dem +=1
         # Nếu chưa xác định được động từ chính thì coi động từ hoặc tính từ đầu tiên xuất hiện trong câu là động từ chính
+        print("main_verb: ",main_verb)
         if main_verb == 0:
             for idx, type_word1 in enumerate(type_word) :
                 if type_word1 == "dongtu":
@@ -374,11 +375,11 @@ class MainProcess():
                 if index > primary_idx-1 and word[1][0] == 'number' and word[0][0] != 'one' and word[0][0] != 'a':
                     for indx in range (index, len(eng_sentence)):
                         if eng_sentence[indx][1][0] == 'noun':
-                            eng_sentence[indx][0][0] = self.plural[self.singular.index(eng_sentence[indx][0][0])]
+                            eng_sentence[indx][0][0] = self.plural[self.singular.index(eng_sentence[indx][0][0].lower())]
                 if index > primary_idx-1 and vi_sentence[index][1][0] == 'luongtu':
                     for indx in range (index, len(eng_sentence)):
                         if eng_sentence[indx][1][0] == 'noun':
-                            eng_sentence[indx][0][0] = self.plural[self.singular.index(eng_sentence[indx][0][0])]
+                            eng_sentence[indx][0][0] = self.plural[self.singular.index(eng_sentence[indx][0][0].lower())]
         except Exception:
                 print('Error')
 
@@ -907,7 +908,7 @@ class MainProcess():
         
 if __name__ == "__main__":
     my = MainProcess()
-    vi_sentence, eng_sentence, result, tense, list_chars = my.process("Một con chó ăn cơm")
+    vi_sentence, eng_sentence, result, tense, list_chars = my.process("anh ấy đến từ Hà Nội")
     print(vi_sentence)
     print(eng_sentence)
     print(result)

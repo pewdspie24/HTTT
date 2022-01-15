@@ -126,8 +126,6 @@ buông thả
 buông trôi
 buông xuôi
 buông xõng
-buồn
-buồn đau
 buộc
 buộc tội
 buột miệng
@@ -622,7 +620,6 @@ cai nghiện
 cai quản
 cai sữa
 cai trị
-cam
 cam chịu
 cam kết
 cam phận
@@ -8126,13 +8123,6 @@ tủi hờn
 tủi thân
 tủm tỉm
 tứ tán
-tứa
-tức
-tức cười
-tức giận
-tức khí
-tức mình
-tức tối
 từ biệt
 từ bỏ
 từ chối
@@ -8570,7 +8560,6 @@ xom
 xong
 xong đời
 xoà
-xoài
 xoá
 xoá bỏ
 xoá mù
